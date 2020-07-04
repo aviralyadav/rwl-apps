@@ -44,7 +44,7 @@ class Dashboard extends React.Component {
                         </View>
                         
                         <View style={styles.pieChartSec}>
-                            <View>
+                            <View style={styles.labelSection}>
                                 <Text>Number of Dam: 500</Text>
                                 <Text>Inspection remaining: 40%</Text>
                             </View>
@@ -76,16 +76,19 @@ const styles = StyleSheet.create({
     pieChartSec: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'center',
-        // fontSize: 20, 
+        // alignItems: 'center',
         borderBottomWidth: 1, 
         borderTopWidth: 1, 
         borderColor: 'green', 
-        // paddingTop: 5, 
-        // paddingBottom: 5, 
-        // marginTop: 4, 
-        // marginBottom: 4
     }
+    ,labelSection: {
+        width: '60%',
+        borderColor: 'green',
+        borderRightWidth: 1,
+        // alignItems: 'center'
+        justifyContent: 'center'
+    }
+    
     // engine: {
     //     position: 'absolute',
     //     right: 0,
