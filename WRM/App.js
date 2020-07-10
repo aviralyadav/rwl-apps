@@ -24,6 +24,12 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Dashboard from './Dashboard';
+import Splash from './Splash';
+import DamInspection from './DamInspection';
+import DamHealthSafety from './DamHealthSafety';
+import DamHealth from './DamHealth';
+import CardList from './CardList';
+import  UserProfile from './UserProfile';
 
 const App = () => {
   return (
@@ -33,7 +39,13 @@ const App = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}> */}
-          <Dashboard />
+           {/* <Dashboard />  */}
+          {/* <Splash/> */}
+          {/* <DamInspection/>  */}
+          {/* <DamHealthSafety/> */}
+           {/* <DamHealth/>  */}
+           <CardList/> 
+           {/* <UserProfile/> */}
         {/* </ScrollView>
       </SafeAreaView> */}
     </>
