@@ -27,6 +27,8 @@ import {
     DebugInstructions,
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Icon from 'react-native-vector-icons/Ionicons';
+import Footer from './Footer';
 
 class Dashboard extends React.Component {
     render() {
@@ -50,8 +52,13 @@ class Dashboard extends React.Component {
                             </View>
                             <PieChart />
                         </View>
+                        
                     </View>
+                    
                 </ScrollView>
+                <View>
+                            <Footer/>
+                        </View>
             </>
         );
     }

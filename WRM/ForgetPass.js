@@ -13,7 +13,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import Footer from './Footer';
 
-export default class Signup extends Component {
+export default class ForgetPass extends Component {
   onPress() {}
   render() {
     return (
@@ -37,18 +37,7 @@ export default class Signup extends Component {
               />
             </View>
             <View style={styles.signupForm}>
-              <View style={styles.sectionStyle}>
-                <Image
-                  source={require('./Images/User1.png')}
-                  style={styles.imageStyle}
-                />
-
-                <TextInput
-                  style={styles.textInput}
-                  placeholder="User Name"
-                  underlineColorAndroid="transparent"
-                />
-              </View>
+             
               <View style={styles.sectionStyle}>
                 <Image
                   source={require('./Images/Email.png')}
@@ -62,32 +51,8 @@ export default class Signup extends Component {
                   underlineColorAndroid="transparent"
                 />
               </View>
-              <View style={styles.sectionStyle}>
-                <Image
-                  source={require('./Images/Mobile.png')}
-                  style={styles.imageStyle}
-                />
-
-                <TextInput
-                keyboardType="numeric"
-                  style={styles.textInput}
-                  placeholder="Mobile Number"
-                  underlineColorAndroid="transparent"
-                />
-              </View>
-              <View style={styles.sectionStyle}>
-                <Image
-                  source={require('./Images/Userpwd.png')}
-                  style={styles.imageStyle}
-                />
-
-                <TextInput
-                secureTextEntry
-                  style={styles.textInput}
-                  placeholder="User Password"
-                  underlineColorAndroid="transparent"
-                />
-              </View>
+              
+              
               <View
                 style={{
                   flexDirection: 'row',
@@ -100,7 +65,7 @@ export default class Signup extends Component {
                   <TouchableWithoutFeedback
                     style={styles.button1}
                     onPress={this.onPress}>
-                    <Text style={styles.button}>Signup</Text>
+                    <Text style={styles.button}>SUBMIT</Text>
                   </TouchableWithoutFeedback>
                 </LinearGradient>
               </View>
@@ -121,6 +86,7 @@ export default class Signup extends Component {
               </View>
             </View>
           </View>
+         
         
 
           {/* <LinearGradient colors={['#7b4397', '#dc2430']} style={styles.footer}>
@@ -129,7 +95,8 @@ export default class Signup extends Component {
             </Text>
           </LinearGradient> */}
         </ImageBackground>
-        <View>
+      
+      <View>
            <Footer/>
        </View>
       </View>

@@ -10,10 +10,11 @@ import {
     TouchableWithoutFeedback
 } from 'react-native';
 
+import Footer from './Footer';
 export default class CardList extends Component {
   render() {
     return (
-        
+        <View style={styles.dashboardContainer}>
         <View
                style={{
                 flex:1,
@@ -30,6 +31,7 @@ export default class CardList extends Component {
                > 
       <Container>
       <View>
+        
 
 <Text style={{fontSize:20, textAlign:"center", color:'black',marginTop:10}}>
     CheckListData
@@ -235,8 +237,21 @@ export default class CardList extends Component {
          </Card>
         </Content>
         </ScrollView>
+        
       </Container>
+     
       </View>
+      <View>
+                            <Footer/>
+                        </View>
+      </View>
+     
     );
   }
 }
+
+const styles = StyleSheet.create({
+  dashboardContainer: {
+    flex: 1
+}
+})

@@ -15,6 +15,7 @@ import {
     DebugInstructions,
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Footer from './Footer';
 
 class DamInspection extends React.Component {
     render(){
@@ -66,6 +67,9 @@ class DamInspection extends React.Component {
                </TouchableWithoutFeedback>
                </View>
            </View>
+           <View>
+           <Footer/>
+       </View>
            </View>
         
         );

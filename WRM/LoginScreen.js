@@ -13,12 +13,12 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import Footer from './Footer';
 
-export default class Signup extends Component {
+export default class LoginScreen extends Component {
   onPress() {}
   render() {
     return (
       <View style={styles.container}>
-    
+     
         <ImageBackground
           style={styles.backgroundImage}
           source={require('./Images/2.jpg')}>
@@ -37,62 +37,13 @@ export default class Signup extends Component {
               />
             </View>
             <View style={styles.signupForm}>
-              <View style={styles.sectionStyle}>
-                <Image
-                  source={require('./Images/User1.png')}
-                  style={styles.imageStyle}
-                />
-
-                <TextInput
-                  style={styles.textInput}
-                  placeholder="User Name"
-                  underlineColorAndroid="transparent"
-                />
-              </View>
-              <View style={styles.sectionStyle}>
-                <Image
-                  source={require('./Images/Email.png')}
-                  style={styles.imageStyle}
-                />
-
-                <TextInput
-                keyboardType="email-address"
-                  style={styles.textInput}
-                  placeholder="Email"
-                  underlineColorAndroid="transparent"
-                />
-              </View>
-              <View style={styles.sectionStyle}>
-                <Image
-                  source={require('./Images/Mobile.png')}
-                  style={styles.imageStyle}
-                />
-
-                <TextInput
-                keyboardType="numeric"
-                  style={styles.textInput}
-                  placeholder="Mobile Number"
-                  underlineColorAndroid="transparent"
-                />
-              </View>
-              <View style={styles.sectionStyle}>
-                <Image
-                  source={require('./Images/Userpwd.png')}
-                  style={styles.imageStyle}
-                />
-
-                <TextInput
-                secureTextEntry
-                  style={styles.textInput}
-                  placeholder="User Password"
-                  underlineColorAndroid="transparent"
-                />
-              </View>
+             
+             
               <View
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'center',
-                  marginTop: 15,
+                  marginTop: 25,
                 }}>
                 <LinearGradient
                   colors={['#7b4397', '#dc2430']}
@@ -100,10 +51,29 @@ export default class Signup extends Component {
                   <TouchableWithoutFeedback
                     style={styles.button1}
                     onPress={this.onPress}>
-                    <Text style={styles.button}>Signup</Text>
+                    <Text style={styles.button}>LOGIN WRD USER</Text>
                   </TouchableWithoutFeedback>
                 </LinearGradient>
+                
               </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  marginTop: 50,
+                }}>
+                <LinearGradient
+                  colors={['#7b4397', '#dc2430']}
+                  style={styles.buttonWrapper}>
+                  <TouchableWithoutFeedback
+                    style={styles.button1}
+                    onPress={this.onPress}>
+                    <Text style={styles.button}>LOGIN CITIZEN</Text>
+                  </TouchableWithoutFeedback>
+                </LinearGradient>
+                
+              </View>
+              
               <View
                 style={{
                   flexDirection: 'row',
@@ -114,13 +84,48 @@ export default class Signup extends Component {
                   style={{
                     color: 'yellow',
                     textDecorationLine: 'underline',
-                    fontWeight: '600',
+                    fontWeight: '900',
+               
                   }}>
-                  Cancel
+                  New Citizen User?
                 </Text>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  marginTop: 90,
+                }}>
+                <Text
+                  style={{
+                    color: 'white',
+                   fontSize:18
+                    // fontWeight: '900',
+               
+                  }}>
+                  Language Change
+                </Text>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  marginTop: 50,
+                }}>
+                <LinearGradient
+                  colors={['#7b4397', '#dc2430']}
+                  style={styles.buttonWrapper1}>
+                  <TouchableWithoutFeedback
+                    style={styles.button1}
+                    onPress={this.onPress}>
+                    <Text style={styles.button}>MARATHI</Text>
+                  </TouchableWithoutFeedback>
+                </LinearGradient>
+                
               </View>
             </View>
           </View>
+          
         
 
           {/* <LinearGradient colors={['#7b4397', '#dc2430']} style={styles.footer}>
@@ -129,9 +134,9 @@ export default class Signup extends Component {
             </Text>
           </LinearGradient> */}
         </ImageBackground>
-        <View>
-           <Footer/>
-       </View>
+      <View>
+        <Footer/>
+      </View>
       </View>
     );
   }
@@ -203,13 +208,20 @@ const styles = {
   buttonWrapper: {
     alignItems: 'center',
     // flexDirection: 'row',
-    width: '65%',
+    width: '75%',
     borderRadius: 30,
   },
   button: {
     color: '#fff',
     fontWeight: '600',
     fontSize: 18,
-    padding: 12,
+    padding: 14,
   },
+  buttonWrapper1: {
+    alignItems: 'center',
+    // flexDirection: 'row',
+    width: '50%',
+    borderRadius: 30,
+  },
+ 
 };

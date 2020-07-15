@@ -15,6 +15,7 @@ import {
     DebugInstructions,
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import Footer from './Footer';
 
 class DamHealth extends React.Component {
     render(){
@@ -56,7 +57,11 @@ class DamHealth extends React.Component {
                </View>
              
            </View>
+           <View>
+           <Footer/>
+       </View>
           </View>
+         
         
         );
     }

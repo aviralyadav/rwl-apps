@@ -17,10 +17,15 @@ import {
   StatusBar,
   TouchableWithoutFeedback,
 } from 'react-native';
+import {
+   Colors,
+} from 'react-native/Libraries/NewAppScreen';
+import Footer from './Footer';
 
 export default class LiveStorageDamTank extends Component {
   render() {
     return (
+      <View style={styles.damContainer}>
       <View
         style={{
           flex: 1,
@@ -32,6 +37,7 @@ export default class LiveStorageDamTank extends Component {
           padding: 10,
           margin: 2,
         }}>
+          
         <Container>
           <View>
             <Text
@@ -261,7 +267,23 @@ export default class LiveStorageDamTank extends Component {
             </Content>
           </ScrollView>
         </Container>
+        
+      </View>
+      <View>
+           <Footer/>
+       </View>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  scrollView: {
+      backgroundColor: Colors.lighter,
+    },
+    damContainer: {
+      flex: 1
+  },
+
+});
+  
