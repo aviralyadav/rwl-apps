@@ -31,6 +31,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
+
+import Profile from './Profile';
 import DrawerContent from './DrawerContent';
 import Dashboard from './Dashboard';
 import Splash from './Splash';
@@ -38,12 +40,13 @@ import DamInspection from './DamInspection';
 import DamHealthSafety from './DamHealthSafety';
 import DamHealth from './DamHealth';
 import CardList from './CardList';
-import  UserProfile from './UserProfile';
+
 import Signup from './Signup';
 import Signin from './Signin';
 import ForgetPass from './ForgetPass';
 import LoginScreen from './LoginScreen';
 import LiveStorageDamTank from './LiveStorageDamTank';
+
 
 
 const Stack = createStackNavigator();
@@ -114,10 +117,10 @@ const App = () => {
         {/* </ScrollView>
       </SafeAreaView> */}
       <NavigationContainer>
-      <Drawer.Navigator DrawerContent={props => <DrawerContent {...props} />}>
+      <Drawer.Navigator >
         
-        {/* <Drawer.Screen name="Signin" component={SigninStackScreen} /> */}
-        <Drawer.Screen name="LoginScreen" component={LoginScreen} />
+        <Drawer.Screen name="Signin" component={SigninStackScreen} />
+        <Drawer.Screen name="Dashboard" component={ DashboardStackScreen} />
       </Drawer.Navigator>
       
     </NavigationContainer>
