@@ -24,9 +24,9 @@ class DamInspection extends React.Component {
            <View style={styles.damContainer}>
                <View>
 
-               <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:30}}>
+               {/* <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:30}}>
                    Dam Safety
-               </Text>
+               </Text> */}
                </View>
                <View
                style={{

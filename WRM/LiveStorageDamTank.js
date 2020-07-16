@@ -40,7 +40,7 @@ export default class LiveStorageDamTank extends Component {
           
         <Container>
           <View>
-            <Text
+            {/* <Text
               style={{
                 fontSize: 20,
                 textAlign: 'center',
@@ -48,7 +48,7 @@ export default class LiveStorageDamTank extends Component {
                 marginTop: 10,
               }}>
               Live Storage Dam Tank
-            </Text>
+            </Text> */}
           </View>
           <ScrollView>
             <Content>
