@@ -33,9 +33,9 @@ export default class CardList extends Component {
       <View>
         
 
-<Text style={{fontSize:20, textAlign:"center", color:'black',marginTop:10}}>
+{/* <Text style={{fontSize:20, textAlign:"center", color:'black',marginTop:10}}>
     CheckListData
-</Text>
+</Text> */}
 </View>
         <ScrollView>
         <Content>

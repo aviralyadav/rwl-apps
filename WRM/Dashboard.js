@@ -36,7 +36,6 @@ class Dashboard extends React.Component {
             <>
                 <ScrollView>
                     <View style={styles.dashboardContainer}>
-                        <Text>Dashboard HEADER</Text>
                         <View style={styles.mapSection}>
                             <Map />
                         </View>

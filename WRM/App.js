@@ -1,127 +1,46 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
  * @format
  * @flow strict-local
  */
 import 'react-native-gesture-handler';
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
   
 } from 'react-native';
 
 import {
-  Header,
-  LearnMoreLinks,
   Colors,
-  DebugInstructions,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { createStackNavigator } from '@react-navigation/stack';
-
-import Icon from 'react-native-vector-icons/Ionicons';
 
 
-import Profile from './Profile';
-import DrawerContent from './DrawerContent';
-import Dashboard from './Dashboard';
-import Splash from './Splash';
-import DamInspection from './DamInspection';
-import DamHealthSafety from './DamHealthSafety';
-import DamHealth from './DamHealth';
-import CardList from './CardList';
-
-import Signup from './Signup';
-import Signin from './Signin';
-import ForgetPass from './ForgetPass';
-import LoginScreen from './LoginScreen';
-import LiveStorageDamTank from './LiveStorageDamTank';
-
-
-
-const Stack = createStackNavigator();
-const SigninStack = createStackNavigator();
-const DashboardStack = createStackNavigator();
+// import CustomSidebarMenu from './CustomSidebarMenu';
+import { DrawerContent } from './DrawerContent';
+import {CardListScreenStack, DashboardScreenStack, SigninStackScreen, SignupStackScreen, DamHealthSafetyScreen, DamInspectionScreen, DamHealthStackScreen, LiveStorageDamTankStackScreen} from './MainScreen'
 const Drawer = createDrawerNavigator();
 
-const SigninStackScreen =( {navigation}) =>(
 
-<SigninStack.Navigator screenOptions={{
-        headerStyle:{
-          backgroundColor: '#dc2430'
-        },
-        headerTintColor:'#fff',
-        headerTitleStyle:{
-          marginLeft:150,
-          fontWeight:'bold'
-        }
-        }}>
-        <Stack.Screen  name="Signin" component={Signin}/>
-       
-      </SigninStack.Navigator>
 
-);
-
-const DashboardStackScreen =( {navigation}) =>(
-  <DashboardStack.Navigator screenOptions={{
-          headerStyle:{
-            backgroundColor: '#dc2430'
-          },
-          headerTintColor:'#fff',
-          headerTitleStyle:{
-            marginLeft:80,
-            fontWeight:'bold'
-          }
-          }}>
-         
-          <Stack.Screen  name="Dashboard" component={Dashboard} options={{
-            headerLeft:() =>(
-              <Icon.Button name='ios-menu' size={25}
-              backgroundColor="#dc2430" onPress={()=>{navigation.openDrawer()}}></Icon.Button>
-            )
-          }}/>
-        </DashboardStack.Navigator>
-  
-  );
 
 
 const App = () => {
   return (
     <>
-      {/* <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}> */}
-           {/* <Dashboard />  */}
-          {/* <Splash/> */}
-          {/* <DamInspection/>  */}
-          {/* <DamHealthSafety/> */}
-           {/* <DamHealth/>  */}
-           {/* <CardList/>  */}
-           {/* <UserProfile/> */}
-           {/* <Signup/> */}
-           {/* <Signin/> */}
-           {/* <ForgetPass /> */}
-           {/* <LoginScreen/> */}
-        {/* </ScrollView>
-      </SafeAreaView> */}
       <NavigationContainer>
-        
-      <Drawer.Navigator >
-        
-        {/* <Drawer.Screen name="Signin" component={SigninStackScreen} /> */}
-        <Drawer.Screen name=" Dashboard" component={  DashboardStackScreen} />
+      
+      <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
+      <Drawer.Screen name="Dashboard" component={DashboardScreenStack} />
+      <Drawer.Screen name="CardList" component={CardListScreenStack} />
+      <Drawer.Screen name="Signin" component={SigninStackScreen} />
+      <Drawer.Screen name="DamHealth" component={DamHealthStackScreen} />
+      <Drawer.Screen name="DamInspection" component={DamInspectionScreen} />
+      <Drawer.Screen name="DamHealthSafety" component={DamHealthSafetyScreen} />
+      <Drawer.Screen name="LiveStorageDamTank" component={LiveStorageDamTankStackScreen} />
+      <Drawer.Screen name="Signup" component={SignupStackScreen} />
+
       </Drawer.Navigator>
       
     </NavigationContainer>
