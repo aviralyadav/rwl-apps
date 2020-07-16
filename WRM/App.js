@@ -117,10 +117,11 @@ const App = () => {
         {/* </ScrollView>
       </SafeAreaView> */}
       <NavigationContainer>
+        
       <Drawer.Navigator >
         
-        <Drawer.Screen name="Signin" component={SigninStackScreen} />
-        <Drawer.Screen name="Dashboard" component={ DashboardStackScreen} />
+        {/* <Drawer.Screen name="Signin" component={SigninStackScreen} /> */}
+        <Drawer.Screen name=" Dashboard" component={  DashboardStackScreen} />
       </Drawer.Navigator>
       
     </NavigationContainer>
