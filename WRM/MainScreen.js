@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Text,View,Image } from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -19,6 +19,8 @@ import Signup from './Signup';
 import ForgetPass from './ForgetPass';
 import LoginScreen from './LoginScreen';
 import LiveStorageDamTank from './LiveStorageDamTank';
+import EnterEvaporation from './EnterEvaporation';
+
 
 const DashboardStack = createStackNavigator();
 const CardListStack = createStackNavigator();
@@ -28,10 +30,23 @@ const DamHealthSafetyStack = createStackNavigator();
 const DamHealthStack = createStackNavigator();
 const LiveStorageDamTankStack = createStackNavigator();
 const SignupStack = createStackNavigator();
+const ProfileStack = createStackNavigator();
+const EnterEvaporationStack = createStackNavigator();
 
 // export default MainScreen;
+function LogoTitle() {
+  return (
+    <Image
+      style={{ width:"105%", height: 55}}
+      source={require("./Images/pravahlogoios.png")}
+    />
+  );
+}
+
 
 export const DashboardScreenStack = ({navigation}) => (
+
+  
   <DashboardStack.Navigator
     screenOptions={{
       headerStyle: {
@@ -46,7 +61,9 @@ export const DashboardScreenStack = ({navigation}) => (
       name="Dashboard"
       component={DashboardScreen}
       options={{
-        title: 'Water Resource Management',
+        headerTitle: props => <LogoTitle {...props} />
+        ,
+        
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -74,7 +91,8 @@ export const CardListScreenStack = ({navigation}) => (
       name="CardList"
       component={CardList}
       options={{
-        title: 'Dam Inspection Check List',
+        headerTitle: props => <LogoTitle {...props} />
+        ,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -230,4 +248,37 @@ export const SignupStackScreen = ({navigation}) => (
     }}>
     <SignupStack.Screen name="Signup" component={Signup} />
   </SignupStack.Navigator>
+);
+
+export const ProfileStackScreen = ({navigation}) => (
+  <ProfileStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        marginLeft: 150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <ProfileStack.Screen name="Profile" component={Profile} />
+  </ProfileStack.Navigator>
+);
+
+
+export const EnterEvaporationStackScreen = ({navigation}) => (
+  <EnterEvaporationStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        marginLeft: 150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <ProfileStack.Screen name="EnterEvaporation" component={EnterEvaporation} />
+  </EnterEvaporationStack.Navigator>
 );

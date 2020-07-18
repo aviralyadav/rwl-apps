@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet,Image } from 'react-native';
 import {
     useTheme,
     Avatar,
@@ -31,16 +31,15 @@ export function DrawerContent(props) {
             <DrawerContentScrollView {...props}>
                 <View style={styles.drawerContent}>
                     <View style={styles.userInfoSection}>
-                        <View style={{flexDirection:'row',marginTop: 15}}>
-                            <Avatar.Image 
-                                source={{
-                                    uri: 'https://api.adorable.io/avatars/50/abott@adorable.png'
-                                }}
-                                size={50}
-                            />
-                            <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>User</Title>
-                                <Caption style={styles.caption}>Title</Caption>
+                        <View style={{flexDirection:'row',marginTop: 5}}>
+                        <Image
+                source={require('./Images/pravahlogoios.png')}
+                style={styles.logo}
+                resizeMode="stretch"
+              />
+                            <View >
+                                
+                                <Caption></Caption>
                             </View>
                         </View>
 
@@ -145,7 +144,30 @@ export function DrawerContent(props) {
                             label="Sign In"
                             onPress={() => {props.navigation.navigate('Signin')}}
                         />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Profile"
+                            onPress={() => {props.navigation.navigate('Profile')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="EnterEvaporation"
+                            onPress={() => {props.navigation.navigate('EnterEvaporation')}}
+                        />
                     </Drawer.Section>
+                    
                 </View>
             </DrawerContentScrollView>
         </View>
@@ -157,17 +179,17 @@ const styles = StyleSheet.create({
       flex: 1,
     },
     userInfoSection: {
-      paddingLeft: 20,
+      paddingLeft: 5,
     },
-    title: {
-      fontSize: 16,
-      marginTop: 3,
-      fontWeight: 'bold',
-    },
-    caption: {
-      fontSize: 14,
-      lineHeight: 14,
-    },
+    // title: {
+    //   fontSize: 16,
+    //   marginTop: 3,
+    //   fontWeight: 'bold',
+    // },
+    // caption: {
+    //   fontSize: 14,
+    //   lineHeight: 14,
+    // },
     row: {
       marginTop: 20,
       flexDirection: 'row',
@@ -183,7 +205,7 @@ const styles = StyleSheet.create({
       marginRight: 3,
     },
     drawerSection: {
-      marginTop: 15,
+      marginTop: 25,
     },
     bottomDrawerSection: {
         marginBottom: 15,
@@ -196,4 +218,5 @@ const styles = StyleSheet.create({
       paddingVertical: 12,
       paddingHorizontal: 16,
     },
+    logo: {height:80, width:"90%"},
   });

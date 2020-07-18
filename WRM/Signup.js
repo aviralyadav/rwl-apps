@@ -162,7 +162,7 @@ const styles = {
     alignItems: 'center',
     marginLeft: '2%',
     marginRight: '2%',
-    paddingTop: 50,
+    paddingTop: 40,
   },
   logo: {height: 65, width: 70},
   logoText: {height: 70, width: '75%'},
