@@ -37,7 +37,7 @@ const EnterEvaporationStack = createStackNavigator();
 function LogoTitle() {
   return (
     <Image
-      style={{ width:"105%", height: 55}}
+      style={{ width:"105%", height: 55 }}
       source={require("./Images/pravahlogoios.png")}
     />
   );
@@ -52,10 +52,7 @@ export const DashboardScreenStack = ({navigation}) => (
       headerStyle: {
         backgroundColor: '#dc2430',
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+     
     }}>
     <DashboardStack.Screen
       name="Dashboard"
@@ -69,6 +66,7 @@ export const DashboardScreenStack = ({navigation}) => (
             name="ios-menu"
             size={25}
             backgroundColor="#dc2430"
+          
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
       }}
@@ -82,10 +80,7 @@ export const CardListScreenStack = ({navigation}) => (
       headerStyle: {
         backgroundColor: '#dc2430',
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+     
     }}>
     <CardListStack.Screen
       name="CardList"
@@ -127,17 +122,14 @@ export const DamInspectionScreen = ({navigation}) => (
       headerStyle: {
         backgroundColor: '#dc2430',
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        //   marginLeft:150,
-        fontWeight: 'bold',
-      },
+     
     }}>
     <DamInspectionStack.Screen
       name="DamInspection"
       component={DamInspection}
       options={{
-        title: 'Dam Inspection',
+        headerTitle: props => <LogoTitle {...props} />
+        ,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -156,16 +148,14 @@ export const DamHealthSafetyScreen = ({navigation}) => (
       headerStyle: {
         backgroundColor: '#dc2430',
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+     
     }}>
     <DamHealthSafetyStack.Screen
       name="DamHealthSafety"
       component={DamHealthSafety}
       options={{
-        title: 'Dam Health Safety',
+        headerTitle: props => <LogoTitle {...props} />
+        ,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -184,16 +174,14 @@ export const DamHealthStackScreen = ({navigation}) => (
       headerStyle: {
         backgroundColor: '#dc2430',
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+     
     }}>
     <DamHealthStack.Screen
       name="DamHealth"
       component={DamHealth}
       options={{
-        title: 'Dam Health',
+        headerTitle: props => <LogoTitle {...props} />
+        ,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -212,16 +200,15 @@ export const LiveStorageDamTankStackScreen = ({navigation}) => (
       headerStyle: {
         backgroundColor: '#dc2430',
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
+     
+     
     }}>
     <LiveStorageDamTankStack.Screen
       name="LiveStorageDamTank"
       component={LiveStorageDamTank}
       options={{
-        title: 'Live Storage Dam Tank',
+        headerTitle: props => <LogoTitle {...props} />
+        ,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -257,12 +244,23 @@ export const ProfileStackScreen = ({navigation}) => (
         backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
-      headerTitleStyle: {
-        marginLeft: 150,
-        fontWeight: 'bold',
-      },
+     
     }}>
-    <ProfileStack.Screen name="Profile" component={Profile} />
+    <ProfileStack.Screen name="Profile"
+     component={Profile}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      headerLeft: () => (
+        <Icon.Button
+          name="ios-menu"
+          size={25}
+          backgroundColor="#dc2430"
+          onPress={() => navigation.openDrawer()}></Icon.Button>
+      ),
+    }}
+  />
+     
   </ProfileStack.Navigator>
 );
 
@@ -274,11 +272,22 @@ export const EnterEvaporationStackScreen = ({navigation}) => (
         backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
-      headerTitleStyle: {
-        marginLeft: 150,
-        fontWeight: 'bold',
-      },
+    
     }}>
-    <ProfileStack.Screen name="EnterEvaporation" component={EnterEvaporation} />
+    <ProfileStack.Screen
+     name="EnterEvaporation"
+     component={EnterEvaporation}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      headerLeft: () => (
+        <Icon.Button
+          name="ios-menu"
+          size={25}
+          backgroundColor="#dc2430"
+          onPress={() => navigation.openDrawer()}></Icon.Button>
+      ),
+    }}
+  />  
   </EnterEvaporationStack.Navigator>
 );

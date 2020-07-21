@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
     SafeAreaView,
     StyleSheet,
@@ -18,6 +19,11 @@ import {
 import Footer from './Footer';
 
 class DamHealthSafety extends React.Component {
+  
+   
+
+    static navigationOptions = ({ navigation }) => {};
+    
     render(){
         return(
             
@@ -44,7 +50,7 @@ class DamHealthSafety extends React.Component {
                >
                <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#47F80A',padding:20,borderRadius: 10, borderWidth:2,
     borderColor: '#999999'}}>
-               <TouchableWithoutFeedback>
+               <TouchableWithoutFeedback  onPress={() => {props.navigation.navigate('DamHealth')}}>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Dam Health Inspection</Text>
                </TouchableWithoutFeedback>
                </View>
