@@ -97,6 +97,17 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
+                            label="Dam Inspection CheckList"
+                            onPress={() => {props.navigation.navigate('DamInspectionCheckList')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="bookmark-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
                             label="Dam Health"
                             onPress={() => {props.navigation.navigate('DamHealth')}}
                         />

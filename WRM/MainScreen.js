@@ -12,6 +12,7 @@ import Profile from './Profile';
 // import DrawerContent from './DrawerContent';
 import Splash from './Splash';
 import DamInspection from './DamInspection';
+import DamInspectionCheckList from './DamInspectionCheckList';
 import DamHealthSafety from './DamHealthSafety';
 import DamHealth from './DamHealth';
 
@@ -32,6 +33,7 @@ const LiveStorageDamTankStack = createStackNavigator();
 const SignupStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
 const EnterEvaporationStack = createStackNavigator();
+const DamInspectionCheckListStack = createStackNavigator();
 
 // export default MainScreen;
 function LogoTitle() {
@@ -140,6 +142,35 @@ export const DamInspectionScreen = ({navigation}) => (
       }}
     />
   </DamInspectionStack.Navigator>
+);
+
+export const DamInspectionCheckListScreen = ({navigation}) => (
+  <DamInspectionCheckListStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <DamInspectionCheckListStack.Screen
+      name="DamInspectionCheckList"
+      component={DamInspectionCheckList}
+      options={{
+        title: 'Dam Inspection CheckList',
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#dc2430"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+      }}
+    />
+  </DamInspectionCheckListStack.Navigator>
 );
 
 export const DamHealthSafetyScreen = ({navigation}) => (
