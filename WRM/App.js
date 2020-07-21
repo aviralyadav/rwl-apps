@@ -4,58 +4,69 @@
  */
 import 'react-native-gesture-handler';
 import React from 'react';
-import {
-  StyleSheet,
-  
-} from 'react-native';
+import {StyleSheet} from 'react-native';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-
+import {NavigationContainer} from '@react-navigation/native';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
 // import CustomSidebarMenu from './CustomSidebarMenu';
-import { DrawerContent } from './DrawerContent';
-import {CardListScreenStack,
-   DashboardScreenStack,
-    SigninStackScreen,
-     SignupStackScreen,
-      DamHealthSafetyScreen,
-       DamInspectionScreen, 
-       DamHealthStackScreen,
-        LiveStorageDamTankStackScreen,
-        ProfileStackScreen,EnterEvaporationStackScreen} from './MainScreen'
+import {DrawerContent} from './DrawerContent';
+import {
+  CardListScreenStack,
+  DashboardScreenStack,
+  SigninStackScreen,
+  SignupStackScreen,
+  DamHealthSafetyScreen,
+  DamInspectionScreen,
+  DamHealthStackScreen,
+  LiveStorageDamTankStackScreen,
+  DamInspectionCheckListScreen,
+  ProfileStackScreen,
+  EnterEvaporationStackScreen,
+} from './MainScreen';
 const Drawer = createDrawerNavigator();
 
-
-
-
-
-const App = () => {
+class App extends React.Component {
+  render (){
   return (
     <>
       <NavigationContainer>
-      
-      <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
-      <Drawer.Screen name="DashboardScreenStack" component={DashboardScreenStack} />
-       <Drawer.Screen name="CardList" component={CardListScreenStack} />
-      <Drawer.Screen name="Signin" component={SigninStackScreen} />
-      <Drawer.Screen name="DamHealth" component={DamHealthStackScreen} />
-      <Drawer.Screen name="DamInspection" component={DamInspectionScreen} />
-      <Drawer.Screen name="DamHealthSafety" component={DamHealthSafetyScreen} />
-      <Drawer.Screen name="LiveStorageDamTank" component={LiveStorageDamTankStackScreen} />
-      <Drawer.Screen name="Signup" component={SignupStackScreen} />
-      <Drawer.Screen name="Profile" component={ProfileStackScreen} /> 
-      <Drawer.Screen name="EnterEvaporation" component={EnterEvaporationStackScreen} /> 
-      </Drawer.Navigator>
-      
-    </NavigationContainer>
+        <Drawer.Navigator
+          drawerContent={(props) => <DrawerContent {...props} />}>
+          <Drawer.Screen
+            name="DashboardScreenStack"
+            component={DashboardScreenStack}
+          />
+          <Drawer.Screen name="CardList" component={CardListScreenStack} />
+          <Drawer.Screen name="Signin" component={SigninStackScreen} />
+          <Drawer.Screen name="DamHealth" component={DamHealthStackScreen} />
+          <Drawer.Screen name="DamInspection" component={DamInspectionScreen} />
+          <Drawer.Screen
+            name="DamInspectionCheckList"
+            component={DamInspectionCheckListScreen}
+          />
+          <Drawer.Screen
+            name="DamHealthSafety"
+            component={DamHealthSafetyScreen}
+          />
+          <Drawer.Screen
+            name="LiveStorageDamTank"
+            component={LiveStorageDamTankStackScreen}
+          />
+          <Drawer.Screen name="Signup" component={SignupStackScreen} />
+          <Drawer.Screen name="Profile" component={ProfileStackScreen} />
+          <Drawer.Screen
+            name="EnterEvaporation"
+            component={EnterEvaporationStackScreen}
+          />
+        </Drawer.Navigator>
+      </NavigationContainer>
     </>
   );
-};
+}
+}
 
 const styles = StyleSheet.create({
   scrollView: {
