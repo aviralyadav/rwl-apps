@@ -221,6 +221,17 @@ export function DrawerContent(props) {
                             label="EnterOTP"
                             onPress={() => {props.navigation.navigate('EnterOTP')}}
                         />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="DamInspectionDetails"
+                            onPress={() => {props.navigation.navigate('DamInspectionDetails')}}
+                        />
                     </Drawer.Section>
                     
                 </View>

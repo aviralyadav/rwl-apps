@@ -23,6 +23,7 @@ import LiveStorageDamTank from './LiveStorageDamTank';
 import GISView from './GISView';
 import DataEnteryOption from './DataEnteryOption';
 import EnterOTP from "./EnterOTP";
+import DamInspectionDetails from "./DamInspectionDetails";
 
 
 const DashboardStack = createStackNavigator();
@@ -40,6 +41,7 @@ const LoginScreenStack = createStackNavigator();
 const ForgetPassStack = createStackNavigator();
 const DataEnteryOptionStack = createStackNavigator();
 const EnterOTPStack = createStackNavigator();
+const DamInspectionDetailsStack = createStackNavigator();
 
 
 // export default MainScreen;
@@ -433,4 +435,31 @@ export const EnterOTPStackScreen = ({navigation}) => (
   />
      
   </EnterOTPStack.Navigator>
+);
+
+export const DamInspectionDetailsStackScreen = ({navigation}) => (
+  <DamInspectionDetailsStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+     
+    }}>
+    <DamInspectionDetailsStack.Screen name="DamInspectionDetails"
+     component={DamInspectionDetails}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      headerLeft: () => (
+        <Icon.Button
+          name="ios-menu"
+          size={25}
+          backgroundColor="#dc2430"
+          onPress={() => navigation.openDrawer()}></Icon.Button>
+      ),
+    }}
+  />
+     
+  </DamInspectionDetailsStack.Navigator>
 );

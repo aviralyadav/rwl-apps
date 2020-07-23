@@ -28,7 +28,8 @@ import {
   ForgetPassStackScreen,
   LoginScreenStackScreen,
   DataEnteryOptionStackScreen,
-  EnterOTPStackScreen
+  EnterOTPStackScreen,
+  DamInspectionDetailsStackScreen
 } from './MainScreen';
 const Drawer = createDrawerNavigator();
 
@@ -78,6 +79,10 @@ class App extends React.Component {
           <Drawer.Screen
             name="EnterOTP"
             component={EnterOTPStackScreen}
+          />
+           <Drawer.Screen
+            name="DamInspectionDetails"
+            component={DamInspectionDetailsStackScreen}
           />
         </Drawer.Navigator>
       </NavigationContainer>
