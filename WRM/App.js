@@ -25,6 +25,7 @@ import {
   DamInspectionCheckListScreen,
   ProfileStackScreen,
   EnterEvaporationStackScreen,
+  GateInspectionDetailFormScreen
 } from './MainScreen';
 const Drawer = createDrawerNavigator();
 
@@ -46,6 +47,10 @@ class App extends React.Component {
           <Drawer.Screen
             name="DamInspectionCheckList"
             component={DamInspectionCheckListScreen}
+          />
+          <Drawer.Screen
+            name="GateInspectionDetailForm"
+            component={GateInspectionDetailFormScreen}
           />
           <Drawer.Screen
             name="DamHealthSafety"

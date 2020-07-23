@@ -13,6 +13,7 @@ import Profile from './Profile';
 import Splash from './Splash';
 import DamInspection from './DamInspection';
 import DamInspectionCheckList from './DamInspectionCheckList';
+import GateInspectionDetailForm from './GateInspectionDetailForm';
 import DamHealthSafety from './DamHealthSafety';
 import DamHealth from './DamHealth';
 
@@ -34,6 +35,7 @@ const SignupStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
 const EnterEvaporationStack = createStackNavigator();
 const DamInspectionCheckListStack = createStackNavigator();
+const GateInspectionDetailFormStack = createStackNavigator();
 
 // export default MainScreen;
 function LogoTitle() {
@@ -179,6 +181,35 @@ export const DamInspectionCheckListScreen = ({navigation}) => (
       }}
     />
   </DamInspectionCheckListStack.Navigator>
+);
+
+export const GateInspectionDetailFormScreen = ({navigation}) => (
+  <GateInspectionDetailFormStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <GateInspectionDetailFormStack.Screen
+      name="GateInspectionDetailForm"
+      component={GateInspectionDetailForm}
+      options={{
+        title: 'Gate Inspection Detail',
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#dc2430"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+      }}
+    />
+  </GateInspectionDetailFormStack.Navigator>
 );
 
 export const DamHealthSafetyScreen = ({navigation}) => (
