@@ -22,42 +22,42 @@ export default class DamInspectionCheckList extends Component {
             descriptions: 'lorem ipsum description data',
             location: 'Pune 121 maharastra 80219',
             image:
-              require('./Images/User1.png'),
+              require('./Images/Pic.png'),
             remark: 'Product is very good at all',
           },
           {
             descriptions: 'lorem ipsum description data',
             location: 'Pune 121 maharastra 80219',
             image:
-            require('./Images/User1.png'),
+            require('./Images/Pic.png'),
             remark: 'Product is very good at all',
           },
           {
             descriptions: 'lorem ipsum description data',
             location: 'Pune 121 maharastra 80219',
             image:
-            require('./Images/User1.png'),
+            require('./Images/Pic.png'),
             remark: 'Product is very good at all',
           },
           {
             descriptions: 'lorem ipsum description data',
             location: 'Pune 121 maharastra 80219',
             image:
-              require('./Images/User1.png'),
+              require('./Images/Pic.png'),
             remark: 'Product is very good at all',
           },
           {
             descriptions: 'lorem ipsum description data',
             location: 'Pune 121 maharastra 80219',
             image:
-              require('./Images/User1.png'),
+              require('./Images/Pic.png'),
             remark: 'Product is very good at all',
           },
           {
             descriptions: 'lorem ipsum description data',
             location: 'Pune 121 maharastra 80219',
             image:
-              require('./Images/User1.png'),
+              require('./Images/Pic.png'),
             remark: 'Product is very good at all',
           },
         ],
@@ -115,11 +115,11 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     height: 510,
     padding: 10,
-    margin: 2,
+    margin: 1,
   },
   header: {
     flexDirection: 'row',
-    width: 385,
+    width: 425,
     justifyContent: 'space-between',
     backgroundColor: 'yellow',
     height: 40,

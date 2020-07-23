@@ -25,7 +25,12 @@ import {
   DamInspectionCheckListScreen,
   ProfileStackScreen,
   EnterEvaporationStackScreen,
-  GateInspectionDetailFormScreen
+  GateInspectionDetailFormScreen,
+  GISViewStackScreen,
+  ForgetPassStackScreen,
+  LoginScreenStackScreen,
+  DataEnteryOptionStackScreen,
+  EnterOTPStackScreen
 } from './MainScreen';
 const Drawer = createDrawerNavigator();
 
@@ -62,9 +67,23 @@ class App extends React.Component {
           />
           <Drawer.Screen name="Signup" component={SignupStackScreen} />
           <Drawer.Screen name="Profile" component={ProfileStackScreen} />
+          <Drawer.Screen name="LoginScreen" component={LoginScreenStackScreen} />
           <Drawer.Screen
-            name="EnterEvaporation"
-            component={EnterEvaporationStackScreen}
+            name="GISView"
+            component={GISViewStackScreen}
+          />
+          <Drawer.Screen
+            name="ForgetPass"
+            component={ForgetPassStackScreen}
+          />
+           <Drawer.Screen
+            name="DataEnteryOption"
+            component={DataEnteryOptionStackScreen}
+          />
+          
+          <Drawer.Screen
+            name="EnterOTP"
+            component={EnterOTPStackScreen}
           />
         </Drawer.Navigator>
       </NavigationContainer>

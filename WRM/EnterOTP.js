@@ -13,12 +13,12 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import Footer from './Footer';
 
-export default class LoginScreen extends Component {
+export default class EnterOTP extends Component {
   onPress() {}
   render() {
     return (
       <View style={styles.container}>
-     
+    
         <ImageBackground
           style={styles.backgroundImage}
           source={require('./Images/2.jpg')}>
@@ -36,31 +36,44 @@ export default class LoginScreen extends Component {
                 resizeMode="contain"
               />
             </View>
+            
+           
+            
             <View style={styles.signupForm}>
-             
-             
-              <View
+            <View
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'center',
                   marginTop: 25,
                 }}>
-                <LinearGradient
-                  colors={['#7b4397', '#dc2430']}
-                  style={styles.buttonWrapper}>
-                  <TouchableWithoutFeedback
-                    style={styles.button1}
-                    onPress={this.onPress}>
-                    <Text style={styles.button}>LOGIN WRD USER</Text>
-                  </TouchableWithoutFeedback>
-                </LinearGradient>
-                
+                <Text
+                  style={{
+                    color: 'black',
+                    // textDecorationLine: 'underline',
+                    fontSize:25,
+                  }}>
+                  Enter OTP
+                </Text>
+
               </View>
+             
+              <View style={styles.sectionStyle}>
+               
+
+                <TextInput
+                keyboardType="numeric"
+                  style={styles.textInput}
+                  placeholder="Enter OTP"
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+              
+              
               <View
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'center',
-                  marginTop: 50,
+                  marginTop: 15,
                 }}>
                 <LinearGradient
                   colors={['#7b4397', '#dc2430']}
@@ -68,13 +81,21 @@ export default class LoginScreen extends Component {
                   <TouchableWithoutFeedback
                     style={styles.button1}
                     onPress={this.onPress}>
-                    <Text style={styles.button}>LOGIN CITIZEN</Text>
+                    <Text style={styles.button}>Confirm</Text>
                   </TouchableWithoutFeedback>
                 </LinearGradient>
-                
+                <LinearGradient
+                  colors={['#7b4397', '#dc2430']}
+                  style={styles.buttonWrapper}>
+                  <TouchableWithoutFeedback
+                    style={styles.button1}
+                    onPress={this.onPress}>
+                    <Text style={styles.button}>Cancel</Text>
+                  </TouchableWithoutFeedback>
+                </LinearGradient>
               </View>
               
-              <View
+              {/* <View
                 style={{
                   flexDirection: 'row',
                   justifyContent: 'center',
@@ -84,48 +105,14 @@ export default class LoginScreen extends Component {
                   style={{
                     color: 'yellow',
                     textDecorationLine: 'underline',
-                    fontWeight: '900',
-               
+                    fontWeight: '600',
                   }}>
-                  New Citizen User?
+                  Cancel
                 </Text>
-              </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  marginTop: 90,
-                }}>
-                <Text
-                  style={{
-                    color: 'white',
-                   fontSize:18
-                    // fontWeight: '900',
-               
-                  }}>
-                  Language Change
-                </Text>
-              </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                  marginTop: 50,
-                }}>
-                <LinearGradient
-                  colors={['#7b4397', '#dc2430']}
-                  style={styles.buttonWrapper1}>
-                  <TouchableWithoutFeedback
-                    style={styles.button1}
-                    onPress={this.onPress}>
-                    <Text style={styles.button}>MARATHI</Text>
-                  </TouchableWithoutFeedback>
-                </LinearGradient>
-                
-              </View>
+              </View> */}
             </View>
           </View>
-          
+         
         
 
           {/* <LinearGradient colors={['#7b4397', '#dc2430']} style={styles.footer}>
@@ -134,9 +121,10 @@ export default class LoginScreen extends Component {
             </Text>
           </LinearGradient> */}
         </ImageBackground>
+      
       <View>
-        <Footer/>
-      </View>
+           <Footer/>
+       </View>
       </View>
     );
   }
@@ -176,7 +164,7 @@ const styles = {
     padding: 9,
   },
   signupForm: {
-    paddingTop: 10,
+    paddingTop: 60,
   },
   footerText: {
     color: 'white',
@@ -208,20 +196,14 @@ const styles = {
   buttonWrapper: {
     alignItems: 'center',
     // flexDirection: 'row',
-    width: '75%',
+    width: '35%',
     borderRadius: 30,
+    margin:8
   },
   button: {
     color: '#fff',
     fontWeight: '600',
     fontSize: 18,
-    padding: 10,
+    padding: 12,
   },
-  buttonWrapper1: {
-    alignItems: 'center',
-    // flexDirection: 'row',
-    width: '50%',
-    borderRadius: 30,
-  },
- 
 };
