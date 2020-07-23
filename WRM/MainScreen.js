@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,View,Image } from 'react-native';
+import {Text,View,Image, Dimensions } from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -43,12 +43,12 @@ const ForgetPassStack = createStackNavigator();
 const DataEnteryOptionStack = createStackNavigator();
 const EnterOTPStack = createStackNavigator();
 
-
+const screen = Dimensions.get("window");
 // export default MainScreen;
 function LogoTitle() {
   return (
     <Image
-      style={{ width:"105%", height: 55 }}
+      style={{ width: '100%', height: 55, }}
       source={require("./Images/pravahlogoios.png")}
     />
   );
@@ -69,17 +69,19 @@ export const DashboardScreenStack = ({navigation}) => (
       name="Dashboard"
       component={DashboardScreen}
       options={{
-        headerTitle: props => <LogoTitle {...props} />
-        ,
-        
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
             size={25}
             backgroundColor="#dc2430"
-          
+          // style={{marginRight: 0}}
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
       }}
     />
   </DashboardStack.Navigator>
@@ -106,6 +108,10 @@ export const CardListScreenStack = ({navigation}) => (
             backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
       }}
     />
   </CardListStack.Navigator>
@@ -148,6 +154,10 @@ export const DamInspectionScreen = ({navigation}) => (
             backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
       }}
     />
   </DamInspectionStack.Navigator>
@@ -178,6 +188,10 @@ export const DamInspectionCheckListScreen = ({navigation}) => (
             backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
       }}
     />
   </DamInspectionCheckListStack.Navigator>
@@ -207,6 +221,10 @@ export const GateInspectionDetailFormScreen = ({navigation}) => (
             backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
       }}
     />
   </GateInspectionDetailFormStack.Navigator>
@@ -233,6 +251,10 @@ export const DamHealthSafetyScreen = ({navigation}) => (
             backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
       }}
     />
   </DamHealthSafetyStack.Navigator>
@@ -259,6 +281,10 @@ export const DamHealthStackScreen = ({navigation}) => (
             backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
       }}
     />
   </DamHealthStack.Navigator>
@@ -286,6 +312,10 @@ export const LiveStorageDamTankStackScreen = ({navigation}) => (
             backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
       }}
     />
   </LiveStorageDamTankStack.Navigator>
@@ -328,6 +358,10 @@ export const ProfileStackScreen = ({navigation}) => (
           backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:50
+      },
     }}
   />
      
@@ -356,6 +390,10 @@ export const GISViewStackScreen = ({navigation}) => (
           backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:50
+      },
     }}
   />
      
@@ -434,6 +472,10 @@ export const DataEnteryOptionStackScreen = ({navigation}) => (
           backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:50
+      },
     }}
   />  
   </DataEnteryOptionStack.Navigator>
@@ -460,6 +502,10 @@ export const EnterOTPStackScreen = ({navigation}) => (
           backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:50
+      },
     }}
   />
      

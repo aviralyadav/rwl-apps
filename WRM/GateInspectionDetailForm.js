@@ -18,7 +18,7 @@ export default class GateInspectionDetailForm extends Component {
   constructor() {
     super();
     this.state = {
-      language: '',
+      inspectionType: '',
       date: '2016-05-15',
     };
   }
@@ -27,7 +27,7 @@ export default class GateInspectionDetailForm extends Component {
     return (
       <View style={styles.damCheckListContainer}>
         <View style={styles.viewArea}>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
             <View>
               <View style={styles.header}>
                 <View style={styles.headerContent}>
@@ -38,9 +38,9 @@ export default class GateInspectionDetailForm extends Component {
                   <Text style={styles.headingText}>Inspection Type</Text>
                   <Picker
                     style={styles.pickerStyle}
-                    selectedValue={this.state.language}
-                    onValueChange={(itemValue) =>
-                      this.setState({language: itemValue})
+                    selectedValue={this.state.inspectionType}
+                    onValueChange={(itemValue, i) =>
+                      this.setState({inspectionType: itemValue, index: i})
                     }>
                     <Picker.Item label="Java" value="java" />
                     <Picker.Item label="JavaScript" value="js" />
@@ -81,11 +81,118 @@ export default class GateInspectionDetailForm extends Component {
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
-                    placeholder="Email"
+                    placeholder="Remark"
                     placeholderTextColor="#9a73ef"
                     autoCapitalize="none"
                     onChangeText={this.handleEmail}
                   />
+                </View>
+              </View>
+              <Text style={styles.headingText}>1. Condition of Hoist</Text>
+              <View>
+                <View style={{flexDirection: 'row', justifyContent: 'space-evenly', backgroundColor: 'yellow', alignItems: 'center', padding: 2}}>
+                  <Text style={styles.headingText1}>Point</Text>
+                  <Text style={styles.headingText1}>Remark</Text>
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.buttonView}>
+                <TouchableWithoutFeedback>
+            <Text style = {styles.buttonText}>
+               Save & Next
+            </Text>
+         </TouchableWithoutFeedback>
+         <TouchableWithoutFeedback>
+            <Text style = {styles.buttonText}>
+               Clear
+            </Text>
+         </TouchableWithoutFeedback>
                 </View>
               </View>
             </View>
@@ -103,6 +210,21 @@ const styles = StyleSheet.create({
   damCheckListContainer: {
     flex: 1,
   },
+  buttonView: {
+    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2
+  },
+  buttonText: {
+    marginTop: 5,
+    borderWidth: 1,
+    // padding: 15,
+    paddingVertical: 10,
+    paddingHorizontal: 25,
+    borderColor: 'black',
+    backgroundColor: 'red',
+    color: '#fff',
+    fontSize: 18
+  },
+  textInputView: {flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2},
   viewArea: {
     flex: 1,
     backgroundColor: 'white',
@@ -118,10 +240,13 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     // justifyContent: 'space-between',
     backgroundColor: 'lightblue',
-    height: Dimensions.get('window').height - 480,
+    height: Dimensions.get('window').height - 510,
     // padding: 4,
     paddingLeft: 10,
-    paddingRight: 40
+    paddingRight: 30,
+    paddingTop: 5,
+    paddingBottom: 5,
+    justifyContent: 'space-between'
     // alignItems: 'center',
   },
   headerContent: {
@@ -131,7 +256,11 @@ const styles = StyleSheet.create({
   headingText: {
     fontSize: 15,
     fontWeight: '700',
-    // width: '25%',
+    width: '45%',
+  },
+  headingText1: {
+    fontSize: 15,
+    fontWeight: '700',
   },
   contentText: {
     fontWeight: 'normal',
@@ -150,15 +279,16 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
   pickerStyle: {
-    // height: 150,
-    // width: '40%',
+    height: 50,
+    width: '45%',
     color: '#344953',
     justifyContent: 'center',
   },
   input: {
-    margin: 15,
-    height: 40,
+    // margin: 15,
+    height: 35,
     borderColor: '#7a42f4',
     borderWidth: 1,
+    width: '55%'
   },
 });
