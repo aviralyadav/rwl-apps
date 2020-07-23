@@ -24,6 +24,8 @@ import {
   LiveStorageDamTankStackScreen,
   DamInspectionCheckListScreen,
   ProfileStackScreen,
+  EnterEvaporationStackScreen,
+  GateInspectionDetailFormScreen,
   GISViewStackScreen,
   ForgetPassStackScreen,
   LoginScreenStackScreen,
@@ -51,6 +53,10 @@ class App extends React.Component {
           <Drawer.Screen
             name="DamInspectionCheckList"
             component={DamInspectionCheckListScreen}
+          />
+          <Drawer.Screen
+            name="GateInspectionDetailForm"
+            component={GateInspectionDetailFormScreen}
           />
           <Drawer.Screen
             name="DamHealthSafety"

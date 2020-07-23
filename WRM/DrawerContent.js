@@ -130,6 +130,17 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
+                            label="Gate Inspection Detail Form"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetailForm')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
                             label="Live Storage Dam Tank"
                             onPress={() => {props.navigation.navigate('LiveStorageDamTank')}}
                         />
