@@ -20,7 +20,9 @@ import Signup from './Signup';
 import ForgetPass from './ForgetPass';
 import LoginScreen from './LoginScreen';
 import LiveStorageDamTank from './LiveStorageDamTank';
-import EnterEvaporation from './EnterEvaporation';
+import GISView from './GISView';
+import DataEnteryOption from './DataEnteryOption';
+import EnterOTP from "./EnterOTP";
 
 
 const DashboardStack = createStackNavigator();
@@ -32,8 +34,13 @@ const DamHealthStack = createStackNavigator();
 const LiveStorageDamTankStack = createStackNavigator();
 const SignupStack = createStackNavigator();
 const ProfileStack = createStackNavigator();
-const EnterEvaporationStack = createStackNavigator();
+const GISViewStack = createStackNavigator();
 const DamInspectionCheckListStack = createStackNavigator();
+const LoginScreenStack = createStackNavigator();
+const ForgetPassStack = createStackNavigator();
+const DataEnteryOptionStack = createStackNavigator();
+const EnterOTPStack = createStackNavigator();
+
 
 // export default MainScreen;
 function LogoTitle() {
@@ -160,7 +167,8 @@ export const DamInspectionCheckListScreen = ({navigation}) => (
       name="DamInspectionCheckList"
       component={DamInspectionCheckList}
       options={{
-        title: 'Dam Inspection CheckList',
+        headerTitle: props => <LogoTitle {...props} />
+        ,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -296,8 +304,85 @@ export const ProfileStackScreen = ({navigation}) => (
 );
 
 
-export const EnterEvaporationStackScreen = ({navigation}) => (
-  <EnterEvaporationStack.Navigator
+export const GISViewStackScreen = ({navigation}) => (
+  <GISViewStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+     
+    }}>
+    <GISViewStack.Screen name="GISView"
+     component={GISView}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      headerLeft: () => (
+        <Icon.Button
+          name="ios-menu"
+          size={25}
+          backgroundColor="#dc2430"
+          onPress={() => navigation.openDrawer()}></Icon.Button>
+      ),
+    }}
+  />
+     
+  </GISViewStack.Navigator>
+);
+
+export const LoginScreenStackScreen = ({navigation}) => (
+  <LoginScreenStack.Navigator
+  screenOptions={{
+    headerStyle: {
+      backgroundColor: '#dc2430',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      marginLeft: 150,
+      fontWeight: 'bold',
+    },
+  }}>
+    <LoginScreenStack.Screen
+     name="LOGIN"
+     component={LoginScreen}
+    //  options={{
+    //   headerTitle: props => <LogoTitle {...props} />
+    //   ,
+    //   headerLeft: () => (
+    //     <Icon.Button
+    //       name="ios-menu"
+    //       size={25}
+    //       backgroundColor="#dc2430"
+    //       onPress={() => navigation.openDrawer()}></Icon.Button>
+    //   ),
+    // }}
+  />  
+  </LoginScreenStack.Navigator>
+);
+
+export const ForgetPassStackScreen = ({navigation}) => (
+  <ForgetPassStack.Navigator
+  screenOptions={{
+    headerStyle: {
+      backgroundColor: '#dc2430',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      marginLeft: 120,
+      fontWeight: 'bold',
+    },
+  }}>
+    <ForgetPassStack.Screen
+     name="ForgetPassword"
+     component={ForgetPass}
+    
+  />  
+  </ForgetPassStack.Navigator>
+);
+
+export const DataEnteryOptionStackScreen = ({navigation}) => (
+  <DataEnteryOptionStack.Navigator
     screenOptions={{
       headerStyle: {
         backgroundColor: '#dc2430',
@@ -305,9 +390,9 @@ export const EnterEvaporationStackScreen = ({navigation}) => (
       headerTintColor: '#fff',
     
     }}>
-    <ProfileStack.Screen
-     name="EnterEvaporation"
-     component={EnterEvaporation}
+    <DataEnteryOptionStack.Screen
+     name="DataEnteryOption"
+     component={DataEnteryOption}
      options={{
       headerTitle: props => <LogoTitle {...props} />
       ,
@@ -320,5 +405,32 @@ export const EnterEvaporationStackScreen = ({navigation}) => (
       ),
     }}
   />  
-  </EnterEvaporationStack.Navigator>
+  </DataEnteryOptionStack.Navigator>
+);
+
+export const EnterOTPStackScreen = ({navigation}) => (
+  <EnterOTPStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+     
+    }}>
+    <EnterOTPStack.Screen name="EnterOTP"
+     component={EnterOTP}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      headerLeft: () => (
+        <Icon.Button
+          name="ios-menu"
+          size={25}
+          backgroundColor="#dc2430"
+          onPress={() => navigation.openDrawer()}></Icon.Button>
+      ),
+    }}
+  />
+     
+  </EnterOTPStack.Navigator>
 );

@@ -174,8 +174,52 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="EnterEvaporation"
-                            onPress={() => {props.navigation.navigate('EnterEvaporation')}}
+                            label="GISView"
+                            onPress={() => {props.navigation.navigate('GISView')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="LoginScreen"
+                            onPress={() => {props.navigation.navigate('LoginScreen')}}
+                        />
+                          <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="ForgetPass"
+                            onPress={() => {props.navigation.navigate('ForgetPass')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="DataEnteryOption"
+                            onPress={() => {props.navigation.navigate('DataEnteryOption')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="EnterOTP"
+                            onPress={() => {props.navigation.navigate('EnterOTP')}}
                         />
                     </Drawer.Section>
                     
