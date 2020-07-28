@@ -17,12 +17,29 @@ import {
 } from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Share from 'react-native-share';
 
 // import{ AuthContext } from '../components/context';
+import files from './Images/base64';
 
-export function DrawerContent(props) {
+export const DrawerContent = (props) => {
 
     const paperTheme = useTheme();
+
+    const shareToFrnds = async () => {
+        const shareOptions = {
+            message: 'This is the message to share',
+            // url: files.image1
+            // urls: [files.image1, files.image2]   // should be in base 64 format
+            url: files.samplePdf
+        }
+        try {
+            const shareResponse = await Share.open(shareOptions);
+            console.log(JSON.stringify(shareResponse));
+        } catch(err) {
+            console.log('Error', err)
+        }
+    }
 
     // const { signOut, toggleTheme } = React.useContext(AuthContext);
 
@@ -43,16 +60,6 @@ export function DrawerContent(props) {
                             </View>
                         </View>
 
-                        {/* <View style={styles.row}>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
-                                <Caption style={styles.caption}>Following</Caption>
-                            </View>
-                            <View style={styles.section}>
-                                <Paragraph style={[styles.paragraph, styles.caption]}>100</Paragraph>
-                                <Caption style={styles.caption}>Followers</Caption>
-                            </View>
-                        </View> */}
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
@@ -66,6 +73,17 @@ export function DrawerContent(props) {
                             )}
                             label="Home"
                             onPress={() => {props.navigation.navigate('Dashboard')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="share" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Share"
+                            onPress={shareToFrnds}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
