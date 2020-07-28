@@ -11,10 +11,11 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import DatePicker from 'react-native-datepicker';
+import DamInspectionDetail2 from './DamInspectionDetail2';
 
 import Footer from './Footer';
 
-export default class GateInspectionDetailForm extends Component {
+export default class DamInspectionDetails1 extends Component {
   constructor() {
     super();
     this.state = {
@@ -27,6 +28,7 @@ export default class GateInspectionDetailForm extends Component {
     return (
       <View style={styles.damCheckListContainer}>
         <View style={styles.viewArea}>
+          <ScrollView>
           <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
             <View>
               <View style={styles.header}>
@@ -90,99 +92,13 @@ export default class GateInspectionDetailForm extends Component {
               </View>
               <Text style={styles.headingText}>1. Condition of Hoist</Text>
               <View>
-                <View style={{flexDirection: 'row', justifyContent:"space-evenly", backgroundColor: 'yellow', alignItems: 'center', padding: 4}}>
-                  <Text style={styles.headingText1}>Point</Text>
-                  <Text style={styles.headingText1}>Remark</Text>
-                </View>
-                <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
-                <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
-                <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
-                <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
-                <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
-                <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
-                <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
-                <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
-                <View style={styles.buttonView}>
+              
+              
+               <DamInspectionDetail2/>
+               
+              
+              </View>
+              <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
                Save & Next
@@ -194,8 +110,8 @@ export default class GateInspectionDetailForm extends Component {
             </Text>
          </TouchableWithoutFeedback>
                 </View>
-              </View>
             </View>
+          </ScrollView>
           </ScrollView>
         </View>
         <View>
@@ -211,7 +127,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonView: {
-    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2
+    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 2, paddingRight: 5, paddingTop: 2, paddingBottom: 2
   },
   buttonText: {
     marginTop: 5,

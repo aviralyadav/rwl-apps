@@ -14,7 +14,7 @@ import DatePicker from 'react-native-datepicker';
 
 import Footer from './Footer';
 
-export default class GateInspectionDetailForm extends Component {
+export default class GateInspectionDetailForm2 extends Component {
   constructor() {
     super();
     this.state = {
@@ -34,50 +34,19 @@ export default class GateInspectionDetailForm extends Component {
                   <Text style={styles.headingText}>Name of MI Tank</Text>
                   <Text style={styles.headingText}>Mi Tank</Text>
                 </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Inspection Type</Text>
-                  <Picker
-                    style={styles.pickerStyle}
-                    selectedValue={this.state.inspectionType}
-                    onValueChange={(itemValue, i) =>
-                      this.setState({inspectionType: itemValue, index: i})
-                    }>
-                    <Picker.Item label="Java" value="java" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="React Native" value="rn" />
-                  </Picker>
+               
+               
+                       
+              
+              </View>
+              <Text style={styles.headingText}>B.1 Condition of Hoist</Text>
+              <View>
+                <View style={{flexDirection: 'row', justifyContent:"space-evenly", backgroundColor: 'yellow', alignItems: 'center', padding: 4}}>
+                  <Text style={styles.headingText1}>Point</Text>
+                  <Text style={styles.headingText1}>Remark</Text>
                 </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Date of Inspection</Text>
-                  <DatePicker
-                    style={{width: 200}}
-                    date={this.state.date}
-                    mode="date"
-                    placeholder="select date"
-                    format="YYYY-MM-DD"
-                    minDate="2016-05-01"
-                    maxDate="2016-06-01"
-                    confirmBtnText="Confirm"
-                    cancelBtnText="Cancel"
-                    customStyles={{
-                      dateIcon: {
-                        position: 'absolute',
-                        left: 0,
-                        top: 4,
-                        marginLeft: 0,
-                      },
-                      dateInput: {
-                        marginLeft: 36,
-                      },
-                      // ... You can check the source to find the other keys.
-                    }}
-                    onDateChange={(date) => {
-                      this.setState({date: date});
-                    }}
-                  />
-                </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Remark</Text>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -87,12 +56,27 @@ export default class GateInspectionDetailForm extends Component {
                     onChangeText={this.handleEmail}
                   />
                 </View>
-              </View>
-              <Text style={styles.headingText}>1. Condition of Hoist</Text>
-              <View>
-                <View style={{flexDirection: 'row', justifyContent:"space-evenly", backgroundColor: 'yellow', alignItems: 'center', padding: 4}}>
-                  <Text style={styles.headingText1}>Point</Text>
-                  <Text style={styles.headingText1}>Remark</Text>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
                 </View>
                 <View style={styles.textInputView}>
                   <Text style={styles.headingText}>Hand wheel</Text>
@@ -214,7 +198,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2
   },
   buttonText: {
-    marginTop: 5,
+    marginTop: 15,
     borderWidth: 1,
     // padding: 15,
     paddingVertical: 10,
@@ -240,7 +224,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     // justifyContent: 'space-between',
     backgroundColor: 'lightblue',
-    height: Dimensions.get('window').height - 510,
+    height: Dimensions.get('window').height - 810,
     // padding: 4,
     paddingLeft: 10,
     paddingRight: 30,

@@ -14,7 +14,7 @@ import DatePicker from 'react-native-datepicker';
 
 import Footer from './Footer';
 
-export default class GateInspectionDetailForm extends Component {
+export default class GateInspectionDetailForm5 extends Component {
   constructor() {
     super();
     this.state = {
@@ -34,68 +34,19 @@ export default class GateInspectionDetailForm extends Component {
                   <Text style={styles.headingText}>Name of MI Tank</Text>
                   <Text style={styles.headingText}>Mi Tank</Text>
                 </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Inspection Type</Text>
-                  <Picker
-                    style={styles.pickerStyle}
-                    selectedValue={this.state.inspectionType}
-                    onValueChange={(itemValue, i) =>
-                      this.setState({inspectionType: itemValue, index: i})
-                    }>
-                    <Picker.Item label="Java" value="java" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="React Native" value="rn" />
-                  </Picker>
-                </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Date of Inspection</Text>
-                  <DatePicker
-                    style={{width: 200}}
-                    date={this.state.date}
-                    mode="date"
-                    placeholder="select date"
-                    format="YYYY-MM-DD"
-                    minDate="2016-05-01"
-                    maxDate="2016-06-01"
-                    confirmBtnText="Confirm"
-                    cancelBtnText="Cancel"
-                    customStyles={{
-                      dateIcon: {
-                        position: 'absolute',
-                        left: 0,
-                        top: 4,
-                        marginLeft: 0,
-                      },
-                      dateInput: {
-                        marginLeft: 36,
-                      },
-                      // ... You can check the source to find the other keys.
-                    }}
-                    onDateChange={(date) => {
-                      this.setState({date: date});
-                    }}
-                  />
-                </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Remark</Text>
-                  <TextInput
-                    style={styles.input}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
+               
+               
+                       
+              
               </View>
-              <Text style={styles.headingText}>1. Condition of Hoist</Text>
+              <Text style={styles.headingText}>B.6 Other Items:</Text>
               <View>
                 <View style={{flexDirection: 'row', justifyContent:"space-evenly", backgroundColor: 'yellow', alignItems: 'center', padding: 4}}>
                   <Text style={styles.headingText1}>Point</Text>
                   <Text style={styles.headingText1}>Remark</Text>
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText2}>Leakage from construction</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -106,7 +57,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText2}>Gate Condition od Down Stream</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -117,7 +68,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText2}>Chamber and Conduit</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -128,7 +79,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText2}>Condition of Well</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -139,7 +90,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText2}>Condition of embedded parts</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -150,7 +101,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText2}>Arrangement of Electric Supply</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -161,7 +112,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText2}>Arrangement of Electric Lights</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -172,7 +123,73 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText2}>Steel Parts etc</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText2}>Watch and Ward Arrangement</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText2}>Board mentioning Sailent teatures</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText2}>Lightning Arrester Provided</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText2}>Condition of Lightning Arrester</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText2}>Previous repairs attended in last one year</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText2}>Record of Operation of gate</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -214,7 +231,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2
   },
   buttonText: {
-    marginTop: 5,
+    marginTop: 15,
     borderWidth: 1,
     // padding: 15,
     paddingVertical: 10,
@@ -240,7 +257,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     // justifyContent: 'space-between',
     backgroundColor: 'lightblue',
-    height: Dimensions.get('window').height - 510,
+    height: Dimensions.get('window').height - 810,
     // padding: 4,
     paddingLeft: 10,
     paddingRight: 30,
@@ -291,5 +308,10 @@ const styles = StyleSheet.create({
     borderColor: '#7a42f4',
     borderWidth: 1,
     width: '55%'
+  },
+  headingText2: {
+    fontSize: 15,
+    fontWeight: '700',
+    width: '40%',
   },
 });

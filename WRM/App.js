@@ -26,12 +26,19 @@ import {
   ProfileStackScreen,
   EnterEvaporationStackScreen,
   GateInspectionDetailFormScreen,
+  GateInspectionDetailForm2Screen,
+  GateInspectionDetailForm3Screen,
+  GateInspectionDetailForm4Screen,
+  GateInspectionDetailForm5Screen,
+  GateInspectionDetailForm6Screen,
   GISViewStackScreen,
   ForgetPassStackScreen,
   LoginScreenStackScreen,
   DataEnteryOptionStackScreen,
   EnterOTPStackScreen,
-  DamInspectionDetailsStackScreen
+  DamInspectionDetailsStackScreen,
+  DamInspectionDetails1StackScreen,
+  EnterLakeLevelScreen
 } from './MainScreen';
 const Drawer = createDrawerNavigator();
 
@@ -57,6 +64,26 @@ class App extends React.Component {
           <Drawer.Screen
             name="GateInspectionDetailForm"
             component={GateInspectionDetailFormScreen}
+          />
+          <Drawer.Screen
+            name="GateInspectionDetailForm2"
+            component={GateInspectionDetailForm2Screen}
+          />
+           <Drawer.Screen
+            name="GateInspectionDetailForm3"
+            component={GateInspectionDetailForm3Screen}
+          />
+           <Drawer.Screen
+            name="GateInspectionDetailForm4"
+            component={GateInspectionDetailForm4Screen}
+          />
+           <Drawer.Screen
+            name="GateInspectionDetailForm5"
+            component={GateInspectionDetailForm5Screen}
+          />
+          <Drawer.Screen
+            name="GateInspectionDetailForm6"
+            component={GateInspectionDetailForm6Screen}
           />
           <Drawer.Screen
             name="DamHealthSafety"
@@ -89,6 +116,14 @@ class App extends React.Component {
            <Drawer.Screen
             name="DamInspectionDetails"
             component={DamInspectionDetailsStackScreen}
+          />
+           <Drawer.Screen
+            name="DamInspectionDetails1"
+            component={DamInspectionDetails1StackScreen}
+          />
+           <Drawer.Screen
+            name="EnterLakeLevel"
+            component={EnterLakeLevelScreen}
           />
         </Drawer.Navigator>
       </NavigationContainer>

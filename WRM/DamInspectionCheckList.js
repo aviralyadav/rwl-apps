@@ -43,6 +43,20 @@ export default class DamInspectionCheckList extends Component {
             descriptions: 'lorem ipsum description data',
             location: 'Pune 121 maharastra 80219',
             image:
+            require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+            require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
               require('./Images/Pic.png'),
             remark: 'Product is very good at all',
           },
@@ -68,7 +82,8 @@ export default class DamInspectionCheckList extends Component {
     return (
       <View style={styles.damCheckListContainer}>
         <View style={styles.viewArea}>
-          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <ScrollView>
+          <ScrollView  horizontal={true}>
               <View>
             <View style={styles.header}>
               <Text style={styles.headingText}>Descriptions</Text>
@@ -92,7 +107,17 @@ export default class DamInspectionCheckList extends Component {
                   </View>
                 )
               )}
+              <View style={styles.buttonView}>
+                <TouchableWithoutFeedback>
+            <Text style = {styles.buttonText}>
+               Submit
+            </Text>
+         </TouchableWithoutFeedback>
+         
+                </View>
               </View>
+              
+          </ScrollView>
           </ScrollView>
         </View>
         <View>
@@ -150,5 +175,19 @@ const styles = StyleSheet.create({
   image: {
       width: 70,
       height: 65
-  }
+  },
+  buttonView: {
+    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 1, paddingRight: 5, paddingTop: 2, paddingBottom: 2
+  },
+  buttonText: {
+    marginTop: 5,
+    borderWidth: 1,
+    // padding: 15,
+    paddingVertical: 10,
+    paddingHorizontal: 25,
+    borderColor: 'black',
+    backgroundColor: 'red',
+    color: '#fff',
+    fontSize: 18
+  },
 });
