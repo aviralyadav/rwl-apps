@@ -34,22 +34,10 @@ export default class EnterLakeLevel extends Component {
             <View>
               <View style={styles.header}>
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Name of MI Tank</Text>
-                  <Text style={styles.headingText}>Mi Tank</Text>
+                  <Text style={styles.headingText}>Dam/Tank/Name</Text>
+                
                 </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Inspection Type</Text>
-                  <Picker
-                    style={styles.pickerStyle}
-                    selectedValue={this.state.inspectionType}
-                    onValueChange={(itemValue, i) =>
-                      this.setState({inspectionType: itemValue, index: i})
-                    }>
-                    <Picker.Item label="Java" value="java" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="React Native" value="rn" />
-                  </Picker>
-                </View>
+               
                 <View style={styles.headerContent}>
                   <Text style={styles.headingText}>Date of Inspection</Text>
                   <DatePicker
@@ -91,8 +79,9 @@ export default class EnterLakeLevel extends Component {
                     onChangeText={this.handleEmail}
                   />
                 </View>
+                <Text style={styles.headingText}>Note:- Max & Min Level</Text>
               </View>
-              <Text style={styles.headingText}>1. Condition of Hoist</Text>
+              
               <View>
               
               
@@ -102,7 +91,7 @@ export default class EnterLakeLevel extends Component {
               <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save & Next
+               Save 
             </Text>
          </TouchableWithoutFeedback>
          <TouchableWithoutFeedback>
@@ -128,7 +117,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonView: {
-    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 2, paddingRight: 5, paddingTop: 2, paddingBottom: 2
+    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 2, paddingRight: 5, paddingTop: 50, paddingBottom: 2
   },
   buttonText: {
     marginTop: 5,
@@ -151,19 +140,22 @@ const styles = StyleSheet.create({
     height: 510,
     padding: 10,
     margin: 2,
+    marginTop:50,
+    
+    
   },
   header: {
     // flexDirection: 'row',
     width: Dimensions.get('window').width,
     // justifyContent: 'space-between',
     backgroundColor: 'lightblue',
-    height: Dimensions.get('window').height - 510,
+    height: Dimensions.get('window').height - 400,
     // padding: 4,
     paddingLeft: 10,
     paddingRight: 30,
     paddingTop: 5,
     paddingBottom: 5,
-    justifyContent: 'space-between'
+    justifyContent: "center"
     // alignItems: 'center',
   },
   headerContent: {
