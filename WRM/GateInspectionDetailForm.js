@@ -9,18 +9,45 @@ import {
   Picker,
   TextInput,
   TouchableWithoutFeedback,
+  Button,
 } from 'react-native';
-import DatePicker from 'react-native-datepicker';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 import Footer from './Footer';
+import {Icon} from 'native-base';
 
 export default class GateInspectionDetailForm extends Component {
   constructor() {
     super();
     this.state = {
       inspectionType: '',
-      date: '2016-05-15',
+      date: new Date(1598051730000),
+      mode: 'date',
+      show: false,
     };
+  }
+
+  onChange = (event, selectedDate) => {
+    const currentDate = selectedDate || date;
+    // setShow(Platform.OS === 'ios');
+    this.setState({date: currentDate});
+  };
+  showDatepicker = () => {
+    this.setState({show: true});
+  };
+  printDate() {
+    return (
+      <Text
+        style={{
+          borderWidth: 1,
+          borderColor: 'red',
+          paddingHorizontal: 20,
+          alignSelf: 'center',
+          paddingVertical: 5,
+        }}>
+        {this.state.date.toDateString()}
+      </Text>
+    );
   }
   render() {
     console.log(this.state);
@@ -49,32 +76,30 @@ export default class GateInspectionDetailForm extends Component {
                 </View>
                 <View style={styles.headerContent}>
                   <Text style={styles.headingText}>Date of Inspection</Text>
-                  <DatePicker
-                    style={{width: 200}}
-                    date={this.state.date}
-                    mode="date"
-                    placeholder="select date"
-                    format="YYYY-MM-DD"
-                    minDate="2016-05-01"
-                    maxDate="2016-06-01"
-                    confirmBtnText="Confirm"
-                    cancelBtnText="Cancel"
-                    customStyles={{
-                      dateIcon: {
-                        position: 'absolute',
-                        left: 0,
-                        top: 4,
-                        marginLeft: 0,
-                      },
-                      dateInput: {
-                        marginLeft: 36,
-                      },
-                      // ... You can check the source to find the other keys.
-                    }}
-                    onDateChange={(date) => {
-                      this.setState({date: date});
-                    }}
-                  />
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      width: '50%',
+                    }}>
+                    <Icon
+                      onPress={this.showDatepicker}
+                      style={{color: 'red'}}
+                      name="calendar-outline"
+                    />
+                    {this.state.date && this.printDate()}
+                  </View>
+
+                  {this.state.show && (
+                    <DateTimePicker
+                      testID="dateTimePicker"
+                      value={this.state.date}
+                      mode={this.state.mode}
+                      is24Hour={true}
+                      display="default"
+                      onChange={this.onChange}
+                    />
+                  )}
                 </View>
                 <View style={styles.headerContent}>
                   <Text style={styles.headingText}>Remark</Text>
@@ -90,7 +115,14 @@ export default class GateInspectionDetailForm extends Component {
               </View>
               <Text style={styles.headingText}>1. Condition of Hoist</Text>
               <View>
-                <View style={{flexDirection: 'row', justifyContent:"space-evenly", backgroundColor: 'yellow', alignItems: 'center', padding: 4}}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-evenly',
+                    backgroundColor: 'yellow',
+                    alignItems: 'center',
+                    padding: 2,
+                  }}>
                   <Text style={styles.headingText1}>Point</Text>
                   <Text style={styles.headingText1}>Remark</Text>
                 </View>
@@ -183,16 +215,12 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.buttonView}>
-                <TouchableWithoutFeedback>
-            <Text style = {styles.buttonText}>
-               Save & Next
-            </Text>
-         </TouchableWithoutFeedback>
-         <TouchableWithoutFeedback>
-            <Text style = {styles.buttonText}>
-               Clear
-            </Text>
-         </TouchableWithoutFeedback>
+                  <TouchableWithoutFeedback>
+                    <Text style={styles.buttonText}>Save & Next</Text>
+                  </TouchableWithoutFeedback>
+                  <TouchableWithoutFeedback>
+                    <Text style={styles.buttonText}>Clear</Text>
+                  </TouchableWithoutFeedback>
                 </View>
               </View>
             </View>
@@ -211,7 +239,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonView: {
-    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingTop: 2,
+    paddingBottom: 2,
   },
   buttonText: {
     marginTop: 5,
@@ -222,9 +256,17 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     backgroundColor: 'red',
     color: '#fff',
-    fontSize: 18
+    fontSize: 18,
   },
-  textInputView: {flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2},
+  textInputView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingTop: 2,
+    paddingBottom: 2,
+  },
   viewArea: {
     flex: 1,
     backgroundColor: 'white',
@@ -246,12 +288,12 @@ const styles = StyleSheet.create({
     paddingRight: 30,
     paddingTop: 5,
     paddingBottom: 5,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
     // alignItems: 'center',
   },
   headerContent: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   headingText: {
     fontSize: 15,
@@ -290,6 +332,6 @@ const styles = StyleSheet.create({
     height: 35,
     borderColor: '#7a42f4',
     borderWidth: 1,
-    width: '55%'
+    width: '55%',
   },
 });

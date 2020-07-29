@@ -10,7 +10,7 @@ import {
   TextInput,
   TouchableWithoutFeedback,
 } from 'react-native';
-import DatePicker from 'react-native-datepicker';
+// import DatePicker from 'react-native-datepicker';
 
 import Footer from './Footer';
 
