@@ -1,194 +1,308 @@
-import React, { Component } from "react";
-import { ScrollView,StyleSheet,Text , View,Image,TextInput,Picker} from 'react-native';
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon} from 'native-base';
+import React, {Component} from 'react';
 
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+  Image,
+  TouchableWithoutFeedback,
+} from 'react-native';
 
-export default class UserProfile extends Component {  
+import Footer from './Footer';
 
-   render() {
-   
-  
-      return (
-   
-          <View style={styles.container}> 
-        <Container>
-        
-        <ScrollView>
-        <Content style={{backgroundColor: '#D0D3D4'}}>
-        <View style={styles.Picker}>
-        <Text style={styles.Text}>Construction Season</Text>
-        <Picker
-          selectedValue={this.state.ConstructionSeason}
-          onValueChange={(itemValue) =>
-            this.setState({ConstructionSeason: itemValue})
-          }
-        >
-          <Picker.Item value="" label="Select Season" />
-          <Picker.Item value="2019-2020" label="2019-2020" />
-          
-        </Picker>
-            
-         </View>
-         <View style={styles.Picker}>
-        <Text style={styles.Text}>Project Name</Text>
-        <Picker 
-          selectedValue={this.state.ProjectName}
-          onValueChange={(itemValue) =>
-            this.setState({ProjectName: itemValue})
-          }
-        >
-             <Picker.Item value="" label="select Project " />
-          <Picker.Item value="Upper Penganga Project" label="Upper Penganga Project" />
-         
-        </Picker>
-            
-         </View>
-        <View >
-        <Text style={styles.Text}>Component of Work</Text>
-          <TextInput style={styles.inputBox}underlineColorAndroid='rgba(0,0,0,0)'/>
-             
-      </View>  
-      <View >
-        <Text style={styles.Text}>Type of Inspection Slip</Text>
-          <TextInput style={styles.inputBox}underlineColorAndroid='rgba(0,0,0,0)'/>
-             
-      </View>  
-      <View style={styles.Picker}>
-        <Text style={styles.Text}>Compliance Office</Text>
-        <Picker 
-          selectedValue={this.state.ComplianceOffice}
-          onValueChange={(itemValue) =>
-            this.setState({ComplianceOffice: itemValue})
-          }
-        >
-             <Picker.Item value="" label="select Compliance Office " />
-          <Picker.Item value="Deputy Engineer,Upper Penganga Project" label="Deputy Engineer,Upper Penganga Project" />
-          <Picker.Item value="Deputy Engineer,Upper Penganga Project" label="Deputy Engineer,Upper Penganga Project" />
-          <Picker.Item value="Deputy Engineer,Upper Penganga Project" label="Deputy Engineer,Upper Penganga Project" />
-        </Picker>
-            
-         </View>
-         <View style={styles.Picker}>
-        <Text style={styles.Text}>Designation</Text>
-        <Picker 
-          selectedValue={this.state.Designation}
-          onValueChange={(itemValue) =>
-            this.setState({Designation: itemValue})
-          }
-        >
-             <Picker.Item value="" label="select Project " />
-          <Picker.Item value="Upper Penganga Project" label="Upper Penganga Project" />
-         
-        </Picker>
-            
-         </View>
-         <View >
-        <Text style={styles.Text}>Construction Officer</Text>
-          <TextInput style={styles.inputBox}underlineColorAndroid='rgba(0,0,0,0)'/>
-             
-      </View> 
-      <View style={styles.Picker}>
-        <Text style={styles.Text}>Select Type of Work</Text>
-        <Picker
-          selectedValue={this.state.TypeOfWork}
-          onValueChange={(itemValue) =>
-            this.setState({TypeOfWork: itemValue})
-          }
-        >
-          <Picker.Item value="" label="Select Season" />
-          <Picker.Item value="2019-2020" label="2019-2020" />
-          
-        </Picker>
-        
-         </View>
-         <View style={styles.container1}>
-            <Button style={styles.Button1}>          
-                <Text  >Save</Text>
-              </Button >
-              <Button   style={styles.Button2}>          
-                <Text  >Clear Data</Text>
-              </Button > 
-           </View>                                  
-        </Content>
+export default class DamInspectionDetails extends Component {
+  constructor() {
+      super();
+      this.state = {
+        data: [
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+              require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+            require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+            require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+              require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+              require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+              require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+        ],
+      };
+  }
+  render() {
+      console.log(this.state)
+    return (
+      <View style={styles.damCheckListContainer}>
+        <View style={styles.viewArea}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+              <View>
+            <View style={styles.header}>
+              <Text style={styles.headingText}>Descriptions</Text>
+              <Text style={styles.headingText}>Location</Text>
+              <Text style={styles.headingText}>Image</Text>
+              <Text style={styles.headingText}>Remark</Text>
+            </View>
+            {this.state.data &&
+              this.state.data.map((item, i) => (
+                
+                  <View style={styles.contentArea} key={i}>
+                    <Text style={styles.contentText}>{item.descriptions}</Text>
+                    <Text style={styles.contentText}>{item.location}</Text>
+                    {/* <Text> */}
+                    {/* <Text style={styles.contentText}>{'IMAGE'}</Text> */}
+                    {/* {/* <View> */}
+                    
+                      <Image source={item.image} style={styles.image} />
+                    {/* </Text> */}
+                    <Text style={styles.contentText}>{item.remark}</Text>
+                  </View>
+                )
+              )}
+              </View>
+          </ScrollView>
+        </View>
+        <View>
+          <Footer />
+        </View>
+      </View>
+    );
+  }
+}
 
-        </ScrollView>
+const styles = StyleSheet.create({
+  damCheckListContainer: {
+    flex: 1,
+  },
+  viewArea: {
+    flex: 1,
+    backgroundColor: 'white',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    height: 510,
+    padding: 10,
+    margin: 1,
+  },
+  header: {
+    flexDirection: 'row',
+    width: 425,
+    justifyContent: 'space-between',
+    backgroundColor: 'yellow',
+    height: 40,
+    padding: 4,
+    alignItems: 'center',
+  },
+  headingText: {
+    fontSize: 15,
+    fontWeight: '700',
+    width: '25%'
+  },
+  contentText: {
+      fontWeight: 'normal',
+      fontSize: 15,
+      width: '25%',
+      padding: 5
+  },
+  contentArea: {
+      flexDirection:'row',
+      justifyContent:'space-between',
+      width: 385,
+      alignItems: 'center',
+      borderBottomColor: 'black',
+      borderBottomWidth: 1,
+      paddingBottom: 5,
+      paddingTop: 5
+  },
+  image: {
+      width: 70,
+      height: 65
+  }
+});
+import React, {Component} from 'react';
 
-        <Footer>
-          <FooterTab style={{backgroundColor:"#154360"}}> 
-          <Body>
-             <Text style={{fontSize:18, fontStyle:'italic' ,textAlign: "left",color:"white" }}>Mechatronics Systems Pvt.Ltd.</Text>
-            </Body>
-          </FooterTab>
-        </Footer>
-      </Container>
-      </View >
-    
-      );
-   }
-   
-} 
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+  Image,
+  TouchableWithoutFeedback,
+} from 'react-native';
 
-const styles=StyleSheet.create({
-    container: {
-      flex:1,
-        flexDirection: "column",
-        justifyContent: "space-around", 
-        width: '100%',
-        backgroundColor:'#455a64'
-       
-    },
-    inputBox: {
-        width:"98%",
-        backgroundColor:'rgba(255,255,255,0.3)',
-        color:'black',
-        marginLeft:5,
-        borderWidth:1,
-        borderColor: 'black',
-        borderRadius: 25
-       
-      },
+import Footer from './Footer';
 
-      Text:{
-        color:'black',
-        padding:10,
-        fontSize:20
-      },
+export default class DamInspectionDetails extends Component {
+  constructor() {
+      super();
+      this.state = {
+        data: [
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+              require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+            require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+            require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+              require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+              require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+          {
+            descriptions: 'lorem ipsum description data',
+            location: 'Pune 121 maharastra 80219',
+            image:
+              require('./Images/Pic.png'),
+            remark: 'Product is very good at all',
+          },
+        ],
+      };
+  }
+  render() {
+      console.log(this.state)
+    return (
+      <View style={styles.damCheckListContainer}>
+        <View style={styles.viewArea}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+              <View>
+            <View style={styles.header}>
+              <Text style={styles.headingText}>Descriptions</Text>
+              <Text style={styles.headingText}>Location</Text>
+              <Text style={styles.headingText}>Image</Text>
+              <Text style={styles.headingText}>Remark</Text>
+            </View>
+            {this.state.data &&
+              this.state.data.map((item, i) => (
+                
+                  <View style={styles.contentArea} key={i}>
+                    <Text style={styles.contentText}>{item.descriptions}</Text>
+                    <Text style={styles.contentText}>{item.location}</Text>
+                    {/* <Text> */}
+                    {/* <Text style={styles.contentText}>{'IMAGE'}</Text> */}
+                    {/* {/* <View> */}
+                    
+                      <Image source={item.image} style={styles.image} />
+                    {/* </Text> */}
+                    <Text style={styles.contentText}>{item.remark}</Text>
+                  </View>
+                )
+              )}
+              </View>
+          </ScrollView>
+        </View>
+        <View>
+          <Footer />
+        </View>
+      </View>
+    );
+  }
+}
 
-     Picker:{
-      
-      borderBottomWidth:1,
-       borderColor: 'black',
-       width: "100%"
-
-     },
-     Button1:{
-      padding:60,
-      margin:5,
-      borderRadius: 25,
-      backgroundColor:'#3498DB',
-      fontSize:40,
-      marginLeft:'8%',
-      marginTop:20,
-      marginBottom:20
-     
-    },
-    Button2:{
-      padding:40,
-      margin:5,
-      borderRadius: 25,
-      backgroundColor:'#3498DB',
-      fontSize:40,
-      marginRight:'13%',
-      marginTop:20,
-      marginBottom:20
-
-     
-    },
-    container1: {
-      flex: 1,
-      flexDirection: 'row',
-      justifyContent: 'space-between'
-    },
-  
-     
-  });
+const styles = StyleSheet.create({
+  damCheckListContainer: {
+    flex: 1,
+  },
+  viewArea: {
+    flex: 1,
+    backgroundColor: 'white',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    height: 510,
+    padding: 10,
+    margin: 1,
+  },
+  header: {
+    flexDirection: 'row',
+    width: 425,
+    justifyContent: 'space-between',
+    backgroundColor: 'yellow',
+    height: 40,
+    padding: 4,
+    alignItems: 'center',
+  },
+  headingText: {
+    fontSize: 15,
+    fontWeight: '700',
+    width: '25%'
+  },
+  contentText: {
+      fontWeight: 'normal',
+      fontSize: 15,
+      width: '25%',
+      padding: 5
+  },
+  contentArea: {
+      flexDirection:'row',
+      justifyContent:'space-between',
+      width: 385,
+      alignItems: 'center',
+      borderBottomColor: 'black',
+      borderBottomWidth: 1,
+      paddingBottom: 5,
+      paddingTop: 5
+  },
+  image: {
+      width: 70,
+      height: 65
+  }
+});

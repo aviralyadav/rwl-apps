@@ -13,7 +13,7 @@ class Footer extends Component {
 
 const styles = StyleSheet.create({
     footer:{
-        backgroundColor:'#dc2430',
+        backgroundColor:'#009ACD',
         justifyContent:'center',
         alignItems:"center",
         height:35

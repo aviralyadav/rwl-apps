@@ -13,7 +13,7 @@ import {
 
 import Footer from './Footer';
 
-export default class DamInspectionCheckList extends Component {
+export default class DamInspectionDetail2 extends Component {
   constructor() {
       super();
       this.state = {
@@ -110,19 +110,23 @@ export default class DamInspectionCheckList extends Component {
               <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Submit
+               Save & Next
             </Text>
          </TouchableWithoutFeedback>
-         
+         <TouchableWithoutFeedback>
+            <Text style = {styles.buttonText}>
+               Clear
+            </Text>
+         </TouchableWithoutFeedback>
                 </View>
               </View>
               
           </ScrollView>
           </ScrollView>
         </View>
-        <View>
+        {/* <View>
           <Footer />
-        </View>
+        </View> */}
       </View>
     );
   }
@@ -177,7 +181,7 @@ const styles = StyleSheet.create({
       height: 65
   },
   buttonView: {
-    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 1, paddingRight: 5, paddingTop: 2, paddingBottom: 2
+    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2
   },
   buttonText: {
     marginTop: 5,

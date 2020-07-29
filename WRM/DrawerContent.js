@@ -151,6 +151,61 @@ export const DrawerContent = (props) => {
                             label="Gate Inspection Detail Form"
                             onPress={() => {props.navigation.navigate('GateInspectionDetailForm')}}
                         />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Gate Inspection Detail Form2"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetailForm2')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Gate Inspection Detail Form3"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetailForm3')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Gate Inspection Detail Form4"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetailForm4')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Gate Inspection Detail Form5"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetailForm5')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Gate Inspection Detail Form6"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetailForm6')}}
+                        />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -249,6 +304,39 @@ export const DrawerContent = (props) => {
                             )}
                             label="EnterOTP"
                             onPress={() => {props.navigation.navigate('EnterOTP')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="DamInspectionDetails"
+                            onPress={() => {props.navigation.navigate('DamInspectionDetails')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="DamInspectionDetails1"
+                            onPress={() => {props.navigation.navigate('DamInspectionDetails1')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="EnterLakeLevel"
+                            onPress={() => {props.navigation.navigate('EnterLakeLevel')}}
                         />
                     </Drawer.Section>
                     
