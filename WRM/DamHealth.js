@@ -37,20 +37,20 @@ class DamHealth extends React.Component {
                   }}
                          
                > 
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:15,backgroundColor:'#47F80A',padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:15,backgroundColor:'#F1C40F',padding:20,borderRadius: 10, borderWidth:2,
+    borderColor: '#dab10d'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Dam 1</Text>
                </TouchableWithoutFeedback>
                </View>
                <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:15,backgroundColor:'#F1C40F',padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+    borderColor: '#dab10d'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:18, textAlign:"center", color:'white'}}>Dam 2</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:15,backgroundColor:'#F80AA9', padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:15,backgroundColor:'#F1C40F', padding:20,borderRadius: 10, borderWidth:2,
+    borderColor: '#dab10d'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Tank 1</Text>
                </TouchableWithoutFeedback>

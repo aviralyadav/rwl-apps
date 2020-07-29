@@ -32,6 +32,9 @@ import EnterOTP from "./EnterOTP";
 import EnterLakeLevel from "./EnterLakeLevel";
 import DamInspectionDetails from "./DamInspectionDetails";
 import DamInspectionDetails1 from "./DamInspectionDetails1";
+import DamDashboard from "./DamDashboard";
+import InstrumentInspectionDetail from "./InstrumentInspectionDetail";
+import GateInspectionDetail from "./GateInspectionDetail";
 
 
 const DashboardStack = createStackNavigator();
@@ -58,6 +61,9 @@ const GateInspectionDetailForm5Stack = createStackNavigator();
 const GateInspectionDetailForm6Stack = createStackNavigator();
 const DamInspectionDetails1Stack = createStackNavigator();
 const EnterLakeLevelStack = createStackNavigator();
+const DamDashboardStack = createStackNavigator();
+const InstrumentInspectionDetailStack = createStackNavigator();
+const GateInspectionDetailStack = createStackNavigator();
 
 const screen = Dimensions.get("window");
 // export default MainScreen;
@@ -233,7 +239,7 @@ export const GateInspectionDetailFormScreen = ({navigation}) => (
       name="GateInspectionDetailForm"
       component={GateInspectionDetailForm}
       options={{
-        title: 'Gate Inspection Detail',
+        title: 'Gate Inspection Detail form',
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -773,7 +779,7 @@ export const EnterLakeLevelScreen = ({navigation}) => (
       name="EnterLakeLevel"
       component={EnterLakeLevel}
       options={{
-        title: 'EnterLakeLevelStack',
+        title: 'EnterLakeLevel',
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -788,4 +794,102 @@ export const EnterLakeLevelScreen = ({navigation}) => (
       }}
     />
   </EnterLakeLevelStack.Navigator>
+);
+
+export const DamDashboardScreen = ({navigation}) => (
+  <DamDashboardStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#CB3550',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <DamDashboardStack.Screen
+      name="DamDashboard"
+      component={DamDashboard}
+      options={{
+        title: 'DamDashboard',
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#CB3550"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </DamDashboardStack.Navigator>
+);
+export const InstrumentInspectionDetailScreen = ({navigation}) => (
+  <InstrumentInspectionDetailStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#CB3550',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <InstrumentInspectionDetailStack.Screen
+      name="InstrumentInspectionDetail"
+      component={InstrumentInspectionDetail}
+      options={{
+        title: 'InstrumentInspectionDetail',
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#CB3550"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </InstrumentInspectionDetailStack.Navigator>
+);
+
+export const GateInspectionDetailScreen = ({navigation}) => (
+  <GateInspectionDetailStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#CB3550',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <GateInspectionDetailStack.Screen
+      name="GateInspectionDetail"
+      component={GateInspectionDetail}
+      options={{
+        title: 'Gate Inspection Detail ',
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#CB3550"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </GateInspectionDetailStack.Navigator>
 );

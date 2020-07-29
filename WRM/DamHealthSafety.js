@@ -48,20 +48,20 @@ class DamHealthSafety extends React.Component {
                   }}
                          
                >
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#47F80A',padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#FE7D6A',padding:20,borderRadius: 10, borderWidth:2,
+    borderColor: '#fe5137'}}>
                <TouchableWithoutFeedback  onPress={() => {props.navigation.navigate('DamHealth')}}>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Dam Health Inspection</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#F1C40F',padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#E17F93',padding:20,borderRadius: 10, borderWidth:2,
+    borderColor: '#dc6a82'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:18, textAlign:"center", color:'white'}}>Instrument Health Inspection (Inspection)</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#F80AA9', padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#9ADF8F', padding:20,borderRadius: 10, borderWidth:2,
+    borderColor: '#76d467'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Mechanical Health Inspection</Text>
                </TouchableWithoutFeedback>

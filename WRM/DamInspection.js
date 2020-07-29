@@ -42,26 +42,26 @@ class DamInspection extends React.Component {
                   }}
                          
                >
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:8,backgroundColor:'#47F80A',padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:8,backgroundColor:'#FE7D6A',padding:20,borderRadius: 10, borderWidth:2,
+    borderColor: '#fe5137'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Dashboard</Text>
                </TouchableWithoutFeedback>
                </View>
                <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:8,backgroundColor:'#F1C40F',padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+    borderColor: '#dab10d'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:18, textAlign:"center", color:'white'}}>Dam Safety Inspection (Inspection)</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:8,backgroundColor:'#F80AA9', padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:8,backgroundColor:'#E17F93', padding:20,borderRadius: 10, borderWidth:2,
+    borderColor: '#dc6a82'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Dam Storage</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:8,backgroundColor:'#00FFFF', padding:20,borderRadius: 10, borderWidth:2,
-    borderColor: '#999999'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:8,backgroundColor:'#9ADF8F', padding:20,borderRadius: 10, borderWidth:2,
+    borderColor: '#76d467'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Food Management</Text>
                </TouchableWithoutFeedback>

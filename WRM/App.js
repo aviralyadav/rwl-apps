@@ -38,7 +38,12 @@ import {
   EnterOTPStackScreen,
   DamInspectionDetailsStackScreen,
   DamInspectionDetails1StackScreen,
-  EnterLakeLevelScreen
+  EnterLakeLevelScreen,
+  DamDashboardScreen,
+  InstrumentInspectionDetailScreen,
+  GateInspectionDetailScreen
+
+
 } from './MainScreen';
 const Drawer = createDrawerNavigator();
 
@@ -124,6 +129,18 @@ class App extends React.Component {
            <Drawer.Screen
             name="EnterLakeLevel"
             component={EnterLakeLevelScreen}
+          />
+            <Drawer.Screen
+            name="DamDashboard"
+            component={DamDashboardScreen}
+          />
+           <Drawer.Screen
+            name="InstrumentInspectionDetail"
+            component={InstrumentInspectionDetailScreen}
+          />
+           <Drawer.Screen
+            name="GateInspectionDetail"
+            component={GateInspectionDetailScreen}
           />
         </Drawer.Navigator>
       </NavigationContainer>
