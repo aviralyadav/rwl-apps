@@ -39,14 +39,14 @@ export default class GateInspectionDetailForm2 extends Component {
                        
               
               </View>
-              <Text style={styles.headingText}>B.1 Condition of Hoist</Text>
+              <Text style={styles.headingText2}>B.1 Condition of Hoist</Text>
               <View>
                 <View style={{flexDirection: 'row', justifyContent:"space-evenly", backgroundColor: 'yellow', alignItems: 'center', padding: 4}}>
                   <Text style={styles.headingText1}>Point</Text>
                   <Text style={styles.headingText1}>Remark</Text>
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Chequeared plate and Railing</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -57,7 +57,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Approch bridge capacity and condition</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -68,7 +68,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Intermediate stem rod diameter and length</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -79,7 +79,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Bolts of Int.stem rod</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -90,7 +90,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Flange coupling of stem rod</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -101,7 +101,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Guides of stem rod</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -112,7 +112,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Guides 01 stem rod</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -123,7 +123,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>V threaded stem rod</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -134,7 +134,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Square threaded stem rod</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -145,7 +145,7 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Pointing of hoist and component</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -156,7 +156,62 @@ export default class GateInspectionDetailForm2 extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Operation of hoist Observations </Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Supporting  Ponal</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Foundation arrangement on well</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Locking arrangement of gate</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Gate it's position indicater</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hoist platform</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -240,7 +295,13 @@ const styles = StyleSheet.create({
   headingText: {
     fontSize: 15,
     fontWeight: '700',
+    width: '35%',
+  },
+  headingText2: {
+    fontSize: 15,
+    fontWeight: '700',
     width: '45%',
+    marginBottom:2
   },
   headingText1: {
     fontSize: 15,

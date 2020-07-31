@@ -11,7 +11,7 @@ import {
   TouchableWithoutFeedback,
   Button,
 } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
+import DatePicker from 'react-native-datepicker';
 
 import Footer from './Footer';
 import {Icon} from 'native-base';
@@ -76,30 +76,32 @@ export default class GateInspectionDetailForm extends Component {
                 </View>
                 <View style={styles.headerContent}>
                   <Text style={styles.headingText}>Date of Inspection</Text>
-                  <View
-                    style={{
-                      flexDirection: 'row',
-                      justifyContent: 'space-between',
-                      width: '50%',
-                    }}>
-                    <Icon
-                      onPress={this.showDatepicker}
-                      style={{color: 'red'}}
-                      name="calendar-outline"
-                    />
-                    {this.state.date && this.printDate()}
-                  </View>
-
-                  {this.state.show && (
-                    <DateTimePicker
-                      testID="dateTimePicker"
-                      value={this.state.date}
-                      mode={this.state.mode}
-                      is24Hour={true}
-                      display="default"
-                      onChange={this.onChange}
-                    />
-                  )}
+                  <DatePicker
+                    style={{width: 200}}
+                    date={this.state.date}
+                    mode="datetime"
+                    placeholder="select date"
+                    format="YYYY-MM-DD"
+                    minDate="2016-05-01"
+                    maxDate="2016-06-01"
+                    confirmBtnText="Confirm"
+                    cancelBtnText="Cancel"
+                    customStyles={{
+                      dateIcon: {
+                        position: 'absolute',
+                        left: 0,
+                        top: 4,
+                        marginLeft: 0,
+                      },
+                      dateInput: {
+                        marginLeft: 36,
+                      },
+                      // ... You can check the source to find the other keys.
+                    }}
+                    onDateChange={(date) => {
+                      this.setState({date: date});
+                    }}
+                  />
                 </View>
                 <View style={styles.headerContent}>
                   <Text style={styles.headingText}>Remark</Text>
@@ -113,7 +115,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
               </View>
-              <Text style={styles.headingText}>1. Condition of Hoist</Text>
+              <Text style={styles.headingText2}>B.1 Condition of Hoist</Text>
               <View>
                 <View
                   style={{
@@ -122,6 +124,7 @@ export default class GateInspectionDetailForm extends Component {
                     backgroundColor: 'yellow',
                     alignItems: 'center',
                     padding: 2,
+                    marginBottom:8
                   }}>
                   <Text style={styles.headingText1}>Point</Text>
                   <Text style={styles.headingText1}>Remark</Text>
@@ -138,7 +141,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Worm Wheel and Worm Shaft</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -149,7 +152,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Thrust bearing</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -160,7 +163,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Brass nut and key </Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -171,7 +174,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Mounting Bolts</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -182,7 +185,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Stam rod</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -193,7 +196,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Lubricantion of brass nut,bearing and stem rod</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -204,7 +207,51 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
                 <View style={styles.textInputView}>
-                  <Text style={styles.headingText}>Hand wheel</Text>
+                  <Text style={styles.headingText}>Supporting Portal</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Foundation arrangement on well</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Locking arrangement of gate</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Gate lift position indicater</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
+                    placeholder="Remark"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
+                </View>
+                <View style={styles.textInputView}>
+                  <Text style={styles.headingText}>Hoist Platform</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -274,7 +321,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'stretch',
     height: 510,
-    padding: 10,
+    padding: 15,
     margin: 2,
   },
   header: {
@@ -284,8 +331,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightblue',
     height: Dimensions.get('window').height - 510,
     // padding: 4,
-    paddingLeft: 10,
-    paddingRight: 30,
+    paddingLeft: 8,
+    paddingRight: 42,
     paddingTop: 5,
     paddingBottom: 5,
     justifyContent: 'space-between',
@@ -296,6 +343,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   headingText: {
+    fontSize: 15,
+    fontWeight: '700',
+    width: '40%',
+  },
+  headingText2: {
     fontSize: 15,
     fontWeight: '700',
     width: '45%',

@@ -16,11 +16,11 @@ import DamInspectionDetail2 from './DamInspectionDetail2';
 
 import Footer from './Footer';
 
-export default class EnterLakeLevel extends Component {
+export default class EnterDischargeLevel extends Component {
   constructor() {
     super();
     this.state = {
-      inspectionType: '',
+        dischargeType: '',
       date: '2016-05-15',
       selectedHours: 0,
       selectedMinutes: 0,
@@ -83,13 +83,25 @@ export default class EnterLakeLevel extends Component {
                   </View>
                   
                 </View>
-                
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Enter Level (m):</Text>
+                  <Text style={styles.headingText}>Discharge Type</Text>
+                  <Picker
+                    style={styles.pickerStyle}
+                    selectedValue={this.state.dischargeType}
+                    onValueChange={(itemValue, i) =>
+                      this.setState({inspectionType: itemValue, index: i})
+                    }>
+                    <Picker.Item label="Select Type" value="Select Type" />
+                    <Picker.Item label="JavaScript" value="js" />
+                    <Picker.Item label="React Native" value="rn" />
+                  </Picker>
+                </View>
+                <View style={styles.headerContent}>
+                  <Text style={styles.headingText}>Enter Discharge (cumec):</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
-                    placeholder="Enter Level"
+                    placeholder="Enter Value"
                     placeholderTextColor="#9a73ef"
                     autoCapitalize="none"
                     onChangeText={this.handleEmail}
@@ -210,6 +222,7 @@ const styles = StyleSheet.create({
     width: '45%',
     color: '#344953',
     justifyContent: 'center',
+    
   },
   input: {
     // margin: 15,

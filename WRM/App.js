@@ -41,7 +41,10 @@ import {
   EnterLakeLevelScreen,
   DamDashboardScreen,
   InstrumentInspectionDetailScreen,
-  GateInspectionDetailScreen
+  GateInspectionDetailScreen,
+  EnterRainfallScreen,
+  EnterDischargeLevelScreen,
+  EnterEvaporationScreen
 
 
 } from './MainScreen';
@@ -129,6 +132,18 @@ class App extends React.Component {
            <Drawer.Screen
             name="EnterLakeLevel"
             component={EnterLakeLevelScreen}
+          />
+           <Drawer.Screen
+            name="EnterRainfall"
+            component={EnterRainfallScreen}
+          />
+           <Drawer.Screen
+            name="EnterDischargeLevel"
+            component={EnterDischargeLevelScreen}
+          />
+           <Drawer.Screen
+            name="EnterEvaporation"
+            component={EnterEvaporationScreen}
           />
             <Drawer.Screen
             name="DamDashboard"

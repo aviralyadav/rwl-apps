@@ -16,7 +16,7 @@ import DamInspectionDetail2 from './DamInspectionDetail2';
 
 import Footer from './Footer';
 
-export default class EnterLakeLevel extends Component {
+export default class EnterRainfall extends Component {
   constructor() {
     super();
     this.state = {
@@ -85,11 +85,11 @@ export default class EnterLakeLevel extends Component {
                 </View>
                 
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Enter Level (m):</Text>
+                  <Text style={styles.headingText}>Rainfall (In mm):</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
-                    placeholder="Enter Level"
+                    placeholder="Enter Value"
                     placeholderTextColor="#9a73ef"
                     autoCapitalize="none"
                     onChangeText={this.handleEmail}

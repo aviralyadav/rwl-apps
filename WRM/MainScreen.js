@@ -35,7 +35,9 @@ import DamInspectionDetails1 from "./DamInspectionDetails1";
 import DamDashboard from "./DamDashboard";
 import InstrumentInspectionDetail from "./InstrumentInspectionDetail";
 import GateInspectionDetail from "./GateInspectionDetail";
-
+import EnterRainfall from "./EnterRainfall";
+import EnterEvaporation from "./EnterEvaporation";
+import EnterDischargeLevel  from "./EnterDischargeLevel";
 
 const DashboardStack = createStackNavigator();
 const CardListStack = createStackNavigator();
@@ -64,6 +66,9 @@ const EnterLakeLevelStack = createStackNavigator();
 const DamDashboardStack = createStackNavigator();
 const InstrumentInspectionDetailStack = createStackNavigator();
 const GateInspectionDetailStack = createStackNavigator();
+const EnterRainfallStack = createStackNavigator();
+const EnterEvaporationStack = createStackNavigator();
+const EnterDischargeLevelStack = createStackNavigator();
 
 const screen = Dimensions.get("window");
 // export default MainScreen;
@@ -93,13 +98,12 @@ export const DashboardScreenStack = ({navigation}) => (
       component={DashboardScreen}
       options={{
         headerTitle: props => <LogoTitle {...props} />,
+        
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
             size={25}
             backgroundColor="#CB3550"
-
-          // style={{marginRight: 0}}
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -239,7 +243,7 @@ export const GateInspectionDetailFormScreen = ({navigation}) => (
       name="GateInspectionDetailForm"
       component={GateInspectionDetailForm}
       options={{
-        title: 'Gate Inspection Detail form',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -607,16 +611,13 @@ export const GateInspectionDetailForm2Screen = ({navigation}) => (
         backgroundColor: '#CB3550',
       },
       headerTintColor: '#fff',
-      headerTitleStyle: {
-        //   marginLeft:150,
-        fontWeight: 'bold',
-      },
+     
     }}>
     <GateInspectionDetailForm2Stack.Screen
       name="GateInspectionDetailForm2"
       component={GateInspectionDetailForm2}
       options={{
-        title: 'Gate Inspection Detail 2',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -649,7 +650,7 @@ export const GateInspectionDetailForm3Screen = ({navigation}) => (
       name="GateInspectionDetailForm3"
       component={GateInspectionDetailForm3}
       options={{
-        title: 'Gate Inspection Detail 3',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -682,7 +683,7 @@ export const GateInspectionDetailForm4Screen = ({navigation}) => (
       name="GateInspectionDetailForm4"
       component={GateInspectionDetailForm4}
       options={{
-        title: 'Gate Inspection Detail 4',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -714,7 +715,7 @@ export const GateInspectionDetailForm5Screen = ({navigation}) => (
       name="GateInspectionDetailForm5"
       component={GateInspectionDetailForm5}
       options={{
-        title: 'Gate Inspection Detail 5',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -747,7 +748,7 @@ export const GateInspectionDetailForm6Screen = ({navigation}) => (
       name="GateInspectionDetailForm6"
       component={GateInspectionDetailForm6}
       options={{
-        title: 'Gate Inspection Detail 6',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -779,7 +780,7 @@ export const EnterLakeLevelScreen = ({navigation}) => (
       name="EnterLakeLevel"
       component={EnterLakeLevel}
       options={{
-        title: 'EnterLakeLevel',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -794,6 +795,102 @@ export const EnterLakeLevelScreen = ({navigation}) => (
       }}
     />
   </EnterLakeLevelStack.Navigator>
+);
+export const EnterRainfallScreen = ({navigation}) => (
+  <EnterRainfallStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#CB3550',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <EnterRainfallStack.Screen
+      name="EnterRainfall"
+      component={EnterRainfall}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#CB3550"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </EnterRainfallStack.Navigator>
+);
+export const EnterEvaporationScreen = ({navigation}) => (
+  <EnterEvaporationStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#CB3550',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <EnterEvaporationStack.Screen
+      name="EnterEvaporation"
+      component={EnterEvaporation}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#CB3550"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </EnterEvaporationStack.Navigator>
+);
+export const EnterDischargeLevelScreen = ({navigation}) => (
+  <EnterDischargeLevelStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#CB3550',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <EnterDischargeLevelStack.Screen
+      name="EnterDischargeLevel"
+      component={EnterDischargeLevel}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#CB3550"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </EnterDischargeLevelStack.Navigator>
 );
 
 export const DamDashboardScreen = ({navigation}) => (
@@ -812,7 +909,7 @@ export const DamDashboardScreen = ({navigation}) => (
       name="DamDashboard"
       component={DamDashboard}
       options={{
-        title: 'DamDashboard',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -844,7 +941,7 @@ export const InstrumentInspectionDetailScreen = ({navigation}) => (
       name="InstrumentInspectionDetail"
       component={InstrumentInspectionDetail}
       options={{
-        title: 'InstrumentInspectionDetail',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"
@@ -877,7 +974,7 @@ export const GateInspectionDetailScreen = ({navigation}) => (
       name="GateInspectionDetail"
       component={GateInspectionDetail}
       options={{
-        title: 'Gate Inspection Detail ',
+        headerTitle: props => <LogoTitle {...props} />,
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"

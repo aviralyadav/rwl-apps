@@ -338,6 +338,39 @@ export const DrawerContent = (props) => {
                             label="EnterLakeLevel"
                             onPress={() => {props.navigation.navigate('EnterLakeLevel')}}
                         />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="EnterRainfall"
+                            onPress={() => {props.navigation.navigate('EnterRainfall')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="EnterEvaporation"
+                            onPress={() => {props.navigation.navigate('EnterEvaporation')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="EnterDischargeLevel"
+                            onPress={() => {props.navigation.navigate('EnterDischargeLevel')}}
+                        />
                           <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
