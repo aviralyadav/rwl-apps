@@ -33,13 +33,27 @@ export default class DamInspectionDetails1 extends Component {
             <View>
               <View style={styles.header}>
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Name of MI Tank</Text>
-                  <Text style={styles.headingText}>Mi Tank</Text>
+                  <Text style={styles.headingText}>Dame Name</Text>
+                  <Text style={styles.headingText}>Dam 1</Text>
                 </View>
                 <View style={styles.headerContent}>
                   <Text style={styles.headingText}>Inspection Type</Text>
+                  <View
+                
+                  style={{
+                      width: "50%",
+                      height: '50%',
+  
+                      justifyContent: 'center',
+                      // flexDirection:"row",
+                      borderColor: 'black',
+                      borderWidth:1,
+                      borderRadius: 10,
+                      alignSelf: 'center'
+                  }}>
                   <Picker
-                    style={styles.pickerStyle}
+                   
+                    // style={styles.pickerStyle}
                     selectedValue={this.state.inspectionType}
                     onValueChange={(itemValue, i) =>
                       this.setState({inspectionType: itemValue, index: i})
@@ -48,17 +62,19 @@ export default class DamInspectionDetails1 extends Component {
                     <Picker.Item label="JavaScript" value="js" />
                     <Picker.Item label="React Native" value="rn" />
                   </Picker>
+                  </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Date of Inspection</Text>
+                  <Text style={styles.headingText1}>Date of Inspection</Text>
                   <DatePicker
-                    style={{width: 200}}
+                  
+                    style={{width: 200 }}
                     date={this.state.date}
                     mode="date"
                     placeholder="select date"
                     format="YYYY-MM-DD"
-                    minDate="2016-05-01"
-                    maxDate="2016-06-01"
+                    minDate="1990-05-01"
+                    maxDate="2020-12-01"
                     confirmBtnText="Confirm"
                     cancelBtnText="Cancel"
                     customStyles={{
@@ -70,6 +86,10 @@ export default class DamInspectionDetails1 extends Component {
                       },
                       dateInput: {
                         marginLeft: 36,
+                        borderColor: 'black',
+                        borderWidth:1,
+                        borderRadius: 10,
+
                       },
                       // ... You can check the source to find the other keys.
                     }}
@@ -90,7 +110,7 @@ export default class DamInspectionDetails1 extends Component {
                   />
                 </View>
               </View>
-              <Text style={styles.headingText}>1. Condition of Hoist</Text>
+              <Text style={styles.headingText}style={{marginTop:40,marginBottom:15}}>1. Condition of Hoist</Text>
               <View>
               
               
@@ -155,7 +175,7 @@ const styles = StyleSheet.create({
     // flexDirection: 'row',
     width: Dimensions.get('window').width,
     // justifyContent: 'space-between',
-    backgroundColor: 'lightblue',
+    backgroundColor: 'white',
     height: Dimensions.get('window').height - 510,
     // padding: 4,
     paddingLeft: 10,
@@ -168,16 +188,21 @@ const styles = StyleSheet.create({
   headerContent: {
     flexDirection: 'row',
     justifyContent: 'space-between'
+    
+   
   },
   headingText: {
     fontSize: 15,
     fontWeight: '700',
     width: '45%',
+    marginTop:20
+  
   },
   headingText1: {
     fontSize: 15,
     fontWeight: '700',
-    width: '50%',
+    width: '45%',
+    marginTop:10
   },
   contentText: {
     fontWeight: 'normal',
@@ -196,16 +221,28 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
   pickerStyle: {
-    height: 50,
+    height: '60%',
     width: '45%',
     color: '#344953',
     justifyContent: 'center',
+   
+   
+  
   },
   input: {
     // margin: 15,
-    height: 35,
-    borderColor: '#7a42f4',
-    borderWidth: 1,
-    width: '55%'
+    width: "50%",
+    height: '60%',
+
+    justifyContent: 'center',
+    // flexDirection:"row",
+    borderColor: 'black',
+    borderWidth:1,
+    borderRadius: 10,
+    alignSelf: 'center',
+   marginBottom:10,
+   marginTop:10
+ 
+  
   },
 });

@@ -34,8 +34,10 @@ class Dashboard extends React.Component {
     render() {
         return (
             <>
+            <StatusBar backgroundColor='#7b4397' barStyle="light-content"/>
                 <ScrollView>
                     <View style={styles.dashboardContainer}>
+
                         <View style={styles.mapSection}>
                             <Map />
                         </View>

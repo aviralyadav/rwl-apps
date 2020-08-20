@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import DashboardScreen from './Dashboard';
 import CardList from './CardList';
 import Signin from './Signin';
-import Profile from './Profile';
+import NewDamChecklist1 from './NewDamChecklist1';
 // import DrawerContent from './DrawerContent';
 import Splash from './Splash';
 import DamInspection from './DamInspection';
@@ -21,7 +21,8 @@ import GateInspectionDetailForm5 from './GateInspectionDetailForm5';
 import GateInspectionDetailForm6 from './GateInspectionDetailForm6';
 import DamHealthSafety from './DamHealthSafety';
 import DamHealth from './DamHealth';
-
+import NewDamChecklist2 from './NewDamChecklist2';
+import NewDamChecklist3 from './NewDamChecklist3';
 import Signup from './Signup';
 import ForgetPass from './ForgetPass';
 import LoginScreen from './LoginScreen';
@@ -47,7 +48,7 @@ const DamHealthSafetyStack = createStackNavigator();
 const DamHealthStack = createStackNavigator();
 const LiveStorageDamTankStack = createStackNavigator();
 const SignupStack = createStackNavigator();
-const ProfileStack = createStackNavigator();
+const NewDamChecklist1Stack = createStackNavigator();
 const GISViewStack = createStackNavigator();
 const DamInspectionCheckListStack = createStackNavigator();
 const GateInspectionDetailFormStack = createStackNavigator();
@@ -69,6 +70,8 @@ const GateInspectionDetailStack = createStackNavigator();
 const EnterRainfallStack = createStackNavigator();
 const EnterEvaporationStack = createStackNavigator();
 const EnterDischargeLevelStack = createStackNavigator();
+const NewDamChecklist2Stack = createStackNavigator();
+const NewDamChecklist3Stack = createStackNavigator();
 
 const screen = Dimensions.get("window");
 // export default MainScreen;
@@ -76,7 +79,7 @@ function LogoTitle() {
   return (
     <Image
       style={{ width: '100%', height: 55, }}
-      source={require("./Images/pravahlogoios3.png")}
+      source={require("./Images/pravahlogoios5.png")}
     />
   );
 }
@@ -88,7 +91,7 @@ export const DashboardScreenStack = ({navigation}) => (
   <DashboardStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
         
       },
      
@@ -103,7 +106,7 @@ export const DashboardScreenStack = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -120,7 +123,7 @@ export const CardListScreenStack = ({navigation}) => (
   <CardListStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
      
     }}>
@@ -134,7 +137,7 @@ export const CardListScreenStack = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -150,12 +153,13 @@ export const SigninStackScreen = ({navigation}) => (
   <SigninStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
         marginLeft: 150,
         fontWeight: 'bold',
+        fontSize:23
       },
     }}>
     <SigninStack.Screen name="Signin" component={Signin} />
@@ -166,7 +170,7 @@ export const DamInspectionScreen = ({navigation}) => (
   <DamInspectionStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
      
     }}>
@@ -180,7 +184,7 @@ export const DamInspectionScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -197,7 +201,7 @@ export const DamInspectionCheckListScreen = ({navigation}) => (
   <DamInspectionCheckListStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -215,7 +219,7 @@ export const DamInspectionCheckListScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -231,7 +235,7 @@ export const GateInspectionDetailFormScreen = ({navigation}) => (
   <GateInspectionDetailFormStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -248,7 +252,7 @@ export const GateInspectionDetailFormScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -264,7 +268,7 @@ export const DamHealthSafetyScreen = ({navigation}) => (
   <DamHealthSafetyStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
      
     }}>
@@ -278,7 +282,7 @@ export const DamHealthSafetyScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -294,7 +298,7 @@ export const DamHealthStackScreen = ({navigation}) => (
   <DamHealthStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
      
     }}>
@@ -308,7 +312,7 @@ export const DamHealthStackScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -324,7 +328,7 @@ export const LiveStorageDamTankStackScreen = ({navigation}) => (
   <LiveStorageDamTankStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
      
      
@@ -339,7 +343,7 @@ export const LiveStorageDamTankStackScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -355,29 +359,30 @@ export const SignupStackScreen = ({navigation}) => (
   <SignupStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
         marginLeft: 150,
         fontWeight: 'bold',
+        fontSize:23
       },
     }}>
     <SignupStack.Screen name="Signup" component={Signup} />
   </SignupStack.Navigator>
 );
 
-export const ProfileStackScreen = ({navigation}) => (
-  <ProfileStack.Navigator
+export const NewDamChecklist1StackScreen = ({navigation}) => (
+  <NewDamChecklist1Stack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
      
     }}>
-    <ProfileStack.Screen name="Profile"
-     component={Profile}
+    <NewDamChecklist1Stack.Screen name="NewDamChecklist1"
+     component={NewDamChecklist1}
      options={{
       headerTitle: props => <LogoTitle {...props} />
       ,
@@ -385,7 +390,7 @@ export const ProfileStackScreen = ({navigation}) => (
         <Icon.Button
           name="ios-menu"
           size={25}
-          backgroundColor="#CB3550"
+          backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
       headerTitleContainerStyle: {
@@ -395,15 +400,76 @@ export const ProfileStackScreen = ({navigation}) => (
     }}
   />
      
-  </ProfileStack.Navigator>
+  </NewDamChecklist1Stack.Navigator>
 );
 
+export const NewDamChecklist2StackScreen = ({navigation}) => (
+  <NewDamChecklist2Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+     
+    }}>
+    <NewDamChecklist2Stack.Screen name="NewDamChecklist2"
+     component={NewDamChecklist2}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      headerLeft: () => (
+        <Icon.Button
+          name="ios-menu"
+          size={25}
+          backgroundColor="#dc2430"
+          onPress={() => navigation.openDrawer()}></Icon.Button>
+      ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:50
+      },
+    }}
+  />
+     
+  </NewDamChecklist2Stack.Navigator>
+);
+
+export const NewDamChecklist3StackScreen = ({navigation}) => (
+  <NewDamChecklist3Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+     
+    }}>
+    <NewDamChecklist3Stack.Screen name="NewDamChecklist3"
+     component={NewDamChecklist3}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      headerLeft: () => (
+        <Icon.Button
+          name="ios-menu"
+          size={25}
+          backgroundColor="#dc2430"
+          onPress={() => navigation.openDrawer()}></Icon.Button>
+      ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:50
+      },
+    }}
+  />
+     
+  </NewDamChecklist3Stack.Navigator>
+);
 
 export const GISViewStackScreen = ({navigation}) => (
   <GISViewStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
      
@@ -417,7 +483,7 @@ export const GISViewStackScreen = ({navigation}) => (
         <Icon.Button
           name="ios-menu"
           size={25}
-          backgroundColor="#CB3550"
+          backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
       headerTitleContainerStyle: {
@@ -434,12 +500,13 @@ export const LoginScreenStackScreen = ({navigation}) => (
   <LoginScreenStack.Navigator
   screenOptions={{
     headerStyle: {
-      backgroundColor: '#CB3550',
+      backgroundColor: '#dc2430',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
       marginLeft: 150,
       fontWeight: 'bold',
+      fontSize:23
     },
   }}>
     <LoginScreenStack.Screen
@@ -464,16 +531,17 @@ export const ForgetPassStackScreen = ({navigation}) => (
   <ForgetPassStack.Navigator
   screenOptions={{
     headerStyle: {
-      backgroundColor: '#CB3550',
+      backgroundColor: '#dc2430',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
-      marginLeft: 120,
+      marginLeft: 105,
       fontWeight: 'bold',
+      fontSize:23
     },
   }}>
     <ForgetPassStack.Screen
-     name="ForgetPassword"
+     name="Forget Password"
      component={ForgetPass}
     
   />  
@@ -484,7 +552,7 @@ export const DataEnteryOptionStackScreen = ({navigation}) => (
   <DataEnteryOptionStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
     
@@ -499,7 +567,7 @@ export const DataEnteryOptionStackScreen = ({navigation}) => (
         <Icon.Button
           name="ios-menu"
           size={25}
-          backgroundColor="#CB3550"
+          backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
       headerTitleContainerStyle: {
@@ -515,7 +583,7 @@ export const EnterOTPStackScreen = ({navigation}) => (
   <EnterOTPStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
      
@@ -529,7 +597,7 @@ export const EnterOTPStackScreen = ({navigation}) => (
         <Icon.Button
           name="ios-menu"
           size={25}
-          backgroundColor="#CB3550"
+          backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
       headerTitleContainerStyle: {
@@ -546,7 +614,7 @@ export const DamInspectionDetailsStackScreen = ({navigation}) => (
   <DamInspectionDetailsStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
      
@@ -560,7 +628,7 @@ export const DamInspectionDetailsStackScreen = ({navigation}) => (
         <Icon.Button
           name="ios-menu"
           size={25}
-          backgroundColor="#CB3550"
+          backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
       headerTitleContainerStyle: {
@@ -577,7 +645,7 @@ export const DamInspectionDetails1StackScreen = ({navigation}) => (
   <DamInspectionDetails1Stack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
      
@@ -591,7 +659,7 @@ export const DamInspectionDetails1StackScreen = ({navigation}) => (
         <Icon.Button
           name="ios-menu"
           size={25}
-          backgroundColor="#CB3550"
+          backgroundColor="#dc2430"
           onPress={() => navigation.openDrawer()}></Icon.Button>
       ),
       headerTitleContainerStyle: {
@@ -608,7 +676,7 @@ export const GateInspectionDetailForm2Screen = ({navigation}) => (
   <GateInspectionDetailForm2Stack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
      
@@ -622,7 +690,7 @@ export const GateInspectionDetailForm2Screen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -638,7 +706,7 @@ export const GateInspectionDetailForm3Screen = ({navigation}) => (
   <GateInspectionDetailForm3Stack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -655,7 +723,7 @@ export const GateInspectionDetailForm3Screen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -671,7 +739,7 @@ export const GateInspectionDetailForm4Screen = ({navigation}) => (
   <GateInspectionDetailForm4Stack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -688,7 +756,7 @@ export const GateInspectionDetailForm4Screen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -703,7 +771,7 @@ export const GateInspectionDetailForm5Screen = ({navigation}) => (
   <GateInspectionDetailForm5Stack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -720,7 +788,7 @@ export const GateInspectionDetailForm5Screen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -736,7 +804,7 @@ export const GateInspectionDetailForm6Screen = ({navigation}) => (
   <GateInspectionDetailForm6Stack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -753,7 +821,7 @@ export const GateInspectionDetailForm6Screen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -768,7 +836,7 @@ export const EnterLakeLevelScreen = ({navigation}) => (
   <EnterLakeLevelStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -785,7 +853,7 @@ export const EnterLakeLevelScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -800,7 +868,7 @@ export const EnterRainfallScreen = ({navigation}) => (
   <EnterRainfallStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -817,7 +885,7 @@ export const EnterRainfallScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -832,7 +900,7 @@ export const EnterEvaporationScreen = ({navigation}) => (
   <EnterEvaporationStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -849,7 +917,7 @@ export const EnterEvaporationScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -864,7 +932,7 @@ export const EnterDischargeLevelScreen = ({navigation}) => (
   <EnterDischargeLevelStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -881,7 +949,7 @@ export const EnterDischargeLevelScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -897,7 +965,7 @@ export const DamDashboardScreen = ({navigation}) => (
   <DamDashboardStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -914,7 +982,7 @@ export const DamDashboardScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -929,7 +997,7 @@ export const InstrumentInspectionDetailScreen = ({navigation}) => (
   <InstrumentInspectionDetailStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -946,7 +1014,7 @@ export const InstrumentInspectionDetailScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {
@@ -962,7 +1030,7 @@ export const GateInspectionDetailScreen = ({navigation}) => (
   <GateInspectionDetailStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: '#CB3550',
+        backgroundColor: '#dc2430',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -979,7 +1047,7 @@ export const GateInspectionDetailScreen = ({navigation}) => (
           <Icon.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#CB3550"
+            backgroundColor="#dc2430"
             onPress={() => navigation.openDrawer()}></Icon.Button>
         ),
         headerTitleContainerStyle: {

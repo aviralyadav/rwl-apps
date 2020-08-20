@@ -23,7 +23,9 @@ import {
   DamHealthStackScreen,
   LiveStorageDamTankStackScreen,
   DamInspectionCheckListScreen,
-  ProfileStackScreen,
+  NewDamChecklist1StackScreen,
+  NewDamChecklist2StackScreen,
+  NewDamChecklist3StackScreen,
   EnterEvaporationStackScreen,
   GateInspectionDetailFormScreen,
   GateInspectionDetailForm2Screen,
@@ -102,7 +104,9 @@ class App extends React.Component {
             component={LiveStorageDamTankStackScreen}
           />
           <Drawer.Screen name="Signup" component={SignupStackScreen} />
-          <Drawer.Screen name="Profile" component={ProfileStackScreen} />
+          <Drawer.Screen name="NewDamChecklist1" component={NewDamChecklist1StackScreen} />
+          <Drawer.Screen name="NewDamChecklist2" component={NewDamChecklist2StackScreen} />
+          <Drawer.Screen name="NewDamChecklist3" component={NewDamChecklist3StackScreen} />
           <Drawer.Screen name="LoginScreen" component={LoginScreenStackScreen} />
           <Drawer.Screen
             name="GISView"

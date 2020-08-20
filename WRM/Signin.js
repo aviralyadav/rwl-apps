@@ -39,13 +39,20 @@ export default class Signin extends Component {
               />
             </View>
             <View style={styles.signupForm}>
-              
+            <View style={{fontSize:30,fontWeight:200}}>
+                <Text style={{
+                    color: 'black',
+                    // textDecorationLine: 'underline',
+                    fontSize:20,
+                  }}>User Name</Text>
+                </View>
               <View style={styles.sectionStyle}>
+              
                 <Image
                   source={require('./Images/Email.png')}
                   style={styles.imageStyle}
                 />
-
+                
                 <TextInput
                 keyboardType="email-address"
                   style={styles.textInput}
@@ -74,7 +81,7 @@ export default class Signin extends Component {
                   marginTop: 15,
                 }}>
                 <LinearGradient
-                  colors={['#7b4397', '#dc2430']}
+                  colors={['#7b4397', '#dc2430',]}
                   style={styles.buttonWrapper}>
                   <TouchableWithoutFeedback
                     style={styles.button1}

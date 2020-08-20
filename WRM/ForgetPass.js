@@ -138,7 +138,7 @@ const styles = {
     padding: 9,
   },
   signupForm: {
-    paddingTop: 10,
+    paddingTop: 90,
   },
   footerText: {
     color: 'white',
@@ -156,7 +156,8 @@ const styles = {
     height: 60,
     borderRadius: 45,
     margin: 10,
-  },
+    
+   },
 
   imageStyle: {
     padding: 10,

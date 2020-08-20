@@ -67,7 +67,7 @@ export default class LiveStorageDamTank extends Component {
                       <Text>Live Storage</Text>
                       <Text
                         style={{
-                          backgroundColor: 'red',
+                          backgroundColor: '#FE7D6A',
                           borderRadius: 45,
                           width: 60,
                           height: 30,
@@ -120,7 +120,7 @@ export default class LiveStorageDamTank extends Component {
                       <Text>Live Storage</Text>
                       <Text
                         style={{
-                          backgroundColor: 'red',
+                          backgroundColor: '#F1C40F',
                           borderRadius: 45,
                           width: 60,
                           height: 30,
@@ -173,7 +173,7 @@ export default class LiveStorageDamTank extends Component {
                       <Text>Live Storage</Text>
                       <Text
                         style={{
-                          backgroundColor: 'red',
+                          backgroundColor: '#FE7D6A',
                           borderRadius: 45,
                           width: 60,
                           height: 30,
@@ -226,7 +226,7 @@ export default class LiveStorageDamTank extends Component {
                       <Text>Live Storage</Text>
                       <Text
                         style={{
-                          backgroundColor: 'red',
+                          backgroundColor: '#F1C40F',
                           borderRadius: 45,
                           width: 60,
                           height: 30,

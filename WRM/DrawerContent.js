@@ -48,15 +48,15 @@ export const DrawerContent = (props) => {
             <DrawerContentScrollView {...props}>
                 <View style={styles.drawerContent}>
                     <View style={styles.userInfoSection}>
-                        <View style={{flexDirection:'row',marginTop: 5}}>
+                        <View style={{flexDirection:'row',marginTop: 2}}>
                         <Image
-                source={require('./Images/pravahlogoios.png')}
+                source={require('./Images/pravahlogoios5.png')}
                 style={styles.logo}
                 resizeMode="stretch"
               />
                             <View >
                                 
-                                <Caption></Caption>
+                                {/* <Caption></Caption> */}
                             </View>
                         </View>
 
@@ -247,8 +247,30 @@ export const DrawerContent = (props) => {
                                 size={size}
                                 />
                             )}
-                            label="Profile"
-                            onPress={() => {props.navigation.navigate('Profile')}}
+                            label="NewDamChecklist1"
+                            onPress={() => {props.navigation.navigate('NewDamChecklist1')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="NewDamChecklist2"
+                            onPress={() => {props.navigation.navigate('NewDamChecklist2')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="NewDamChecklist3"
+                            onPress={() => {props.navigation.navigate('NewDamChecklist3')}}
                         />
                          <DrawerItem 
                             icon={({color, size}) => (
@@ -456,5 +478,5 @@ const styles = StyleSheet.create({
       paddingVertical: 12,
       paddingHorizontal: 16,
     },
-    logo: {height:80, width:"90%"},
+    logo: {height:70, width:"98%"},
   });

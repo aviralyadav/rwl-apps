@@ -20,7 +20,7 @@ import {
 import {
    Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import Footer from './Footer';
+
 
 export default class LiveStorage2 extends Component {
   render() {
@@ -36,9 +36,6 @@ export default class LiveStorage2 extends Component {
           height: 510,
           padding: 10,
           margin: 2,
-        //   borderBottomWidth: 1,
-    borderTopWidth: 1,
-    borderColor: 'green',
         }}>
           
         <Container>
@@ -65,13 +62,12 @@ export default class LiveStorage2 extends Component {
                         justifyContent: 'space-between',
                         width: '100%',
                         marginBottom: 15,
-                        
                       }}>
                       <Text>Dam1</Text>
-                      <Text style={{fontSize:18}}>Live Storage</Text>
+                      <Text>Live Storage</Text>
                       <Text
                         style={{
-                          backgroundColor: 'red',
+                          backgroundColor: '#FE7D6A',
                           borderRadius: 45,
                           width: 60,
                           height: 30,
@@ -124,7 +120,7 @@ export default class LiveStorage2 extends Component {
                       <Text>Live Storage</Text>
                       <Text
                         style={{
-                          backgroundColor: 'red',
+                          backgroundColor: '#F1C40F',
                           borderRadius: 45,
                           width: 60,
                           height: 30,
@@ -177,7 +173,7 @@ export default class LiveStorage2 extends Component {
                       <Text>Live Storage</Text>
                       <Text
                         style={{
-                          backgroundColor: 'red',
+                          backgroundColor: '#FE7D6A',
                           borderRadius: 45,
                           width: 60,
                           height: 30,
@@ -230,7 +226,7 @@ export default class LiveStorage2 extends Component {
                       <Text>Live Storage</Text>
                       <Text
                         style={{
-                          backgroundColor: 'red',
+                          backgroundColor: '#F1C40F',
                           borderRadius: 45,
                           width: 60,
                           height: 30,
@@ -273,7 +269,7 @@ export default class LiveStorage2 extends Component {
         </Container>
         
       </View>
-     
+      
       </View>
     );
   }

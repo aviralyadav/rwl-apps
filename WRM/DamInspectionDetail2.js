@@ -143,12 +143,12 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'stretch',
     height: 510,
-    padding: 10,
-    margin: 1,
+    padding: 1,
+    
   },
   header: {
     flexDirection: 'row',
-    width: 425,
+    width: 420,
     justifyContent: 'space-between',
     backgroundColor: 'yellow',
     height: 40,
@@ -158,7 +158,9 @@ const styles = StyleSheet.create({
   headingText: {
     fontSize: 15,
     fontWeight: '700',
-    width: '25%'
+    width: '25%',
+    marginLeft:1
+    
   },
   contentText: {
       fontWeight: 'normal',
