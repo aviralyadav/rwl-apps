@@ -9,7 +9,7 @@ export default class NewDamChecklist1 extends Component {
     super();
     this.state = {
       inspectionType: '',
-      date: '2016-05-15',
+      date: '',
     };
   }
   
@@ -71,29 +71,35 @@ export default class NewDamChecklist1 extends Component {
         <Text style={styles.Text}>Date of Inspection</Text>
         <DatePicker
                   
-                  style={{width: 400 }}
+                  style={{width: '100%', }}
                   date={this.state.date}
                   mode="date"
-                  placeholder="select date"
+                  placeholder="Select inspection date"
                   format="YYYY-MM-DD"
                   minDate="1990-05-01"
-                  maxDate="2020-12-01"
+                  maxDate="2090-12-31"
                   confirmBtnText="Confirm"
                   cancelBtnText="Cancel"
+                  showIcon={false}
                   customStyles={{
                     dateIcon: {
+                      display: 'none',
                       position: 'absolute',
                       left: 0,
                       top: 4,
                       marginLeft: 0,
                     },
                     dateInput: {
-                      marginLeft: 36,
+                      // marginLeft: 10,
+                      marginHorizontal: 12,
                       borderColor: 'black',
                       borderWidth:1,
                       borderRadius: 10,
-
+                      color: '#000'
                     },
+                    placeholderText: {
+                      color: '#000'
+                    }
                     // ... You can check the source to find the other keys.
                   }}
                   onDateChange={(date) => {
