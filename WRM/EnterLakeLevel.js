@@ -11,7 +11,7 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 import DatePicker from 'react-native-datepicker';
-import TimePicker from 'react-native-simple-time-picker';
+// import TimePicker from 'react-native-simple-time-picker';
 import DamInspectionDetail2 from './DamInspectionDetail2';
 
 import Footer from './Footer';

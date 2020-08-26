@@ -71,7 +71,7 @@ export default class NewDamChecklist1 extends Component {
         <Text style={styles.Text}>Date of Inspection</Text>
         <DatePicker
                   
-                  style={{width: '100%', }}
+                  style={{width: '97%', }}
                   date={this.state.date}
                   mode="date"
                   placeholder="Select inspection date"
@@ -90,8 +90,8 @@ export default class NewDamChecklist1 extends Component {
                       marginLeft: 0,
                     },
                     dateInput: {
-                      // marginLeft: 10,
-                      marginHorizontal: 12,
+                       marginLeft: 10,
+                      // marginHorizontal: 10,
                       borderColor: 'black',
                       borderWidth:1,
                       borderRadius: 10,
