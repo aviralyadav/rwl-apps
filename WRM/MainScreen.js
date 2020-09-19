@@ -6,13 +6,14 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import DashboardScreen from './Dashboard';
-import CardList from './CardList';
+import DamInspectionCheckList1 from './DamInspectionCheckList1';
 import Signin from './Signin';
 import NewDamChecklist1 from './NewDamChecklist1';
 // import DrawerContent from './DrawerContent';
 import Splash from './Splash';
 import DamInspection from './DamInspection';
 import DamInspectionCheckList from './DamInspectionCheckList';
+import DamInspectionCheckList2 from './DamInspectionCheckList2';
 import GateInspectionDetailForm from './GateInspectionDetailForm';
 import GateInspectionDetailForm2 from './GateInspectionDetailForm2';
 import GateInspectionDetailForm3 from './GateInspectionDetailForm3';
@@ -31,17 +32,21 @@ import GISView from './GISView';
 import DataEnteryOption from './DataEnteryOption';
 import EnterOTP from "./EnterOTP";
 import EnterLakeLevel from "./EnterLakeLevel";
-import DamInspectionDetails from "./DamInspectionDetails";
-import DamInspectionDetails1 from "./DamInspectionDetails1";
+import GateInspectionDetail3 from "./GateInspectionDetail3";
+import GateInspectionDetail2 from "./GateInspectionDetail2";
 import DamDashboard from "./DamDashboard";
 import InstrumentInspectionDetail from "./InstrumentInspectionDetail";
 import GateInspectionDetail from "./GateInspectionDetail";
 import EnterRainfall from "./EnterRainfall";
 import EnterEvaporation from "./EnterEvaporation";
 import EnterDischargeLevel  from "./EnterDischargeLevel";
+import EnterIndustrialUses  from "./EnterIndustrialUses";
+import EnterDrinkingandIrrigationUses from "./EnterDrinkingandIrrigationUses";
+
 
 const DashboardStack = createStackNavigator();
-const CardListStack = createStackNavigator();
+const DamInspectionCheckList1Stack = createStackNavigator();
+const DamInspectionCheckList2Stack = createStackNavigator();
 const SigninStack = createStackNavigator();
 const DamInspectionStack = createStackNavigator();
 const DamHealthSafetyStack = createStackNavigator();
@@ -56,13 +61,13 @@ const LoginScreenStack = createStackNavigator();
 const ForgetPassStack = createStackNavigator();
 const DataEnteryOptionStack = createStackNavigator();
 const EnterOTPStack = createStackNavigator();
-const DamInspectionDetailsStack = createStackNavigator();
+const GateInspectionDetail3Stack = createStackNavigator();
 const GateInspectionDetailForm2Stack = createStackNavigator();
 const GateInspectionDetailForm3Stack = createStackNavigator();
 const GateInspectionDetailForm4Stack = createStackNavigator();
 const GateInspectionDetailForm5Stack = createStackNavigator();
 const GateInspectionDetailForm6Stack = createStackNavigator();
-const DamInspectionDetails1Stack = createStackNavigator();
+const GateInspectionDetail2Stack = createStackNavigator();
 const EnterLakeLevelStack = createStackNavigator();
 const DamDashboardStack = createStackNavigator();
 const InstrumentInspectionDetailStack = createStackNavigator();
@@ -70,8 +75,12 @@ const GateInspectionDetailStack = createStackNavigator();
 const EnterRainfallStack = createStackNavigator();
 const EnterEvaporationStack = createStackNavigator();
 const EnterDischargeLevelStack = createStackNavigator();
+const EnterIndustrialUsesStack = createStackNavigator();
+const EnterDrinkingandIrrigationUsesStack = createStackNavigator();
 const NewDamChecklist2Stack = createStackNavigator();
 const NewDamChecklist3Stack = createStackNavigator();
+
+
 
 const screen = Dimensions.get("window");
 // export default MainScreen;
@@ -119,17 +128,17 @@ export const DashboardScreenStack = ({navigation}) => (
   </DashboardStack.Navigator>
 );
 
-export const CardListScreenStack = ({navigation}) => (
-  <CardListStack.Navigator
+export const DamInspectionCheckList2ScreenStack = ({navigation}) => (
+  <DamInspectionCheckList2Stack.Navigator
     screenOptions={{
       headerStyle: {
         backgroundColor: '#dc2430',
       },
      
     }}>
-    <CardListStack.Screen
-      name="CardList"
-      component={CardList}
+    <DamInspectionCheckList2Stack.Screen
+      name="DamInspectionCheckList2"
+      component={DamInspectionCheckList2}
       options={{
         headerTitle: props => <LogoTitle {...props} />
         ,
@@ -146,7 +155,37 @@ export const CardListScreenStack = ({navigation}) => (
         },
       }}
     />
-  </CardListStack.Navigator>
+  </DamInspectionCheckList2Stack.Navigator>
+);
+
+export const DamInspectionCheckList1ScreenStack = ({navigation}) => (
+  <DamInspectionCheckList1Stack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+     
+    }}>
+    <DamInspectionCheckList1Stack.Screen
+      name="DamInspectionCheckList1"
+      component={DamInspectionCheckList1}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />
+        ,
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#dc2430"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </DamInspectionCheckList1Stack.Navigator>
 );
 
 export const SigninStackScreen = ({navigation}) => (
@@ -155,14 +194,27 @@ export const SigninStackScreen = ({navigation}) => (
       headerStyle: {
         backgroundColor: '#dc2430',
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        marginLeft: 150,
-        fontWeight: 'bold',
-        fontSize:23
-      },
+      
     }}>
-    <SigninStack.Screen name="Signin" component={Signin} />
+      
+    <SigninStack.Screen name="Signin" component={Signin}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      // headerLeft: () => (
+      //   <Icon.Button
+      //     name="ios-menu"
+      //     size={25}
+      //     backgroundColor="#dc2430"
+      //     onPress={() => navigation.openDrawer()}></Icon.Button>
+      // ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:20,
+        // height:55
+      },
+    }}
+  />
   </SigninStack.Navigator>
 );
 
@@ -348,7 +400,7 @@ export const LiveStorageDamTankStackScreen = ({navigation}) => (
         ),
         headerTitleContainerStyle: {
           right: 0,
-          left:50
+          left:50,
         },
       }}
     />
@@ -368,7 +420,26 @@ export const SignupStackScreen = ({navigation}) => (
         fontSize:23
       },
     }}>
-    <SignupStack.Screen name="Signup" component={Signup} />
+    <SignupStack.Screen 
+    name="Signup"
+     component={Signup}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      // headerLeft: () => (
+      //   <Icon.Button
+      //     name="ios-menu"
+      //     size={25}
+      //     backgroundColor="#dc2430"
+      //     onPress={() => navigation.openDrawer()}></Icon.Button>
+      // ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:20,
+        // height:55
+      },
+    }}
+      />
   </SignupStack.Navigator>
 );
 
@@ -512,17 +583,21 @@ export const LoginScreenStackScreen = ({navigation}) => (
     <LoginScreenStack.Screen
      name="LOGIN"
      component={LoginScreen}
-    //  options={{
-    //   headerTitle: props => <LogoTitle {...props} />
-    //   ,
-    //   headerLeft: () => (
-    //     <Icon.Button
-    //       name="ios-menu"
-    //       size={25}
-    //       backgroundColor="#dc2430"
-    //       onPress={() => navigation.openDrawer()}></Icon.Button>
-    //   ),
-    // }}
+     options={{
+      headerTitle: props => <LogoTitle {...props} />
+      ,
+      // headerLeft: () => (
+      //   <Icon.Button
+      //     name="ios-menu"
+      //     size={25}
+      //     backgroundColor="#dc2430"
+      //     onPress={() => navigation.openDrawer()}></Icon.Button>
+      // ),
+      headerTitleContainerStyle: {
+        right: 0,
+        left:20
+      },
+    }}
   />  
   </LoginScreenStack.Navigator>
 );
@@ -610,8 +685,8 @@ export const EnterOTPStackScreen = ({navigation}) => (
   </EnterOTPStack.Navigator>
 );
 
-export const DamInspectionDetailsStackScreen = ({navigation}) => (
-  <DamInspectionDetailsStack.Navigator
+export const GateInspectionDetail3StackScreen = ({navigation}) => (
+  <GateInspectionDetail3Stack.Navigator
     screenOptions={{
       headerStyle: {
         backgroundColor: '#dc2430',
@@ -619,8 +694,8 @@ export const DamInspectionDetailsStackScreen = ({navigation}) => (
       headerTintColor: '#fff',
      
     }}>
-    <DamInspectionDetailsStack.Screen name="DamInspectionDetails"
-     component={DamInspectionDetails}
+    <GateInspectionDetail3Stack.Screen name="GateInspectionDetail3"
+     component={GateInspectionDetail3}
      options={{
       headerTitle: props => <LogoTitle {...props} />
       ,
@@ -638,11 +713,11 @@ export const DamInspectionDetailsStackScreen = ({navigation}) => (
     }}
   />
      
-  </DamInspectionDetailsStack.Navigator>
+  </GateInspectionDetail3Stack.Navigator>
 );
 
-export const DamInspectionDetails1StackScreen = ({navigation}) => (
-  <DamInspectionDetails1Stack.Navigator
+export const GateInspectionDetail2StackScreen = ({navigation}) => (
+  <GateInspectionDetail2Stack.Navigator
     screenOptions={{
       headerStyle: {
         backgroundColor: '#dc2430',
@@ -650,8 +725,8 @@ export const DamInspectionDetails1StackScreen = ({navigation}) => (
       headerTintColor: '#fff',
      
     }}>
-    <DamInspectionDetails1Stack.Screen name="DamInspectionDetails1"
-     component={DamInspectionDetails1}
+    <GateInspectionDetail2Stack.Screen name="GateInspectionDetail2"
+     component={GateInspectionDetail2}
      options={{
       headerTitle: props => <LogoTitle {...props} />
       ,
@@ -669,7 +744,7 @@ export const DamInspectionDetails1StackScreen = ({navigation}) => (
     }}
   />
      
-  </DamInspectionDetails1Stack.Navigator>
+  </GateInspectionDetail2Stack.Navigator>
 );
 
 export const GateInspectionDetailForm2Screen = ({navigation}) => (
@@ -959,6 +1034,72 @@ export const EnterDischargeLevelScreen = ({navigation}) => (
       }}
     />
   </EnterDischargeLevelStack.Navigator>
+);
+
+export const EnterDrinkingandIrrigationUsesScreen = ({navigation}) => (
+  <EnterDrinkingandIrrigationUsesStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <EnterDrinkingandIrrigationUsesStack.Screen
+      name="EnterDrinkingandIrrigationUses"
+      component={EnterDrinkingandIrrigationUses}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#dc2430"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </EnterDrinkingandIrrigationUsesStack.Navigator>
+);
+
+export const EnterIndustrialUsesScreen = ({navigation}) => (
+  <EnterIndustrialUsesStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#dc2430',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        //   marginLeft:150,
+        fontWeight: 'bold',
+      },
+    }}>
+    <EnterIndustrialUsesStack.Screen
+      name="EnterIndustrialUses"
+      component={EnterIndustrialUses}
+      options={{
+        headerTitle: props => <LogoTitle {...props} />,
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#dc2430"
+            onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerTitleContainerStyle: {
+          right: 0,
+          left:50
+        },
+      }}
+    />
+  </EnterIndustrialUsesStack.Navigator>
 );
 
 export const DamDashboardScreen = ({navigation}) => (

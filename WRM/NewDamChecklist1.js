@@ -24,19 +24,16 @@ export default class NewDamChecklist1 extends Component {
         <View>
 
 <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:5}}>
-    Dam Inspection Checklist
+    Dam Inspection Details
 </Text>
 </View>
       
         <ScrollView>
         <Content style={{backgroundColor: 'white',margin:5}}>
-        <View >
+        <View  style={styles.headerContent}>
+
         <Text style={styles.Text}>Dam Name :</Text>
-          <TextInput style={styles.inputBox}
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-          placeholder="Enter Dam Name"
-          underlineColorAndroid='rgba(0,0,0,0)'/>
+        <Text style={styles.Text1}>Bhama Askhed</Text>
        </View>
        <View >
         <Text style={styles.Text}>Inspection Type :</Text>
@@ -60,7 +57,7 @@ export default class NewDamChecklist1 extends Component {
                     onValueChange={(itemValue, i) =>
                       this.setState({inspectionType: itemValue, index: i})
                     }>
-                    <Picker.Item label="Java" value="java" />
+                    <Picker.Item label="Select Option" value="Select Option" />
                     <Picker.Item label="JavaScript" value="js" />
                     <Picker.Item label="React Native" value="rn" />
                   </Picker>
@@ -80,7 +77,7 @@ export default class NewDamChecklist1 extends Component {
                   maxDate="2090-12-31"
                   confirmBtnText="Confirm"
                   cancelBtnText="Cancel"
-                  showIcon={false}
+                  showIcon={true}
                   customStyles={{
                     dateIcon: {
                       display: 'none',
@@ -90,7 +87,7 @@ export default class NewDamChecklist1 extends Component {
                       marginLeft: 0,
                     },
                     dateInput: {
-                       marginLeft: 10,
+                       marginLeft: 50,
                       // marginHorizontal: 10,
                       borderColor: 'black',
                       borderWidth:1,
@@ -172,7 +169,7 @@ export default class NewDamChecklist1 extends Component {
          </View> */}
          <View style={styles.container1}>
             <Button style={styles.Button1}>          
-                <Text  >Save & Checklist</Text>
+                <Text  >Save & Enter Checklist</Text>
               </Button >
               <Button   style={styles.Button2}>          
                 <Text  >Cancel</Text>
@@ -228,6 +225,13 @@ const styles=StyleSheet.create({
         padding:10,
         fontSize:20
       },
+      Text1:{
+        color:'black',
+        padding:10,
+        fontSize:20,
+        marginRight:"30%",
+        fontWeight:"bold"
+      },
 
      Picker:{
       
@@ -242,7 +246,7 @@ const styles=StyleSheet.create({
       borderRadius: 25,
       backgroundColor:'#9ADF8F',
       fontSize:70,
-      marginLeft:'8%',
+      marginLeft:'3%',
       marginTop:40,
       marginBottom:20
      
@@ -264,6 +268,11 @@ const styles=StyleSheet.create({
       flexDirection: 'row',
       justifyContent: 'space-between'
     },
-  
+    headerContent: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginTop:20
+    },
+   
      
   });

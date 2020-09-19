@@ -85,17 +85,7 @@ export const DrawerContent = (props) => {
                             label="Share"
                             onPress={shareToFrnds}
                         />
-                        <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="account-outline" 
-                                color={color}
-                                size={size}
-                                />
-                            )}
-                            label="Card List"
-                            onPress={() => {props.navigation.navigate('CardList')}}
-                        />
+                        
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -117,6 +107,28 @@ export const DrawerContent = (props) => {
                             )}
                             label="Dam Inspection CheckList"
                             onPress={() => {props.navigation.navigate('DamInspectionCheckList')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Dam Inspection CheckList1"
+                            onPress={() => {props.navigation.navigate('DamInspectionCheckList1')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Dam Inspection CheckList2"
+                            onPress={() => {props.navigation.navigate('DamInspectionCheckList2')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
@@ -327,6 +339,7 @@ export const DrawerContent = (props) => {
                             label="EnterOTP"
                             onPress={() => {props.navigation.navigate('EnterOTP')}}
                         />
+                         
                          <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -335,8 +348,8 @@ export const DrawerContent = (props) => {
                                 size={size}
                                 />
                             )}
-                            label="DamInspectionDetails"
-                            onPress={() => {props.navigation.navigate('DamInspectionDetails')}}
+                            label="GateInspectionDetail"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetail')}}
                         />
                          <DrawerItem 
                             icon={({color, size}) => (
@@ -346,8 +359,19 @@ export const DrawerContent = (props) => {
                                 size={size}
                                 />
                             )}
-                            label="DamInspectionDetails1"
-                            onPress={() => {props.navigation.navigate('DamInspectionDetails1')}}
+                            label="GateInspectionDetail2"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetail2')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="GateInspectionDetail3"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetail3')}}
                         />
                          <DrawerItem 
                             icon={({color, size}) => (
@@ -393,6 +417,28 @@ export const DrawerContent = (props) => {
                             label="EnterDischargeLevel"
                             onPress={() => {props.navigation.navigate('EnterDischargeLevel')}}
                         />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Enter Industrial Uses"
+                            onPress={() => {props.navigation.navigate('EnterIndustrialUses')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Enter DrinkingandIrrigationUses"
+                            onPress={() => {props.navigation.navigate('EnterDrinkingandIrrigationUses')}}
+                        />
                           <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -415,17 +461,7 @@ export const DrawerContent = (props) => {
                             label="InstrumentInspectionDetail"
                             onPress={() => {props.navigation.navigate('InstrumentInspectionDetail')}}
                         />
-                         <DrawerItem 
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="account-check-outline" 
-                                color={color}
-                                size={size}
-                                />
-                            )}
-                            label="GateInspectionDetail"
-                            onPress={() => {props.navigation.navigate('GateInspectionDetail')}}
-                        />
+                        
                     </Drawer.Section>
                     
                 </View>

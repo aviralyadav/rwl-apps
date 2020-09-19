@@ -50,7 +50,7 @@ export default class EnterOTP extends Component {
                   style={{
                     color: 'black',
                     // textDecorationLine: 'underline',
-                    fontSize:25,
+                    fontSize:20,
                   }}>
                   Enter OTP
                 </Text>
@@ -192,7 +192,7 @@ const styles = {
     resizeMode: 'stretch',
     alignItems: 'center',
   },
-  textInput: {flex: 1, color: '#000', fontSize: 20, fontWeight: '600'},
+  textInput: {flex: 1, color: '#000', fontSize: 15, fontWeight: '600'},
   buttonWrapper: {
     alignItems: 'center',
     // flexDirection: 'row',

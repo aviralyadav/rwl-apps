@@ -8,7 +8,8 @@ import {
   TouchableWithoutFeedback,
   ImageBackground,
   Image,
-  Dimensions
+  Dimensions,
+  
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Footer from './Footer';
@@ -18,7 +19,7 @@ export default class Signup extends Component {
   render() {
     return (
       <View style={styles.container}>
-    
+    <ScrollView > 
         <ImageBackground
           style={styles.backgroundImage}
           source={require('./Images/2.jpg')}>
@@ -45,7 +46,19 @@ export default class Signup extends Component {
 
                 <TextInput
                   style={styles.textInput}
-                  placeholder="User Name"
+                  placeholder="Enter First Name"
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+              <View style={styles.sectionStyle}>
+                <Image
+                  source={require('./Images/User1.png')}
+                  style={styles.imageStyle}
+                />
+
+                <TextInput
+                  style={styles.textInput}
+                  placeholder="Enter Last Name"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -58,7 +71,7 @@ export default class Signup extends Component {
                 <TextInput
                 keyboardType="email-address"
                   style={styles.textInput}
-                  placeholder="Email"
+                  placeholder="Enter Email ID"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -71,7 +84,7 @@ export default class Signup extends Component {
                 <TextInput
                 keyboardType="numeric"
                   style={styles.textInput}
-                  placeholder="Mobile Number"
+                  placeholder="Enter Mobile Number"
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -84,7 +97,21 @@ export default class Signup extends Component {
                 <TextInput
                 secureTextEntry
                   style={styles.textInput}
-                  placeholder="User Password"
+                  placeholder="Enter Password"
+                  underlineColorAndroid="transparent"
+                />
+              </View>
+              
+              <View style={styles.sectionStyle}>
+                <Image
+                  source={require('./Images/aadhar.png')}
+                  style={styles.imageStyle}
+                />
+
+                <TextInput
+                secureTextEntry
+                  style={styles.textInput}
+                  placeholder="Enter Aadhaar Number Optional "
                   underlineColorAndroid="transparent"
                 />
               </View>
@@ -100,7 +127,16 @@ export default class Signup extends Component {
                   <TouchableWithoutFeedback
                     style={styles.button1}
                     onPress={this.onPress}>
-                    <Text style={styles.button}>Signup</Text>
+                    <Text style={styles.button}>Next</Text>
+                  </TouchableWithoutFeedback>
+                </LinearGradient>
+                <LinearGradient
+                  colors={['#7b4397', '#dc2430']}
+                  style={styles.buttonWrapper}>
+                  <TouchableWithoutFeedback
+                    style={styles.button}
+                    onPress={this.onPress}>
+                    <Text style={styles.button}>Cancel</Text>
                   </TouchableWithoutFeedback>
                 </LinearGradient>
               </View>
@@ -129,6 +165,7 @@ export default class Signup extends Component {
             </Text>
           </LinearGradient> */}
         </ImageBackground>
+        </ScrollView > 
         <View>
            <Footer/>
        </View>
@@ -194,17 +231,19 @@ const styles = {
   imageStyle: {
     padding: 10,
     margin: 5,
-    height: 35,
-    width: 35,
+    height: 25,
+    width: 25,
     resizeMode: 'stretch',
     alignItems: 'center',
+    marginLeft:10
   },
-  textInput: {flex: 1, color: '#000', fontSize: 20, fontWeight: '600'},
+  textInput: {flex: 1, color: '#000', fontSize: 15, fontWeight: '600'},
   buttonWrapper: {
     alignItems: 'center',
     // flexDirection: 'row',
-    width: '65%',
+    width: '35%',
     borderRadius: 30,
+    margin:8
   },
   button: {
     color: '#fff',

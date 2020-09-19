@@ -16,7 +16,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 
 import Footer from './Footer';
 
-export default class EnterDischargeLevel extends Component {
+export default class EnterDrinkingandIrrigationUses extends Component {
   constructor() {
     super();
     this.state = {
@@ -42,7 +42,7 @@ export default class EnterDischargeLevel extends Component {
          <View>
 
 <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:10}}>
-Enter Discharge Level
+Enter Drinking and Irrigation Uses
 </Text>
 </View>
         <View style={styles.viewArea}>
@@ -98,56 +98,20 @@ Enter Discharge Level
                 </View>
 
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Time:</Text>
-                  <Text style={{borderColor: 'black', borderWidth: 1,borderRadius: 5, width: '50%', height: 35,alignItems: 'center', textAlign: 'center',paddingTop:7}} onPress={this.showTimePicker}>{this.state.time.toLocaleTimeString()}</Text>
-                     {this.state.show && (
-                    <DateTimePicker
-                      testID="dateTimePicker"
-                      value={this.state.time}
-                      placeholder="Select Time"
-                      mode="time"
-                      is24Hour={true}
-                      display="default"
-                      onChange={this.onChange}
+                  <Text style={styles.headingText}>Drinking Uses:</Text>
+                  <TextInput
+                    style={styles.input}
+                    underlineColorAndroid="transparent"
                     
-        />
-      )}
-                 
-                  
+                    placeholder="Enter Value"
+                    placeholderTextColor="#9a73ef"
+                    autoCapitalize="none"
+                    onChangeText={this.handleEmail}
+                  />
                 </View>
-                
+               
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText1}>Discharge Type:</Text>
-                   <View
-                
-                  style={{
-                      width: "50%",
-                      // height: '23%',
-                      // padding:3,
-                      justifyContent: 'center',
-                      // flexDirection:"row",
-                      borderColor: 'black',
-                      borderWidth:1,
-                      borderRadius: 10,
-                      alignSelf: 'center'
-                  }}>
-                  <Picker
-                   
-                    // style={styles.pickerStyle}
-                    selectedValue={this.state.inspectionType}
-                    onValueChange={(itemValue, i) =>
-                      this.setState({inspectionType: itemValue, index: i})
-                    }>
-                    <Picker.Item label="Select Type" value="Select Type" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="React Native" value="rn" />
-                  </Picker>
-                  </View>
-                  
-                </View>
-                
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Enter Discharge(Cumec):</Text>
+                  <Text style={styles.headingText}>Irrigation Uses:</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
@@ -245,7 +209,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     // justifyContent: 'space-between',
     backgroundColor: 'white',
-    height: Dimensions.get('window').height - 420,
+    height: Dimensions.get('window').height -475,
     // padding: 4,
     paddingLeft: 20,
     paddingRight: 30,

@@ -1,5 +1,5 @@
 import React from 'react';
-import {  ScrollView,StyleSheet,Text , View,Image,TextInput, Button,TouchableWithoutFeedback, } from 'react-native';
+import {  ScrollView,StyleSheet,Text , View,Image,TextInput, Button,TouchableWithoutFeedback,Picker } from 'react-native';
 import { Container,Content} from 'native-base';
 import ImagePicker from 'react-native-image-picker';
 
@@ -32,15 +32,15 @@ export default class NewDamChecklist2 extends React.Component {
       <Container>
       <View>
 
-<Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:5}}>
-  Dam Inspection Checklist
+      <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:5}}>
+  Gate Inspection Detail
 </Text>
 </View>
     
       <ScrollView>
       <Content style={{backgroundColor: 'white',margin:5}}>
         <View >
-        <Text style={styles.Text}>Q.1.1.1 : Section of the Dam and UpStream Slope</Text>
+        <Text style={styles.Text}>Q.2 : Capacity :</Text>
           <TextInput style={styles.inputBox}
           onChangeText={(text) => this.setState({text})}
           value={this.state.text}
@@ -48,11 +48,41 @@ export default class NewDamChecklist2 extends React.Component {
           underlineColorAndroid='rgba(0,0,0,0)'/>
        </View>
        <View >
-         <TextInput style={styles.inputBox3}
+        <Text style={styles.Text}>Observations :</Text>
+        <View
+                
+                  style={{
+                      width: "95%",
+                      // height: '23%',
+                      padding:3,
+                      justifyContent: 'center',
+                      // flexDirection:"row",
+                      borderColor: 'black',
+                      borderWidth:1,
+                      borderRadius: 10,
+                      alignSelf: 'center'
+                  }}>
+                  <Picker
+                   
+                    // style={styles.pickerStyle}
+                    selectedValue={this.state.inspectionType}
+                    onValueChange={(itemValue, i) =>
+                      this.setState({inspectionType: itemValue, index: i})
+                    }>
+                    <Picker.Item label="Select Option" value="Select Option" />
+                    <Picker.Item label="JavaScript" value="js" />
+                    <Picker.Item label="React Native" value="rn" />
+                  </Picker>
+                  </View>
+                  <View >
+        <Text style={styles.Text}>Category :</Text>
+          <TextInput style={styles.inputBox}
           onChangeText={(text) => this.setState({text})}
           value={this.state.text}
-          placeholder="Location"
+          placeholder="Auto-populated"
           underlineColorAndroid='rgba(0,0,0,0)'/>
+       </View>
+
        </View>
        <View style={styles.inputBox2}>
        <View style={styles.headerContent}>
@@ -69,7 +99,7 @@ export default class NewDamChecklist2 extends React.Component {
         </View>
         </View>
       <View >
-        <Text style={styles.Text}>Remarks :</Text>
+        <Text style={styles.Text}>Remark :</Text>
           <TextInput multiline={true}
            numberOfLines={4}
           style={styles.inputBox1}
@@ -83,14 +113,10 @@ export default class NewDamChecklist2 extends React.Component {
       <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save & Next
+               Submit
             </Text>
          </TouchableWithoutFeedback>
-         <TouchableWithoutFeedback>
-            <Text style = {styles.buttonText1}>
-               Cancel
-            </Text>
-         </TouchableWithoutFeedback>
+         
                 </View>
        {/* <View style={styles.container1}>
             <Button style={styles.Button1}>          
@@ -196,13 +222,13 @@ const styles=StyleSheet.create({
     borderWidth: 1,
     paddingVertical: 10,
     paddingHorizontal: 25,
-    borderColor: '#9ADF8F',
       borderRadius: 25,
+      borderColor: '#9ADF8F',
       backgroundColor:'#9ADF8F',
       fontSize:18,
       marginLeft:'2%',
-      marginTop:20,
-      marginBottom:20
+      marginTop:10,
+      marginBottom:30
   },
  
   buttonText1: {
@@ -211,7 +237,6 @@ const styles=StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 25,
       borderRadius: 25,
-      borderColor: '#FE7D6A',
       backgroundColor:'#FE7D6A',
       fontSize:18,
       marginLeft:'4%',

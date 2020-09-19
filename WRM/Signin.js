@@ -42,38 +42,49 @@ export default class Signin extends Component {
             <View style={{fontSize:30,fontWeight:200}}>
                 <Text style={{
                     color: 'black',
+                    marginTop:30,
+                    marginLeft:18,
                     // textDecorationLine: 'underline',
                     fontSize:20,
-                  }}>User Name</Text>
+                  }}>Username or Mobile No. </Text>
                 </View>
               <View style={styles.sectionStyle}>
               
-                <Image
-                  source={require('./Images/Email.png')}
+              <Image
+                  source={require('./Images/User1.png')}
                   style={styles.imageStyle}
                 />
-                
                 <TextInput
-                keyboardType="email-address"
+                keyboardType="default"
                   style={styles.textInput}
-                  placeholder="Email"
+                  placeholder="Enter Username or Mobile No."
+                 
                   underlineColorAndroid="transparent"
                 />
               </View>
+              <Text style={{
+                    color: 'black',
+                    marginTop:10,
+                    marginLeft:18,
+                    // textDecorationLine: 'underline',
+                    fontSize:20,
+                  }}>Password </Text>
               
               <View style={styles.sectionStyle}>
                 <Image
                   source={require('./Images/Userpwd.png')}
                   style={styles.imageStyle}
                 />
+                
 
                 <TextInput
                 secureTextEntry
                   style={styles.textInput}
-                  placeholder="User Password"
+                  placeholder="Enter Password"
                   underlineColorAndroid="transparent"
                 />
               </View>
+
               <View
                 style={{
                   flexDirection: 'row',
@@ -86,9 +97,26 @@ export default class Signin extends Component {
                   <TouchableWithoutFeedback
                     style={styles.button1}
                     onPress={()=>{this.props.navigation.navigate("Dashboard")}}>
-                    <Text style={styles.button}>Signin</Text>
+                    <Text style={styles.button}>Login</Text>
                   </TouchableWithoutFeedback>
                 </LinearGradient>
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  marginTop: 25,
+                }}>
+                <Text
+                  style={{
+                    color: 'yellow',
+                    // textDecorationLine: 'underline',
+                    fontWeight: 'bold',
+                    fontSize:20
+               
+                  }}>
+                  Forgot Password ?
+                </Text>
               </View>
               <View
                 style={{
@@ -181,12 +209,13 @@ const styles = {
   imageStyle: {
     padding: 10,
     margin: 5,
-    height: 35,
-    width: 35,
+    height: 25,
+    width: 25,
     resizeMode: 'stretch',
     alignItems: 'center',
+    marginLeft:10
   },
-  textInput: {flex: 1, color: '#000', fontSize: 20, fontWeight: '600'},
+  textInput: {flex: 1, color: '#000', fontSize: 15, fontWeight: '600'},
   buttonWrapper: {
     alignItems: 'center',
     // flexDirection: 'row',

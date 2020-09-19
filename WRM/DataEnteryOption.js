@@ -29,12 +29,19 @@ class DataEnteryOption extends React.Component {
         return(
             
            <View style={styles.damContainer}>
+                <View>
+
+<Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:30}}>
+    Data Entery Option
+</Text>
+</View>
                <View>
 
                <Text style={{fontSize:25,  color:'black',marginTop:30,marginLeft:15}}>
                 Dam/Tank Name
                </Text>
                </View>
+               <ScrollView>
                <View
                 style={{
                 flex:1,
@@ -55,26 +62,34 @@ class DataEnteryOption extends React.Component {
                <Text style={{fontSize:22, textAlign:"center", color:'white'}}>Enter Lake Level</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:50,backgroundColor:'#FE7D6A',padding:10,borderRadius: 10, borderWidth:2,
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:30,backgroundColor:'#FE7D6A',padding:10,borderRadius: 10, borderWidth:2,
     borderColor: '#fe5137'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:22, textAlign:"center", color:'white'}}>Enter Rainfall</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:50,backgroundColor:'#9ADF8F', padding:10,borderRadius: 10, borderWidth:2,
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:30,backgroundColor:'#9ADF8F', padding:10,borderRadius: 10, borderWidth:2,
     borderColor: '#76d467'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:22, textAlign:"center", color:'white'}}>Enter Evaporation</Text>
                </TouchableWithoutFeedback>
+
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:50,backgroundColor:'#F1C40F', padding:10,borderRadius: 10, borderWidth:2,
-    borderColor: '#dab10d'}}>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:30,backgroundColor:'#44a6c6', padding:10,borderRadius: 10, borderWidth:2,
+    borderColor: '#3899b8'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:22, textAlign:"center", color:'white'}}>Enter Drinking & Irrigation Uses</Text>
                </TouchableWithoutFeedback>
                </View>
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:30,backgroundColor:'#F1C40F', padding:10,borderRadius: 10, borderWidth:2,
+    borderColor: '#dab10d'}}>
+               <TouchableWithoutFeedback>
+               <Text style={{fontSize:22, textAlign:"center", color:'white',}}>Enter Industrial Uses</Text>
+               </TouchableWithoutFeedback>
+               </View>
              
            </View>
+           </ScrollView>
            <View>
            <Footer/>
        </View>

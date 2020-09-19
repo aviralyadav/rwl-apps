@@ -48,22 +48,22 @@ class DamHealthSafety extends React.Component {
                   }}
                          
                >
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#FE7D6A',padding:18,borderRadius: 10, borderWidth:2,
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#fe6750',padding:18,borderRadius: 10, borderWidth:2,
     borderColor: '#fe5137'}}>
                <TouchableWithoutFeedback  onPress={() => {props.navigation.navigate('DamHealth')}}>
                <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Dam Health Inspection</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#E17F93',padding:18,borderRadius: 10, borderWidth:2,
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#d75670',padding:18,borderRadius: 10, borderWidth:2,
     borderColor: '#dc6a82'}}>
                <TouchableWithoutFeedback>
                <Text style={{fontSize:18, textAlign:"center", color:'white'}}>Instrument Health Inspection</Text>
                </TouchableWithoutFeedback>
                </View>
-               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#9ADF8F', padding:18,borderRadius: 10, borderWidth:2,
+               <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:5,backgroundColor:'#88d97b', padding:18,borderRadius: 10, borderWidth:2,
     borderColor: '#76d467'}}>
                <TouchableWithoutFeedback>
-               <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Mechanical Health Inspection</Text>
+               <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Gate Health Inspection</Text>
                </TouchableWithoutFeedback>
                </View>
              

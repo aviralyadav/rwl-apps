@@ -14,7 +14,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 // import CustomSidebarMenu from './CustomSidebarMenu';
 import {DrawerContent} from './DrawerContent';
 import {
-  CardListScreenStack,
+  DamInspectionCheckList1ScreenStack,
   DashboardScreenStack,
   SigninStackScreen,
   SignupStackScreen,
@@ -23,6 +23,7 @@ import {
   DamHealthStackScreen,
   LiveStorageDamTankStackScreen,
   DamInspectionCheckListScreen,
+  DamInspectionCheckList2ScreenStack,
   NewDamChecklist1StackScreen,
   NewDamChecklist2StackScreen,
   NewDamChecklist3StackScreen,
@@ -38,15 +39,17 @@ import {
   LoginScreenStackScreen,
   DataEnteryOptionStackScreen,
   EnterOTPStackScreen,
-  DamInspectionDetailsStackScreen,
-  DamInspectionDetails1StackScreen,
+  GateInspectionDetail3StackScreen,
+  GateInspectionDetail2StackScreen,
   EnterLakeLevelScreen,
   DamDashboardScreen,
   InstrumentInspectionDetailScreen,
   GateInspectionDetailScreen,
   EnterRainfallScreen,
   EnterDischargeLevelScreen,
-  EnterEvaporationScreen
+  EnterEvaporationScreen,
+  EnterIndustrialUsesScreen,
+  EnterDrinkingandIrrigationUsesScreen
 
 
 } from './MainScreen';
@@ -63,7 +66,8 @@ class App extends React.Component {
             name="DashboardScreenStack"
             component={DashboardScreenStack}
           />
-          <Drawer.Screen name="CardList" component={CardListScreenStack} />
+          <Drawer.Screen name="DamInspectionCheckList1" component={DamInspectionCheckList1ScreenStack} />
+          <Drawer.Screen name="DamInspectionCheckList2" component={DamInspectionCheckList2ScreenStack} />
           <Drawer.Screen name="Signin" component={SigninStackScreen} />
           <Drawer.Screen name="DamHealth" component={DamHealthStackScreen} />
           <Drawer.Screen name="DamInspection" component={DamInspectionScreen} />
@@ -126,12 +130,12 @@ class App extends React.Component {
             component={EnterOTPStackScreen}
           />
            <Drawer.Screen
-            name="DamInspectionDetails"
-            component={DamInspectionDetailsStackScreen}
+            name="GateInspectionDetail3"
+            component={GateInspectionDetail3StackScreen}
           />
            <Drawer.Screen
-            name="DamInspectionDetails1"
-            component={DamInspectionDetails1StackScreen}
+            name="GateInspectionDetail2"
+            component={GateInspectionDetail2StackScreen}
           />
            <Drawer.Screen
             name="EnterLakeLevel"
@@ -145,9 +149,17 @@ class App extends React.Component {
             name="EnterDischargeLevel"
             component={EnterDischargeLevelScreen}
           />
+          <Drawer.Screen
+            name="EnterIndustrialUses"
+            component={EnterIndustrialUsesScreen}
+          />
            <Drawer.Screen
             name="EnterEvaporation"
             component={EnterEvaporationScreen}
+          />
+          <Drawer.Screen
+            name="EnterDrinkingandIrrigationUses"
+            component={EnterDrinkingandIrrigationUsesScreen}
           />
             <Drawer.Screen
             name="DamDashboard"

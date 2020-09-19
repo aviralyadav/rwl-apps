@@ -53,37 +53,59 @@ export default class GateInspectionDetailForm extends Component {
     console.log(this.state);
     return (
       <View style={styles.damCheckListContainer}>
+        <View>
+
+<Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:7}}>
+    Gate Inspection Details
+</Text>
+</View>
         <View style={styles.viewArea}>
           <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
             <View>
-              <View style={styles.header}>
+            <View style={styles.header}>
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Name of MI Tank</Text>
+                  <Text style={styles.headingText}>Name of Mi Tank</Text>
                   <Text style={styles.headingText}>Mi Tank</Text>
                 </View>
                 <View style={styles.headerContent}>
                   <Text style={styles.headingText}>Inspection Type</Text>
+                  <View
+                
+                  style={{
+                      width: "50%",
+                      height: '50%',
+  
+                      justifyContent: 'center',
+                      // flexDirection:"row",
+                      borderColor: 'black',
+                      borderWidth:1,
+                      borderRadius: 10,
+                      alignSelf: 'center'
+                  }}>
                   <Picker
-                    style={styles.pickerStyle}
+                   
+                    // style={styles.pickerStyle}
                     selectedValue={this.state.inspectionType}
                     onValueChange={(itemValue, i) =>
                       this.setState({inspectionType: itemValue, index: i})
                     }>
-                    <Picker.Item label="Java" value="java" />
+                    <Picker.Item label="Select Option" value="Select Option" />
                     <Picker.Item label="JavaScript" value="js" />
                     <Picker.Item label="React Native" value="rn" />
                   </Picker>
+                  </View>
                 </View>
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Date of Inspection</Text>
+                  <Text style={styles.headingText1}>Date of Inspection</Text>
                   <DatePicker
-                    style={{width: 200}}
+                  
+                    style={{width: 200 }}
                     date={this.state.date}
-                    mode="datetime"
+                    mode="date"
                     placeholder="select date"
                     format="YYYY-MM-DD"
-                    minDate="2016-05-01"
-                    maxDate="2016-06-01"
+                    minDate="1990-05-01"
+                    maxDate="2020-12-01"
                     confirmBtnText="Confirm"
                     cancelBtnText="Cancel"
                     customStyles={{
@@ -95,6 +117,10 @@ export default class GateInspectionDetailForm extends Component {
                       },
                       dateInput: {
                         marginLeft: 36,
+                        borderColor: 'black',
+                        borderWidth:1,
+                        borderRadius: 10,
+
                       },
                       // ... You can check the source to find the other keys.
                     }}
@@ -106,7 +132,7 @@ export default class GateInspectionDetailForm extends Component {
                 <View style={styles.headerContent}>
                   <Text style={styles.headingText}>Remark</Text>
                   <TextInput
-                    style={styles.input}
+                    style={styles.input1}
                     underlineColorAndroid="transparent"
                     placeholder="Remark"
                     placeholderTextColor="#9a73ef"
@@ -115,7 +141,7 @@ export default class GateInspectionDetailForm extends Component {
                   />
                 </View>
               </View>
-              <Text style={styles.headingText2}>B.1 Condition of Hoist</Text>
+              <Text style={styles.headingText4}style={{marginTop:40,marginBottom:15,fontWeight: "bold",}}>B.1 Condition of Hoist</Text>
               <View>
                 <View
                   style={{
@@ -123,7 +149,7 @@ export default class GateInspectionDetailForm extends Component {
                     justifyContent: 'space-evenly',
                     backgroundColor: 'yellow',
                     alignItems: 'center',
-                    padding: 2,
+                    padding: 4,
                     marginBottom:8
                   }}>
                   <Text style={styles.headingText1}>Point</Text>
@@ -266,7 +292,7 @@ export default class GateInspectionDetailForm extends Component {
                     <Text style={styles.buttonText}>Save & Next</Text>
                   </TouchableWithoutFeedback>
                   <TouchableWithoutFeedback>
-                    <Text style={styles.buttonText}>Clear</Text>
+                    <Text style={styles.buttonText1}>Clear</Text>
                   </TouchableWithoutFeedback>
                 </View>
               </View>
@@ -299,11 +325,26 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     // padding: 15,
     paddingVertical: 10,
-    paddingHorizontal: 25,
-    borderColor: 'black',
-    backgroundColor: 'red',
-    color: '#fff',
+    paddingHorizontal: 30,
+    borderColor: '#9ADF8F',
+    backgroundColor: '#9ADF8F',
+    color: 'black',
     fontSize: 18,
+    borderRadius:25,
+    marginTop:20
+  },
+  buttonText1: {
+    marginTop: 5,
+    borderWidth: 1,
+    // padding: 15,
+    paddingVertical: 10,
+    paddingHorizontal: 30,
+    borderColor: '#FE7D6A',
+    backgroundColor: '#FE7D6A',
+    color: 'black',
+    fontSize: 18,
+    borderRadius:25,
+    marginTop:20
   },
   textInputView: {
     flexDirection: 'row',
@@ -321,21 +362,21 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'stretch',
     height: 510,
-    padding: 15,
+    padding: 10,
     margin: 2,
   },
   header: {
     // flexDirection: 'row',
     width: Dimensions.get('window').width,
     // justifyContent: 'space-between',
-    backgroundColor: 'lightblue',
+    backgroundColor: 'white',
     height: Dimensions.get('window').height - 510,
     // padding: 4,
-    paddingLeft: 8,
-    paddingRight: 42,
+    paddingLeft: 10,
+    paddingRight: 30,
     paddingTop: 5,
     paddingBottom: 5,
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
     // alignItems: 'center',
   },
   headerContent: {
@@ -344,18 +385,21 @@ const styles = StyleSheet.create({
   },
   headingText: {
     fontSize: 15,
-    fontWeight: '700',
-    width: '40%',
+    fontWeight: "bold",
+    width: '45%',
+    marginTop:20
   },
   headingText2: {
     fontSize: 15,
     fontWeight: '700',
     width: '45%',
+    marginBottom:20
   },
   headingText1: {
     fontSize: 15,
     fontWeight: '700',
-    width: '50%',
+    width: '45%',
+    // marginTop:10
   },
   contentText: {
     fontWeight: 'normal',
@@ -386,4 +430,32 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: '55%',
   },
+  input1:{
+    width: "50%",
+    height: '60%',
+
+    justifyContent: 'center',
+    // flexDirection:"row",
+    borderColor: 'black',
+    borderWidth:1,
+    borderRadius: 10,
+    alignSelf: 'center',
+   marginBottom:10,
+   marginTop:10
+  },
+  headingText4: {
+    fontSize: 15,
+    fontWeight: '700',
+    width: '100%',
+    backgroundColor: '#FE7D6A',
+    // borderTopWidth:2,
+    borderWidth:2,
+    borderColor:'gray',
+    padding:3,
+    alignSelf:"center",
+    width: Dimensions.get('window').width,
+    marginLeft:30,
+    height: Dimensions.get('window').height - 710,
+  },
+  
 });

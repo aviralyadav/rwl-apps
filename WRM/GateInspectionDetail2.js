@@ -1,9 +1,9 @@
 import React from 'react';
-import {  ScrollView,StyleSheet,Text , View,Image,TextInput, Button,TouchableWithoutFeedback, } from 'react-native';
+import {  ScrollView,StyleSheet,Text , View,Image,TextInput, Button,TouchableWithoutFeedback, Picker} from 'react-native';
 import { Container,Content} from 'native-base';
 import ImagePicker from 'react-native-image-picker';
 
-export default class NewDamChecklist2 extends React.Component {
+export default class GateInspectionDetail2 extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -33,14 +33,14 @@ export default class NewDamChecklist2 extends React.Component {
       <View>
 
 <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:5}}>
-  Dam Inspection Checklist
+  Gate Inspection Detail
 </Text>
 </View>
     
       <ScrollView>
       <Content style={{backgroundColor: 'white',margin:5}}>
         <View >
-        <Text style={styles.Text}>Q.1.1.1 : Section of the Dam and UpStream Slope</Text>
+        <Text style={styles.Text}>Q.1 : Types (Screw Stem Hoist/Worm & Worm Wheel Hoist) :</Text>
           <TextInput style={styles.inputBox}
           onChangeText={(text) => this.setState({text})}
           value={this.state.text}
@@ -48,11 +48,41 @@ export default class NewDamChecklist2 extends React.Component {
           underlineColorAndroid='rgba(0,0,0,0)'/>
        </View>
        <View >
-         <TextInput style={styles.inputBox3}
+        <Text style={styles.Text}>Observations :</Text>
+        <View
+                
+                  style={{
+                      width: "95%",
+                      // height: '23%',
+                      padding:3,
+                      justifyContent: 'center',
+                      // flexDirection:"row",
+                      borderColor: 'black',
+                      borderWidth:1,
+                      borderRadius: 10,
+                      alignSelf: 'center'
+                  }}>
+                  <Picker
+                   
+                    // style={styles.pickerStyle}
+                    selectedValue={this.state.inspectionType}
+                    onValueChange={(itemValue, i) =>
+                      this.setState({inspectionType: itemValue, index: i})
+                    }>
+                    <Picker.Item label="Select Option" value="Select Option" />
+                    <Picker.Item label="JavaScript" value="js" />
+                    <Picker.Item label="React Native" value="rn" />
+                  </Picker>
+                  </View>
+                  <View >
+        <Text style={styles.Text}>Category :</Text>
+          <TextInput style={styles.inputBox}
           onChangeText={(text) => this.setState({text})}
           value={this.state.text}
-          placeholder="Location"
+          placeholder="Auto-populated"
           underlineColorAndroid='rgba(0,0,0,0)'/>
+       </View>
+
        </View>
        <View style={styles.inputBox2}>
        <View style={styles.headerContent}>
@@ -69,7 +99,7 @@ export default class NewDamChecklist2 extends React.Component {
         </View>
         </View>
       <View >
-        <Text style={styles.Text}>Remarks :</Text>
+        <Text style={styles.Text}>Remark :</Text>
           <TextInput multiline={true}
            numberOfLines={4}
           style={styles.inputBox1}

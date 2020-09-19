@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import { SearchBar } from 'react-native-elements';
 import {
   Dimensions,
   StyleSheet,
@@ -20,9 +20,20 @@ export default class DamDashboard extends Component {
     this.state = {
       inspectionType: '',
       date: '2016-05-15',
+      searchTasil: '',
+      searchDis: ''
     };
   }
+
+  updateSearch = (search) => {
+    this.setState({ searchTasil: search });
+  };
+  updateSearchDis = (search) => {
+    this.setState({ searchDis: search });
+  };
+
   render() {
+    const { searchTasil, searchDis } = this.state;
     console.log(this.state);
     return (
       <View style={styles.damCheckListContainer}>
@@ -36,12 +47,58 @@ export default class DamDashboard extends Component {
                   <Text style={styles.headingText1}>Add Dam to View in Dashboard</Text>
                   
                 </View>
+                <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center'}}>
+                  <Text style={styles.headingText3}>District:</Text>
+                
+                  <View style={{width: '60%',marginTop:10,marginRight:50}}>
+                  <SearchBar 
+                   showLoading={false}
+                  
+                   platform={Platform.OS}
+                   clearIcon={true}
+                   onChangeText={this.updateSearchDis}
+                   value={searchDis}
+                   onClearText={() => console.log('onClearText')}
+                   placeholder='Search..'
+                   cancelButtonTitle='Cancel'
+                  //  containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
+                   containerStyle={Platform.OS==="android"? {backgroundColor: 'white',
+                    borderWidth: 1, borderRadius: 5,flex:1, justifyContent:'center', height:45}: {flex:1, justifyContent:'center', height:49} }
+                  inputStyle={{height:37}}
+      />
+        
+                </View>
+                
+                </View>
+                <View style={{flexDirection: 'row',justifyContent: 'space-between', alignItems: 'center',}}>
+                  <Text style={styles.headingText3}>Tasil:</Text>
+                
+                  <View style={{width: '60%',marginTop:10,marginRight:50}}>
+                  <SearchBar 
+                   showLoading={false}
+                  
+                   platform={Platform.OS}
+                   clearIcon={true}
+                   onChangeText={this.updateSearch}
+                   value={searchTasil}
+                   onClearText={() => console.log('onClearText')}
+                   placeholder='Search..'
+                   cancelButtonTitle='Cancel'
+                  //  containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
+                   containerStyle={Platform.OS==="android"? {backgroundColor: 'white',
+                    borderWidth: 1, borderRadius: 5,flex:1, justifyContent:'center', height:45}: {flex:1, justifyContent:'center', height:49} }
+                  inputStyle={{height:37}}
+      />
+        
+                </View>
+                
+                </View>
                 <View style={styles.textInputView}>
                   <Text style={styles.headingText2}>Dam1</Text>
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+               Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -52,7 +109,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -63,7 +120,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -74,7 +131,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -85,7 +142,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -96,7 +153,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -107,7 +164,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -118,7 +175,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -129,7 +186,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -140,7 +197,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -151,7 +208,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -162,7 +219,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -173,7 +230,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -184,7 +241,7 @@ export default class DamDashboard extends Component {
                   <View style={styles.buttonView}>
                 <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
-               Save
+            Add
             </Text>
          </TouchableWithoutFeedback>
         
@@ -208,8 +265,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonView: {
-    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 5, paddingRight: 5, paddingTop: 2, paddingBottom: 2
-  },
+    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 5, paddingRight: 5, 
+    paddingTop: 2, paddingBottom: 2,
+  marginBottom:5},
   buttonText: {
     marginTop: 8,
     marginRight:8,
@@ -217,8 +275,8 @@ const styles = StyleSheet.create({
     // padding: 15,
     paddingVertical: 5,
     paddingHorizontal: 35,
-    borderColor: 'black',
-    backgroundColor: 'red',
+    borderColor: '#9ADF8F',
+    backgroundColor: '#9ADF8F',
     color: '#fff',
     fontSize: 18
   },
@@ -229,6 +287,8 @@ const styles = StyleSheet.create({
       paddingRight: 5, paddingTop: 2, paddingBottom: 2, borderBottomWidth: 1, 
      
       borderColor: 'gray', },
+
+     
   viewArea: {
     flex: 1,
     backgroundColor: 'white',
@@ -302,6 +362,12 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '700',
     width: '40%',
+    marginLeft:25
+  },
+  headingText3: {
+    fontSize: 20,
+    fontWeight: '700',
+    width: '25%',
     marginLeft:25
   },
 });

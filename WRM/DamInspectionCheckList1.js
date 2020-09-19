@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
 //import all the components we are going to use.
 
-export default class App extends Component {
+export default class DamInspectionCheckList1 extends Component {
   render() {
     return (
       <View style={styles.MainContainer}>
@@ -24,7 +24,7 @@ export default class App extends Component {
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
    
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -35,7 +35,7 @@ export default class App extends Component {
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
    
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />

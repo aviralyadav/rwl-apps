@@ -44,7 +44,7 @@ export default class NewDamChecklist2 extends React.Component {
           <TextInput style={styles.inputBox}
           onChangeText={(text) => this.setState({text})}
           value={this.state.text}
-          placeholder="Description"
+          placeholder=""
           underlineColorAndroid='rgba(0,0,0,0)'/>
        </View>
        <View >
@@ -166,7 +166,8 @@ const styles=StyleSheet.create({
       
       color:'black',
       padding:10,
-      fontSize:20
+      fontSize:20,
+      
     },
     
     Text1:{
@@ -193,6 +194,7 @@ const styles=StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 25,
       borderRadius: 25,
+      borderColor: '#9ADF8F',
       backgroundColor:'#9ADF8F',
       fontSize:18,
       marginLeft:'2%',

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 //import react in our code.
 
-import { StyleSheet, View, Text, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, Image, TouchableOpacity ,TouchableWithoutFeedback} from 'react-native';
 //import all the components we are going to use.
 
-export default class App extends Component {
+export default class DamInspectionCheckList2 extends Component {
   render() {
     return (
       <View style={styles.MainContainer}>
@@ -24,7 +24,7 @@ export default class App extends Component {
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
    
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -35,7 +35,7 @@ export default class App extends Component {
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
    
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -44,7 +44,7 @@ export default class App extends Component {
  </TouchableOpacity>
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -62,7 +62,7 @@ export default class App extends Component {
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
    
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -72,7 +72,7 @@ export default class App extends Component {
 
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -82,7 +82,7 @@ export default class App extends Component {
 
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -101,7 +101,7 @@ export default class App extends Component {
 <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
    
    <Image
-           source={require('./Images/list.png')}
+           source={require('./Images/list2.png')}
 
        style={styles.ImageIconStyle}
      />
@@ -111,7 +111,7 @@ export default class App extends Component {
 
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -121,7 +121,7 @@ export default class App extends Component {
 
         <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5}>
         <Image
-                source={require('./Images/list.png')}
+                source={require('./Images/list2.png')}
 
             style={styles.ImageIconStyle}
           />
@@ -129,6 +129,14 @@ export default class App extends Component {
           <Text style={styles.TextStyle}>Section I </Text>
         </TouchableOpacity>
       </View>
+      <View style={styles.buttonView}>
+                <TouchableWithoutFeedback>
+            <Text style = {styles.buttonText}>
+               Submit
+            </Text>
+         </TouchableWithoutFeedback>
+         
+                </View>
 
       </View>
     );
@@ -203,6 +211,23 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   
    
+  },
+  buttonView: {
+    flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 2, paddingRight: 5, 
+    paddingTop: 30, paddingBottom: 2
+  },
+  buttonText: {
+    marginTop: 5,
+    borderWidth: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 25,
+      borderRadius: 25,
+      borderColor: '#9ADF8F',
+      backgroundColor:'#9ADF8F',
+      fontSize:18,
+      marginLeft:'35%',
+      marginTop:50,
+      marginBottom:20
   },
   Text:{
     color:'black',

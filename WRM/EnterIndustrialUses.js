@@ -16,7 +16,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 
 import Footer from './Footer';
 
-export default class EnterDischargeLevel extends Component {
+export default class EnterIndustrialUses extends Component {
   constructor() {
     super();
     this.state = {
@@ -97,27 +97,39 @@ Enter Discharge Level
         
                 </View>
 
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Time:</Text>
-                  <Text style={{borderColor: 'black', borderWidth: 1,borderRadius: 5, width: '50%', height: 35,alignItems: 'center', textAlign: 'center',paddingTop:7}} onPress={this.showTimePicker}>{this.state.time.toLocaleTimeString()}</Text>
-                     {this.state.show && (
-                    <DateTimePicker
-                      testID="dateTimePicker"
-                      value={this.state.time}
-                      placeholder="Select Time"
-                      mode="time"
-                      is24Hour={true}
-                      display="default"
-                      onChange={this.onChange}
-                    
-        />
-      )}
-                 
-                  
-                </View>
+               
                 
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText1}>Discharge Type:</Text>
+                  <Text style={styles.headingText1}>Month:</Text>
+                   <View
+                
+                  style={{
+                      width: "50%",
+                      // height: '23%',
+                      // padding:3,
+                      justifyContent: 'center',
+                      // flexDirection:"row",
+                      borderColor: 'black',
+                      borderWidth:1,
+                      borderRadius: 10,
+                      alignSelf: 'center'
+                  }}>
+                  <Picker
+                   
+                    // style={styles.pickerStyle}
+                    selectedValue={this.state.inspectionType}
+                    onValueChange={(itemValue, i) =>
+                      this.setState({inspectionType: itemValue, index: i})
+                    }>
+                    <Picker.Item label="Select Type" value="Select Type" />
+                    <Picker.Item label="JavaScript" value="js" />
+                    <Picker.Item label="React Native" value="rn" />
+                  </Picker>
+                  </View>
+                  
+                </View>
+                <View style={styles.headerContent}>
+                  <Text style={styles.headingText1}>Year:</Text>
                    <View
                 
                   style={{
@@ -146,8 +158,9 @@ Enter Discharge Level
                   
                 </View>
                 
+                
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Enter Discharge(Cumec):</Text>
+                  <Text style={styles.headingText}>Enter Industrial Uses:</Text>
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
