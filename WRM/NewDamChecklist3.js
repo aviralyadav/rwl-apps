@@ -41,11 +41,7 @@ export default class NewDamChecklist2 extends React.Component {
       <Content style={{backgroundColor: 'white',margin:5}}>
         <View >
         <Text style={styles.Text}>Q.1.4.9 : Indicate the general condition of downstream Pitching/turfing and rock toe.</Text>
-          <TextInput style={styles.inputBox}
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-          placeholder=""
-          underlineColorAndroid='rgba(0,0,0,0)'/>
+         
        </View>
        <View >
          <TextInput style={styles.inputBox3}

@@ -41,11 +41,7 @@ export default class NewDamChecklist2 extends React.Component {
       <Content style={{backgroundColor: 'white',margin:5}}>
         <View >
         <Text style={styles.Text}>Q.1.1.1 : Section of the Dam and UpStream Slope</Text>
-          <TextInput style={styles.inputBox}
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-          placeholder=""
-          underlineColorAndroid='rgba(0,0,0,0)'/>
+        
        </View>
        <View >
          <TextInput style={styles.inputBox3}

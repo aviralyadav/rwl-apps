@@ -51,7 +51,7 @@ Enter Drinking and Irrigation Uses
             <View>
               <View style={styles.header}>
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Dam/Tank Name</Text>
+                  <Text style={styles.headingText}>Dam Name</Text>
                 
                 </View>
                

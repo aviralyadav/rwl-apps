@@ -42,7 +42,7 @@ export default class EnterDischargeLevel extends Component {
          <View>
 
 <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:10}}>
-Enter Discharge Level
+Enter Discharge 
 </Text>
 </View>
         <View style={styles.viewArea}>
@@ -51,7 +51,7 @@ Enter Discharge Level
             <View>
               <View style={styles.header}>
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Dam/Tank Name</Text>
+                  <Text style={styles.headingText}>Dam Name</Text>
                 
                 </View>
                
@@ -117,7 +117,7 @@ Enter Discharge Level
                 </View>
                 
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText1}>Discharge Type:</Text>
+                  <Text style={styles.headingText1}>Discharge through:</Text>
                    <View
                 
                   style={{
@@ -151,7 +151,6 @@ Enter Discharge Level
                   <TextInput
                     style={styles.input}
                     underlineColorAndroid="transparent"
-                    
                     placeholder="Enter Value"
                     placeholderTextColor="#9a73ef"
                     autoCapitalize="none"

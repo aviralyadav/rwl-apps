@@ -67,91 +67,11 @@ export default class GateInspectionDetailForm extends Component {
                   <Text style={styles.headingText}>Name of Mi Tank</Text>
                   <Text style={styles.headingText}>Mi Tank</Text>
                 </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Inspection Type</Text>
-                  <View
-                
-                  style={{
-                      width: "50%",
-                      height: '50%',
-  
-                      justifyContent: 'center',
-                      // flexDirection:"row",
-                      borderColor: 'black',
-                      borderWidth:1,
-                      borderRadius: 10,
-                      alignSelf: 'center'
-                  }}>
-                  <Picker
-                   
-                    // style={styles.pickerStyle}
-                    selectedValue={this.state.inspectionType}
-                    onValueChange={(itemValue, i) =>
-                      this.setState({inspectionType: itemValue, index: i})
-                    }>
-                    <Picker.Item label="Select Option" value="Select Option" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="React Native" value="rn" />
-                  </Picker>
-                  </View>
-                </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText1}>Date of Inspection</Text>
-                  <DatePicker
-                  
-                    style={{width: 200 }}
-                    date={this.state.date}
-                    mode="date"
-                    placeholder="select date"
-                    format="YYYY-MM-DD"
-                    minDate="1990-05-01"
-                    maxDate="2020-12-01"
-                    confirmBtnText="Confirm"
-                    cancelBtnText="Cancel"
-                    customStyles={{
-                      dateIcon: {
-                        position: 'absolute',
-                        left: 0,
-                        top: 4,
-                        marginLeft: 0,
-                      },
-                      dateInput: {
-                        marginLeft: 36,
-                        borderColor: 'black',
-                        borderWidth:1,
-                        borderRadius: 10,
-
-                      },
-                      // ... You can check the source to find the other keys.
-                    }}
-                    onDateChange={(date) => {
-                      this.setState({date: date});
-                    }}
-                  />
-                </View>
-                <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Remark</Text>
-                  <TextInput
-                    style={styles.input1}
-                    underlineColorAndroid="transparent"
-                    placeholder="Remark"
-                    placeholderTextColor="#9a73ef"
-                    autoCapitalize="none"
-                    onChangeText={this.handleEmail}
-                  />
-                </View>
+               
               </View>
-              <Text style={styles.headingText4}style={{marginTop:40,marginBottom:15,fontWeight: "bold",}}>B.1 Condition of Hoist</Text>
+              <Text style={styles.headingText3}>B.1 Condition of Hoist</Text>
               <View>
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    justifyContent: 'space-evenly',
-                    backgroundColor: 'yellow',
-                    alignItems: 'center',
-                    padding: 4,
-                    marginBottom:8
-                  }}>
+              <View style={{flexDirection: 'row',marginTop:4,marginBottom:4,justifyContent:"space-evenly", backgroundColor: 'yellow', alignItems: 'center', padding: 4}}>
                   <Text style={styles.headingText1}>Point</Text>
                   <Text style={styles.headingText1}>Remark</Text>
                 </View>
@@ -370,7 +290,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     // justifyContent: 'space-between',
     backgroundColor: 'white',
-    height: Dimensions.get('window').height - 510,
+    height: Dimensions.get('window').height - 810,
     // padding: 4,
     paddingLeft: 10,
     paddingRight: 30,
@@ -385,9 +305,8 @@ const styles = StyleSheet.create({
   },
   headingText: {
     fontSize: 15,
-    fontWeight: "bold",
-    width: '45%',
-    marginTop:20
+    fontWeight: '700',
+    width: '35%',
   },
   headingText2: {
     fontSize: 15,
@@ -444,6 +363,20 @@ const styles = StyleSheet.create({
    marginTop:10
   },
   headingText4: {
+    fontSize: 15,
+    fontWeight: '700',
+    width: '100%',
+    backgroundColor: '#FE7D6A',
+    // borderTopWidth:2,
+    borderWidth:2,
+    borderColor:'gray',
+    padding:3,
+    alignSelf:"center",
+    width: Dimensions.get('window').width,
+    marginLeft:30,
+    height: Dimensions.get('window').height - 710,
+  },
+  headingText3: {
     fontSize: 15,
     fontWeight: '700',
     width: '100%',

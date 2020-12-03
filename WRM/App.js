@@ -49,7 +49,9 @@ import {
   EnterDischargeLevelScreen,
   EnterEvaporationScreen,
   EnterIndustrialUsesScreen,
-  EnterDrinkingandIrrigationUsesScreen
+  EnterDrinkingandIrrigationUsesScreen,
+  GateInspectionDetailForm1Screen,
+  InstrumentInspectionDetails1Screen
 
 
 } from './MainScreen';
@@ -78,6 +80,10 @@ class App extends React.Component {
           <Drawer.Screen
             name="GateInspectionDetailForm"
             component={GateInspectionDetailFormScreen}
+          />
+          <Drawer.Screen
+            name="GateInspectionDetailForm1"
+            component={GateInspectionDetailForm1Screen}
           />
           <Drawer.Screen
             name="GateInspectionDetailForm2"
@@ -169,6 +175,11 @@ class App extends React.Component {
             name="InstrumentInspectionDetail"
             component={InstrumentInspectionDetailScreen}
           />
+          <Drawer.Screen
+            name="InstrumentInspectionDetails1"
+            component={InstrumentInspectionDetails1Screen}
+          />
+
            <Drawer.Screen
             name="GateInspectionDetail"
             component={GateInspectionDetailScreen}

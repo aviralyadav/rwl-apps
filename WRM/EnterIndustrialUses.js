@@ -42,7 +42,7 @@ export default class EnterIndustrialUses extends Component {
          <View>
 
 <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:10}}>
-Enter Discharge Level
+Enter Industrial Uses
 </Text>
 </View>
         <View style={styles.viewArea}>
@@ -51,7 +51,7 @@ Enter Discharge Level
             <View>
               <View style={styles.header}>
                 <View style={styles.headerContent}>
-                  <Text style={styles.headingText}>Dam/Tank Name</Text>
+                  <Text style={styles.headingText}>Dam Name</Text>
                 
                 </View>
                
@@ -121,7 +121,7 @@ Enter Discharge Level
                     onValueChange={(itemValue, i) =>
                       this.setState({inspectionType: itemValue, index: i})
                     }>
-                    <Picker.Item label="Select Type" value="Select Type" />
+                    <Picker.Item label="Select" value="Select " />
                     <Picker.Item label="JavaScript" value="js" />
                     <Picker.Item label="React Native" value="rn" />
                   </Picker>
@@ -150,7 +150,7 @@ Enter Discharge Level
                     onValueChange={(itemValue, i) =>
                       this.setState({inspectionType: itemValue, index: i})
                     }>
-                    <Picker.Item label="Select Type" value="Select Type" />
+                    <Picker.Item label="Select" value="Select " />
                     <Picker.Item label="JavaScript" value="js" />
                     <Picker.Item label="React Native" value="rn" />
                   </Picker>

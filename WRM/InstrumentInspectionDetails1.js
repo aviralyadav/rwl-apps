@@ -3,7 +3,7 @@ import { ScrollView,StyleSheet,Text , View,Image,TextInput,Picker} from 'react-n
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon} from 'native-base';
 import DatePicker from 'react-native-datepicker';
 
-export default class NewDamChecklist1 extends Component {  
+export default class InstrumentInspectionDetails1 extends Component {  
  
   constructor() {
     super();
@@ -24,7 +24,7 @@ export default class NewDamChecklist1 extends Component {
         <View>
 
 <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:5}}>
-    Dam Inspection Details
+    Instrument Inspection Details
 </Text>
 </View>
       
@@ -33,31 +33,30 @@ export default class NewDamChecklist1 extends Component {
         <View  style={styles.headerContent}>
 
         <Text style={styles.Text}>Dam Name :</Text>
-        <Text style={styles.Text1}>Bhama Askhed</Text>
+        <Text style={styles.Text1}>Dam 1</Text>
        </View>
-
-       <View  style={{marginTop:20,flexDirection: 'row',
-      justifyContent: 'space-between',}}>
+       <View >
         <Text style={styles.Text}>Inspection Type :</Text>
         <Text style={styles.Text2}>Pre-Monsoon/Post-Monsoon</Text>
 
-       </View >
-        <View style={{marginTop:20}}  >
+
+       </View>
+       <View style={{marginTop:10}}  >
 
 
-        <Text style={styles.Text}  >Date & time  of Inspection:</Text>
-      <Text style={styles.Text3}>dd/mm/yyyy hh:mm{"\n"}
-                            (Current date & Time will auto populate)
-      </Text>
-        
-              </View>
+<Text style={styles.Text}  >Date of Inspection:</Text>
+<Text style={styles.Text3}>dd/mm/yyyy hh:mm{"\n"}
+                    (Current date & Time will auto populate)
+</Text>
+
+      </View>
              
-      
-      <View  style={{marginTop:35}} >
+       <View  style={{marginTop:5}} >
         
         <Text style={styles.Text} >Inspection Conducted by :</Text>
         
         <Text style={styles.Text4}>Officer Name</Text>
+
 
           {/* <TextInput multiline={true}
            numberOfLines={4}
@@ -68,6 +67,7 @@ export default class NewDamChecklist1 extends Component {
          placeholderTextColor="grey"
           underlineColorAndroid='rgba(0,0,0,0)'/>
               */}
+
       </View>  
       {/* <View style={styles.Picker}>
         <Text style={styles.Text}>Compliance Office</Text>
@@ -119,7 +119,7 @@ export default class NewDamChecklist1 extends Component {
          </View> */}
          <View style={styles.container1}>
             <Button style={styles.Button1}>          
-                <Text  >Save </Text>
+                <Text  >Save & Enter Detail</Text>
               </Button >
               <Button   style={styles.Button2}>          
                 <Text  >Cancel</Text>
@@ -174,24 +174,29 @@ const styles=StyleSheet.create({
         color:'black',
         padding:10,
         fontSize:20,
-        // marginTop:2
+       
+      },
+      Text0:{
+        color:'black',
+        padding:10,
+        fontSize:20,
+        fontWeight:"bold",
       },
       Text1:{
         color:'black',
         padding:10,
         fontSize:20,
-        marginRight:"30%",
+        marginRight:"50%",
         fontWeight:"bold"
       },
       Text2:{
         color:'black',
         padding:10,
-        fontSize:16,
-        // marginRight:"30%",
+        fontSize:20,
+        marginRight:"30%",
         fontWeight:"100",
         backgroundColor:"#BDC3C7"
       },
-    
       Text3:{
         color:'black',
         padding:10,
@@ -199,9 +204,10 @@ const styles=StyleSheet.create({
         marginRight:"8%",
         fontWeight:"100",
         backgroundColor:"#BDC3C7",
-        marginTop:8,
+        // marginTop:8,
         marginLeft:10
       },
+
       Text4:{
         color:'black',
         padding:5,
@@ -212,10 +218,18 @@ const styles=StyleSheet.create({
         fontWeight:"100",
         backgroundColor:"#BDC3C7",
         textAlign:"center",
-        marginTop:6
+        // marginTop:6
+      }, 
+    
+      Text5:{
+        color:'black',
+        padding:10,
+        fontSize:20,
+        fontWeight:"bold",
       },
 
-     Picker:{    
+     Picker:{
+      
       borderBottomWidth:1,
        borderColor: 'black',
        width: "100%"
@@ -226,10 +240,9 @@ const styles=StyleSheet.create({
       margin:5,
       borderRadius: 25,
       backgroundColor:'#9ADF8F',
-      fontSize:90,
-      fontWeight:"bold",
-      marginLeft:'13%',
-      marginTop:40,
+      fontSize:70,
+      marginLeft:'6%',
+      marginTop:50,
       marginBottom:20
      
     },
@@ -240,11 +253,12 @@ const styles=StyleSheet.create({
       backgroundColor:'#FE7D6A',
       fontSize:50,
       marginRight:'13%',
-      marginTop:40,
-      marginBottom:20
+      marginTop:50,
+      marginBottom:30
 
      
     },
+
     container1: {
       flex: 1,
       flexDirection: 'row',
@@ -253,7 +267,7 @@ const styles=StyleSheet.create({
     headerContent: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      marginTop:30
+      marginTop:20
     },
    
      

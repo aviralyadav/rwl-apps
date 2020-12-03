@@ -41,11 +41,7 @@ export default class GateInspectionDetail2 extends React.Component {
       <Content style={{backgroundColor: 'white',margin:5}}>
         <View >
         <Text style={styles.Text}>Q.1 : Types (Screw Stem Hoist/Worm & Worm Wheel Hoist) :</Text>
-          <TextInput style={styles.inputBox}
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-          placeholder=""
-          underlineColorAndroid='rgba(0,0,0,0)'/>
+         
        </View>
        <View >
         <Text style={styles.Text}>Observations :</Text>
@@ -101,7 +97,7 @@ export default class GateInspectionDetail2 extends React.Component {
       <View >
         <Text style={styles.Text}>Remark :</Text>
           <TextInput multiline={true}
-           numberOfLines={4}
+           numberOfLines={3}
           style={styles.inputBox1}
          onChangeText={(text) => this.setState({text})}
          value={this.state.text}
@@ -219,7 +215,7 @@ const styles=StyleSheet.create({
    },
    buttonView: {
     flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 2, paddingRight: 5, 
-    paddingTop: 30, paddingBottom: 2
+    paddingTop: 1, paddingBottom: 2
   },
   buttonText: {
     marginTop: 5,

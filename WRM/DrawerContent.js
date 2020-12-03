@@ -152,6 +152,17 @@ export const DrawerContent = (props) => {
                             label="Dam Health Safety"
                             onPress={() => {props.navigation.navigate('DamHealthSafety')}}
                         />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Gate Inspection Detail Form1"
+                            onPress={() => {props.navigation.navigate('GateInspectionDetailForm1')}}
+                        />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -460,6 +471,17 @@ export const DrawerContent = (props) => {
                             )}
                             label="InstrumentInspectionDetail"
                             onPress={() => {props.navigation.navigate('InstrumentInspectionDetail')}}
+                        />
+                         <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="account-check-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="InstrumentInspectionDetails1"
+                            onPress={() => {props.navigation.navigate('InstrumentInspectionDetails1')}}
                         />
                         
                     </Drawer.Section>

@@ -3,7 +3,7 @@ import { ScrollView,StyleSheet,Text , View,Image,TextInput,Picker} from 'react-n
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon} from 'native-base';
 import DatePicker from 'react-native-datepicker';
 
-export default class NewDamChecklist1 extends Component {  
+export default class GateInspectionDetail extends Component {  
  
   constructor() {
     super();
@@ -32,95 +32,41 @@ export default class NewDamChecklist1 extends Component {
         <Content style={{backgroundColor: 'white',margin:5}}>
         <View  style={styles.headerContent}>
 
-        <Text style={styles.Text}>Dam of Name :</Text>
-        <Text style={styles.Text1}>Dam 1</Text>
+        <Text style={styles.Text}>Dam Name :</Text>
+        <Text style={styles.Text1}></Text>
        </View>
        <View >
         <Text style={styles.Text}>Inspection Type :</Text>
-        <View
-                
-                  style={{
-                      width: "95%",
-                      // height: '23%',
-                      padding:3,
-                      justifyContent: 'center',
-                      // flexDirection:"row",
-                      borderColor: 'black',
-                      borderWidth:1,
-                      borderRadius: 10,
-                      alignSelf: 'center'
-                  }}>
-                  <Picker
-                   
-                    // style={styles.pickerStyle}
-                    selectedValue={this.state.inspectionType}
-                    onValueChange={(itemValue, i) =>
-                      this.setState({inspectionType: itemValue, index: i})
-                    }>
-                    <Picker.Item label="Select Option" value="Select Option" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="React Native" value="rn" />
-                  </Picker>
-                  </View>
+        <Text style={styles.Text2}>Pre-Monsoon/Post-Monsoon</Text>
+
 
        </View>
-        <View >
-        <Text style={styles.Text}>Date of Inspection</Text>
-        <DatePicker
-                  
-                  style={{width: '97%', }}
-                  date={this.state.date}
-                  mode="date"
-                  placeholder="Select inspection date"
-                  format="YYYY-MM-DD"
-                  minDate="1990-05-01"
-                  maxDate="2090-12-31"
-                  confirmBtnText="Confirm"
-                  cancelBtnText="Cancel"
-                  showIcon={true}
-                  customStyles={{
-                    dateIcon: {
-                      display: 'none',
-                      position: 'absolute',
-                      left: 0,
-                      top: 4,
-                      marginLeft: 0,
-                    },
-                    dateInput: {
-                       marginLeft: 50,
-                      // marginHorizontal: 10,
-                      borderColor: 'black',
-                      borderWidth:1,
-                      borderRadius: 10,
-                      color: '#000'
-                    },
-                    placeholderText: {
-                      color: '#000'
-                    }
-                    // ... You can check the source to find the other keys.
-                  }}
-                  onDateChange={(date) => {
-                    this.setState({date: date});
-                  }}
-                />
-        
-              </View>
+       <View style={{marginTop:10}}  >
+
+
+<Text style={styles.Text}  >Date of Inspection:</Text>
+<Text style={styles.Text3}>dd/mm/yyyy hh:mm{"\n"}
+                    (Current date & Time will auto populate)
+</Text>
+
+      </View>
              
       
-              <View >
-        <Text style={styles.Text}>Type of Gate :</Text>
+              <View style={styles.headerContent}>
+        <Text style={styles.Text5}>Type of Gate :</Text>
         <View
                 
                   style={{
-                      width: "95%",
+                      width: "50%",
                       // height: '23%',
-                      padding:3,
+                      padding:1,
                       justifyContent: 'center',
                       // flexDirection:"row",
                       borderColor: 'black',
                       borderWidth:1,
                       borderRadius: 10,
-                      alignSelf: 'center'
+                      alignSelf: 'center',
+                      marginRight:"10%"
                   }}>
                   <Picker
                    
@@ -129,13 +75,30 @@ export default class NewDamChecklist1 extends Component {
                     onValueChange={(itemValue, i) =>
                       this.setState({inspectionType: itemValue, index: i})
                     }>
-                    <Picker.Item label="Select Option" value="Select Option" />
+                    <Picker.Item label="Select Gate Type" value="Select Gate Type" />
                     <Picker.Item label="JavaScript" value="js" />
                     <Picker.Item label="React Native" value="rn" />
                   </Picker>
                   </View>
+                  
 
        </View>
+       <View  style={{marginTop:5}} >
+        
+        <Text style={styles.Text} >Inspection Conducted by :</Text>
+        
+        <Text style={styles.Text4}>Officer Name</Text>
+
+          {/* <TextInput multiline={true}
+           numberOfLines={4}
+          style={styles.inputBox1}
+         onChangeText={(text) => this.setState({text})}
+         value={this.state.text}
+         placeholder="Remark"
+         placeholderTextColor="grey"
+          underlineColorAndroid='rgba(0,0,0,0)'/>
+              */}
+      </View>  
       {/* <View style={styles.Picker}>
         <Text style={styles.Text}>Compliance Office</Text>
         <Picker 
@@ -249,6 +212,44 @@ const styles=StyleSheet.create({
         marginRight:"50%",
         fontWeight:"bold"
       },
+      Text2:{
+        color:'black',
+        padding:10,
+        fontSize:20,
+        marginRight:"30%",
+        fontWeight:"100",
+        backgroundColor:"#BDC3C7"
+      },
+      Text3:{
+        color:'black',
+        padding:10,
+        fontSize:19,
+        marginRight:"8%",
+        fontWeight:"100",
+        backgroundColor:"#BDC3C7",
+        // marginTop:8,
+        marginLeft:10
+      },
+
+      Text4:{
+        color:'black',
+        padding:5,
+        fontSize:19,
+        marginRight:"50%",
+        marginLeft:"5%",
+        paddingRight:10,
+        fontWeight:"100",
+        backgroundColor:"#BDC3C7",
+        textAlign:"center",
+        // marginTop:6
+      }, 
+    
+      Text5:{
+        color:'black',
+        padding:10,
+        fontSize:20,
+        fontWeight:"bold",
+      },
 
      Picker:{
       
@@ -264,8 +265,8 @@ const styles=StyleSheet.create({
       backgroundColor:'#9ADF8F',
       fontSize:70,
       marginLeft:'3%',
-      marginTop:40,
-      marginBottom:20
+      marginTop:30,
+      marginBottom:30
      
     },
     Button2:{
@@ -275,11 +276,12 @@ const styles=StyleSheet.create({
       backgroundColor:'#FE7D6A',
       fontSize:50,
       marginRight:'13%',
-      marginTop:40,
-      marginBottom:20
+      marginTop:30,
+      marginBottom:30
 
      
     },
+
     container1: {
       flex: 1,
       flexDirection: 'row',

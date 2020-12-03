@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ScrollView,StyleSheet,Text , View,Image,TextInput,Picker,TouchableWithoutFeedback,} from 'react-native';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon} from 'native-base';
-import DatePicker from 'react-native-datepicker';
+// import DatePicker from 'react-native-datepicker';
 
 export default class NewDamChecklist1 extends Component {  
  
@@ -25,88 +25,65 @@ export default class NewDamChecklist1 extends Component {
 
 <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:5}}>
     Instrument Inspection Details
+    Instrument Name (Autopopulated)
 </Text>
 </View>
+
       
         <ScrollView>
         <Content style={{backgroundColor: 'white',margin:5}}>
-        <View  style={styles.headerContent}>
-
-        <Text style={styles.Text}>Dam Name :</Text>
-        <Text style={styles.Text1}>Dam 1 </Text>
-       </View>
-       <View >
-        <Text style={styles.Text}>Inspection Type :</Text>
-        <View
-                
-                  style={{
-                      width: "95%",
-                      // height: '23%',
-                      padding:3,
-                      justifyContent: 'center',
-                      // flexDirection:"row",
-                      borderColor: 'black',
-                      borderWidth:1,
-                      borderRadius: 10,
-                      alignSelf: 'center'
-                  }}>
-                  <Picker
-                   
-                    // style={styles.pickerStyle}
-                    selectedValue={this.state.inspectionType}
-                    onValueChange={(itemValue, i) =>
-                      this.setState({inspectionType: itemValue, index: i})
-                    }>
-                    <Picker.Item label="Select Option" value="Select Option" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="React Native" value="rn" />
-                  </Picker>
-                  </View>
-
-       </View>
-        <View >
-        <Text style={styles.Text}>Date of Inspection</Text>
-        <DatePicker
-                  
-                  style={{width: '97%', }}
-                  date={this.state.date}
-                  mode="date"
-                  placeholder="YYYY-MM-DD"
-                  format="YYYY-MM-DD"
-                  minDate="1990-05-01"
-                  maxDate="2090-12-31"
-                  confirmBtnText="Confirm"
-                  cancelBtnText="Cancel"
-                  showIcon={true}
-                  customStyles={{
-                    dateIcon: {
-                      display: 'none',
-                      position: 'absolute',
-                      left: 0,
-                      top: 4,
-                      marginLeft: 0,
-                    },
-                    dateInput: {
-                       marginLeft: 50,
-                      // marginHorizontal: 10,
-                      borderColor: 'black',
-                      borderWidth:1,
-                      borderRadius: 10,
-                      color: '#000'
-                    },
-                    placeholderText: {
-                      color: '#000'
-                    }
-                    // ... You can check the source to find the other keys.
-                  }}
-                  onDateChange={(date) => {
-                    this.setState({date: date});
-                  }}
-                />
-        
-              </View>
-             
       
+   
+      
+<View >
+        <Text style={styles.Text}>No of Instruments (Qty):</Text>
+          <TextInput 
+          //  numberOfLines={2}
+          style={styles.inputBox1}
+        //  onChangeText={(text) => this.setState({text})}
+        //  value={this.state.text}
+         placeholder=""
+         placeholderTextColor="grey"
+          underlineColorAndroid='rgba(0,0,0,0)'/>
+             
+      </View>
+
+       <View >
+        <Text style={styles.Text}>Location RD/RL:</Text>
+          <TextInput 
+          //  numberOfLines={2}
+          style={styles.inputBox1}
+        //  onChangeText={(text) => this.setState({text})}
+        //  value={this.state.text}
+         placeholder="Location"
+         placeholderTextColor="grey"
+          underlineColorAndroid='rgba(0,0,0,0)'/>
+             
+      </View>
+
+      <View >
+        <Text style={styles.Text}>No. of Functional Instruments:</Text>
+          <TextInput
+          //  numberOfLines={2}
+          style={styles.inputBox1}
+        //  onChangeText={(text) => this.setState({text})}
+        //  value={this.state.text}
+         placeholder=""
+         placeholderTextColor="grey"
+          underlineColorAndroid='rgba(0,0,0,0)'/>
+             
+      </View>
+      <View >
+        <Text style={styles.Text}>No. of Non Functional Instruments:</Text>
+          <TextInput 
+          //  numberOfLines={2}
+          style={styles.inputBox1}
+        
+         placeholder=""
+         placeholderTextColor="grey"
+          underlineColorAndroid='rgba(0,0,0,0)'/>
+             
+      </View>
       <View >
         <Text style={styles.Text}>Remarks :</Text>
           <TextInput multiline={true}
@@ -117,96 +94,7 @@ export default class NewDamChecklist1 extends Component {
          placeholder="Remark"
          placeholderTextColor="grey"
           underlineColorAndroid='rgba(0,0,0,0)'/>
-             
-      </View> 
-      <View >
-        <Text style={styles.Text}>Instrument Name:</Text>
-        <View
-                
-                  style={{
-                      width: "95%",
-                      // height: '23%',
-                      padding:3,
-                      justifyContent: 'center',
-                      // flexDirection:"row",
-                      borderColor: 'black',
-                      borderWidth:1,
-                      borderRadius: 10,
-                      alignSelf: 'center'
-                  }}>
-                  <Picker
-                   
-                    // style={styles.pickerStyle}
-                    selectedValue={this.state.inspectionType}
-                    onValueChange={(itemValue, i) =>
-                      this.setState({inspectionType: itemValue, index: i})
-                    }>
-                    <Picker.Item label="Dropdown" value="Dropdown" />
-                    <Picker.Item label="JavaScript" value="js" />
-                    <Picker.Item label="React Native" value="rn" />
-                  </Picker>
-                  </View>
-
-       </View> 
-       <View >
-        <Text style={styles.Text}>Location RD/RL:</Text>
-          <TextInput multiline={true}
-           numberOfLines={2}
-          style={styles.inputBox1}
-         onChangeText={(text) => this.setState({text})}
-         value={this.state.text}
-         placeholder="Location"
-         placeholderTextColor="grey"
-          underlineColorAndroid='rgba(0,0,0,0)'/>
-             
-      </View>
-      <View >
-        <Text style={styles.Text}>No of instruments (Qty):</Text>
-          <TextInput multiline={true}
-          //  numberOfLines={2}
-          style={styles.inputBox1}
-         onChangeText={(text) => this.setState({text})}
-         value={this.state.text}
-         placeholder=""
-         placeholderTextColor="grey"
-          underlineColorAndroid='rgba(0,0,0,0)'/>
-             
-      </View>
-      <View >
-        <Text style={styles.Text}>Functional(Qty):</Text>
-          <TextInput multiline={true}
-          //  numberOfLines={2}
-          style={styles.inputBox1}
-         onChangeText={(text) => this.setState({text})}
-         value={this.state.text}
-         placeholder=""
-         placeholderTextColor="grey"
-          underlineColorAndroid='rgba(0,0,0,0)'/>
-             
-      </View>
-      <View >
-        <Text style={styles.Text}>Non Functional(Qty):</Text>
-          <TextInput multiline={true}
-          //  numberOfLines={2}
-          style={styles.inputBox1}
-         onChangeText={(text) => this.setState({text})}
-         value={this.state.text}
-         placeholder=""
-         placeholderTextColor="grey"
-          underlineColorAndroid='rgba(0,0,0,0)'/>
-             
-      </View>
-      <View >
-        <Text style={styles.Text}>Remarks :</Text>
-          <TextInput multiline={true}
-           numberOfLines={3}
-          style={styles.inputBox1}
-         onChangeText={(text) => this.setState({text})}
-         value={this.state.text}
-         placeholder="Remark"
-         placeholderTextColor="grey"
-          underlineColorAndroid='rgba(0,0,0,0)'/>
-             
+    
       </View> 
       {/* <View style={styles.Picker}>
         <Text style={styles.Text}>Compliance Office</Text>
@@ -256,13 +144,13 @@ export default class NewDamChecklist1 extends Component {
         </Picker>
         
          </View> */}
-          <View style={styles.buttonView}>
+          {/* <View style={styles.buttonView}>
          <TouchableWithoutFeedback>
             <Text style = {styles.buttonText}>
                Add New instrument
             </Text>
          </TouchableWithoutFeedback>
-         </View>
+         </View> */}
          <View style={styles.container1}>
            
          <TouchableWithoutFeedback>

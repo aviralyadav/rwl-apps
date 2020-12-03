@@ -25,7 +25,7 @@ class DamHealth extends React.Component {
                <View>
 
 <Text style={{fontSize:25, textAlign:"center", color:'black',marginTop:30}}>
-    List of Dam/Tank
+    List of Dam
 </Text>
 </View>
 <View>
@@ -63,13 +63,13 @@ class DamHealth extends React.Component {
                <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:15,backgroundColor:'#F1C40F', padding:20,borderRadius: 10, borderWidth:2,
     borderColor: '#dab10d'}}>
                <TouchableWithoutFeedback>
-               <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Tank 1</Text>
+               <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Dam 3</Text>
                </TouchableWithoutFeedback>
                </View>
                <View style={{ flexDirection: "column", width: "100%" ,justifyContent:"space-around",marginTop:15,backgroundColor:'#F1C40F', padding:20,borderRadius: 10, borderWidth:2,
     borderColor: '#dab10d'}}>
                <TouchableWithoutFeedback>
-               <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Tank 2</Text>
+               <Text style={{fontSize:20, textAlign:"center", color:'white'}}>Dam 4</Text>
                </TouchableWithoutFeedback>
                </View>
             </View>

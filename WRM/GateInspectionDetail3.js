@@ -41,11 +41,7 @@ export default class NewDamChecklist2 extends React.Component {
       <Content style={{backgroundColor: 'white',margin:5}}>
         <View >
         <Text style={styles.Text}>Q.2 : Capacity :</Text>
-          <TextInput style={styles.inputBox}
-          onChangeText={(text) => this.setState({text})}
-          value={this.state.text}
-          placeholder=""
-          underlineColorAndroid='rgba(0,0,0,0)'/>
+         
        </View>
        <View >
         <Text style={styles.Text}>Observations :</Text>
@@ -215,7 +211,7 @@ const styles=StyleSheet.create({
    },
    buttonView: {
     flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center', paddingLeft: 2, paddingRight: 5, 
-    paddingTop: 30, paddingBottom: 2
+    paddingTop: 8, paddingBottom: 2
   },
   buttonText: {
     marginTop: 5,
